@@ -16,7 +16,7 @@ Check out the live demo [here](https://charlesarcher.me). 🌐
 ## Features
 
 - **Responsive Design:** Ensuring a seamless experience on various devices. 📱💻
-- **Project Showcase:** Highlighting key projects with descriptions, technologies used, and links to source code and live demos. 🛠️🚀
+- **Project Showcase:** Highlighting key projects with descriptions and technologies used 🛠️🚀
 - **Skills and Expertise:** Showcasing the skills and technologies I'm proficient in. 💡
 - **Contact Information:** Ways for potential employers or collaborators to get in touch with me. 📬
 
