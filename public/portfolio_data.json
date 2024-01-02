@@ -1,0 +1,100 @@
+{
+  "info": {
+    "name": "Charles Archer",
+    "titles": ["Full Stack Software Engineer"],
+    "image": "headshot.jpg",
+    "logo": "logo.png",
+    "description": "Welcome to my digital portfolio! I'm Charles Archer, a dynamic Software Engineer with a passion for crafting innovative solutions. My expertise lies in developing mission-critical software and advanced simulations, as showcased in my work in the aerospace industry. I thrive on enhancing system accuracy and reliability, leveraging languages like C++, Lua, and Python. Explore my diverse projects, from pioneering aerospace initiatives to creating a cryptocurrency trading bot and web applications for Non-Fungible Token projects. With a robust skill set in languages, frameworks, and cloud technologies, I am dedicated to driving future advancements in the field. Let's explore the possibilities together.",
+    "social": [
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/charlesrarcher/",
+        "class": "fab fa-linkedin",
+        "image": "images/icons/linkedin.png"
+      },
+      {
+        "name": "github",
+        "url": "https://github.com/charlesarcher72",
+        "class": "fab fa-github",
+        "image": "images/icons/github.png"
+      },
+      {
+        "name": "mail",
+        "url": "mailto:charlesarcher72@gmail.com",
+        "class": "fas fa-envelope",
+        "image": "images/icons/mail.png"
+      }
+    ],
+    "section_name": {
+      "about": "ABOUT ME",
+      "skills": "SKILLS",
+      "experience": "PROFESSIONAL EXPERIENCE",
+      "projects": "PROJECTS",
+      "services": "SERVICES"
+    }
+  },
+  "skills": {
+    "icons": [
+      {"name": "C", "class": "devicon-c-plain"},
+      {"name": "C++", "class": "devicon-cplusplus-plain"},
+      {"name": "JAVA", "class": "devicon-java-plain"},
+      {"name": "PYTHON", "class": "devicon-python-plain"},
+      {"name": "HTML", "class": "devicon-html5-plain"},
+      {"name": "CSS", "class": "devicon-css3-plain"},
+      {"name": "JAVASCRIPT", "class": "devicon-javascript-plain"},
+      {"name": "REACT", "class": "devicon-react-plain"},
+      {"name": "VUE", "class": "devicon-vuejs-plain"},
+      {"name": "AWS", "class": "devicon-amazonwebservices-plain"},
+      {"name": "GIT", "class": "devicon-git-plain"},
+      {"name": "GITHUB", "class": "devicon-github-plain"},
+      {"name": "VSCODE", "class": "devicon-vscode-plain"},
+      {"name": "LINUX", "class": "devicon-linux-plain"},
+      {"name": "MACOS", "class": "devicon-apple-plain"},
+      {"name": "WINDOWS", "class": "devicon-windows8-plain"}
+    ]
+  },
+  "experience": [
+    {
+      "company": "Lockheed Martin",
+      "title": "Software Engineer",
+      "years": "January 2021 - Present",
+      "description": "In my role at Lockheed Martin, I design and develop software for a high fidelity flight simulation training environment...",
+      "technologies": ["C++", "Python", "Ada", "Linux", "Bash"]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Buxon Development Group",
+      "date": "2022",
+      "description": "I supported this Non-Fungible Token project by designing and developing the web applications to support its blockchain utility...",
+      "images": [
+        "images/portfolio/buxons/main.png",
+        "images/portfolio/buxons/staking2.png",
+        "images/portfolio/buxons/muttant_mint.png",
+        "images/portfolio/buxons/kennel_mint.png",
+        "images/portfolio/buxons/mint.png",
+        "images/portfolio/buxons/slots.png",
+        "images/portfolio/buxons/staking1.png"
+      ]
+    },
+    {
+      "title": "Staking Platforms",
+      "date": "2022",
+      "description": "I spearheaded the front-end design and development of Solana staking platforms for several NFT projects...",
+      "images": [
+        "images/portfolio/staking/solraiderz.png",
+        "images/portfolio/staking/germination.png",
+        "images/portfolio/staking/curation.png",
+        "images/portfolio/staking/beartoshi.png",
+        "images/portfolio/staking/buxons.png"
+      ]
+    }
+  ],
+  "services": {
+    "icons": [
+      {"name": "FULL STACK DEVELOPMENT", "class": "col-0 fa fa-cogs"},
+      {"name": "WEB DESIGN", "class": "col-0 fa fa-globe"},
+      {"name": "SOFTWARE DEVELOPMENT", "class": "col-0 fa fa-code"}
+    ]
+  }
+}

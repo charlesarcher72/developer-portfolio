@@ -1,0 +1,182 @@
+
+// Nav Style 
+nav{
+	color: #A63636;
+   background-color: #F7F6F2;
+}
+
+nav span:hover
+{
+	border-bottom : 1px solid #D3504A;
+}
+
+// Header Style
+header {
+   background-color: #F7F6F2;
+   h1 {
+     color: #A63636;
+   }
+ }
+ 
+ .title-styles {
+   color: #D3504A;
+ }
+ 
+ .header-icon {
+   opacity: 0.8;
+ }
+ 
+ .header-icon-links {
+   font-size: 40px;
+   cursor: pointer;
+   a, a:visited {
+     color: #A63636;
+   }
+   a:hover, a:focus {
+     color: #D3504A;
+   }
+ }
+ 
+ // About Style
+ #about {
+   background-color: #F7F6F2;
+   h1 span {
+     color: #D3504A;
+   }
+   .profile_pic span {
+     background: #D3504A;
+   }
+   .card {
+     background: #F7F6F2;
+     color: #A63636;
+   }
+   .res-button a {
+     border: 2px solid #D3504A;
+     color: #A63636;
+   }
+   .res-button a:hover {
+     border: 2px solid #D3504A;
+     color: #A63636;
+     background-color: rgba(#A63636, 0.1);
+   }
+ }
+ 
+ // Skills Style
+ #skills {
+   background-color: #F7F6F2;
+   h1 {
+     color: #D3504A;
+   }
+ }
+ 
+ .skills-tile {
+   background-color: #A63636;
+ }
+ 
+ .skills-tile i {
+   color: #F7F6F2;
+ }
+ 
+ .skills-tile p {
+   color: #F7F6F2;
+ }
+ 
+ .skills-tile:hover {
+   background-color: #D3504A;
+ }
+ 
+ // Experience Style
+ #experience {
+   background: #F7F6F2;
+   h1 span {
+     color: #D3504A;
+   }
+   .experience-badge {
+     background: #e4e1d4 !important;
+     color: #A63636;
+   }
+   .main-badge {
+     background: #919191 !important;
+   }
+   .vertical-timeline::before {
+     background: #A63636;
+   }
+ }
+ 
+ // Projects Style
+ #projects {
+   background: #F7F6F2;
+   .section-title {
+     color: #D3504A !important;
+   }
+   .pic div {
+     background: #A63636;
+   }
+   .project-title-settings {
+     color: #F7F6F2;
+   }
+ }
+ 
+ .project-date {
+   background-color: #e4e1d4;
+   color: #A63636;
+ }
+ 
+ .project-description {
+   color: #F7F6F2;
+ }
+ 
+ .modal-inside .modal-content {
+   background: #F7F6F2;
+   border-color: #A63636;
+   border-width: 3px;
+   border-radius: 25px;
+ }
+ 
+ .awssld {
+   border-color: #A63636;
+ }
+ 
+ .close-icon {
+   color: #A63636;
+ }
+ 
+ // Services Style
+ #services {
+   background-color: #F7F6F2;
+   h1 {
+     color: #D3504A;
+   }
+ }
+ 
+ .services-tile {
+   background-color: #A63636;
+ }
+ 
+ .services-tile i {
+   color: #F7F6F2;
+ }
+ 
+ .services-tile p {
+   color: #F7F6F2;
+ }
+ 
+ .services-tile:hover {
+   background-color: #D3504A;
+ }
+ 
+ // Footer Style
+ footer a,
+ footer a:visited {
+   color: #A63636;
+ }
+ 
+ footer a:hover,
+ footer a:focus {
+   color: #D3504A;
+ }
+ 
+ footer {
+   background: #F7F6F2;
+   color: #A63636;
+ } 
