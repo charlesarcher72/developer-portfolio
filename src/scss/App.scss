@@ -172,7 +172,7 @@ header h1 {
 // MOBILE
 @media only screen and (max-width: 480px) {
 	#about .card {
-		font-size: 130%;
+		font-size: 120%;
 	}
 
 	#about h1 {
@@ -434,6 +434,7 @@ header h1 {
 	border: 5px solid #A63636;
 }
 
+// MOBILE
 @media only screen and (max-width: 480px) {
 	#projects h1 {
 		font-size: 180%;
