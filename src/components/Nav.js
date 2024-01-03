@@ -23,9 +23,9 @@ const NavLink = ({ navLinkId, scrollToId }) => {
 const navLinks = [
   { navLinkId: 'Home', scrollToId: 'home' },
   { navLinkId: 'About', scrollToId: 'about' },
-  { navLinkId: 'Skills', scrollToId: 'skills' },
   { navLinkId: 'Experience', scrollToId: 'experience' },
   { navLinkId: 'Projects', scrollToId: 'projects' },
+  { navLinkId: 'Skills', scrollToId: 'skills' },
   { navLinkId: 'Services', scrollToId: 'services' }
 ];
 

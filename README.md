@@ -58,3 +58,4 @@ To personalize this portfolio for yourself, follow these steps:
 
 ---
 ### Feel free to reach out for any questions or feedback! 📧👋
+[![Powered by Vercel](https://img.shields.io/badge/Powered%20by-Vercel-blue)](https://vercel.com/) [![Built with React](https://img.shields.io/badge/Built%20with-React-blue)](https://reactjs.org/)

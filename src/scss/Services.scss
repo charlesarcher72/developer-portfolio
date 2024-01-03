@@ -1,0 +1,69 @@
+/////////////////////////////
+// SERVICES STYLE
+/////////////////////////////
+#services 
+{
+	height         : 85vh;
+	width          : 100%;
+	overflow       : hidden;
+}
+
+#services h1 
+{
+	padding-top    : 100px;
+	font-size      : 200%;
+	letter-spacing : 3px;
+	font-weight    : 600 !important;
+	font-family    : 'Roboto Mono', monospace;
+	text-align     : center;
+}
+
+.services-tile 
+{
+	padding       : 10% 10% 5% 10%;
+	width         : 350px;
+	height        : 100%;
+	margin        : 5% 0 5% 0;
+	border-radius : 50px;
+	font-family   : 'Roboto Mono', monospace;
+}
+
+.services-icon 
+{
+	font-size  : 160%;
+	text-align : center;
+	position   : relative;
+}
+
+.services-tile:hover 
+{
+	-webkit-transform  : scale(1.01);
+	-moz-transform     : scale(1.01);
+	transform          : scale(1.01);
+	z-index            : 10;
+	-webkit-box-shadow : 0 10px 20px rgba(0, 0, 0, .7);
+	-moz-box-shadow    : 0 10px 20px rgba(0, 0, 0, .7);
+	box-shadow         : 0 10px 20px rgba(0, 0, 0, .7);
+}
+
+.services-tile p
+{
+	font-family : 'Roboto Mono', monospace;
+}
+
+// MOBILE
+@media only screen and (max-width: 480px) 
+{
+	.services-tile 
+	{
+		width         : 200px;
+		border-radius : 10px;
+		font-size     : 10px;
+	}
+
+	#services h1 
+	{
+		font-size   : 180%;
+		padding-top : 50px;
+	}
+}

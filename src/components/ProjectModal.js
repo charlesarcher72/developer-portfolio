@@ -47,7 +47,7 @@ class ProjectModal extends Component {
             </Slider>
           </div>
           <div className="col-md-10 mx-auto">
-            <h3 style={{ padding: "5px 5px 0 5px" }}>
+            <h3 className="modal-title" style={{ padding: "5px 5px 0 5px" }}>
               {title}
               {url ? (
                 <a

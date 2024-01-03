@@ -1,0 +1,165 @@
+/////////////////////////////
+// PROJECTS STYLE
+/////////////////////////////
+#projects {
+	height: 100vh;
+}
+
+#projects h1 {
+	padding-top: 100px;
+	padding-bottom: 50px;
+	font-size: 200%;
+	letter-spacing: 3px;
+	font-weight: 600 !important;
+	font-family: 'Roboto Mono', monospace;
+	text-align: center;
+}
+
+.project-date {
+	font-size: 16px;
+	font-family: 'Roboto Mono', monospace;
+	padding: 5px 15px 5px 15px;
+	position: relative;
+	z-index: -500;
+	border-radius: 10px 10px 10px 10px;
+}
+
+.pic img {
+	display: block;
+	width: 100%;
+	border-radius: 15px;
+	height: 200px;
+}
+
+.pic div {
+	display: inline-block;
+	margin-bottom: 5%;
+	padding: 15px;
+	max-width: 400px;
+	text-align: center;
+	text-decoration: none;
+	-webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+	-moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+	-webkit-transition: all .20s linear;
+	-moz-transition: all .20s linear;
+	transition: all .20s linear;
+	z-index: 0;
+	position: relative;
+	border-radius: 20px;
+}
+
+.pic div:hover {
+	-webkit-transform: scale(1.01);
+	-moz-transform: scale(1.01);
+	transform: scale(1.01);
+	z-index: 10;
+	-webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, .7);
+	-moz-box-shadow: 5px 5px 15px rgba(0, 0, 0, .7);
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, .7);
+}
+
+.project-title-settings {
+	margin-top: 5%;
+	font: 20px 'Roboto Mono', monospace;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-close {
+	text-align: right;
+	padding: 10px 15px 10px 15px;
+	cursor: pointer;
+}
+
+.close-icon {
+	font-weight: lighter !important;
+}
+
+.modal-title {
+	font: 20px 'Roboto Mono', monospace;
+	text-align: justify;
+	text-transform: uppercase;
+}
+
+.modal-description {
+	padding: 5px 5px 0 5px;
+	margin-bottom: 20px;
+	font-size: 18px;
+	font-family: 'Roboto Mono', monospace;
+	text-align: justify;
+	line-height: 180%;
+	font-family: 'Roboto Mono', monospace;
+}
+
+.modal-open {
+	overflow: hidden;
+}
+
+.projects .projects-item .projects-item-caption {
+	-webkit-transition: all ease 0.5s;
+	-moz-transition: all ease 0.5s;
+	transition: all ease 0.5s;
+	opacity: 0;
+	background-color: rgba(51, 51, 51, 0.9);
+}
+
+.projects .projects-item .projects-item-caption:hover {
+	opacity: 1;
+}
+
+.projects .projects-item .projects-item-caption .projects-item-caption-content {
+	font-size: 1.5rem;
+}
+
+.slider-image {
+	border: 5px solid #A63636;
+}
+
+// MOBILE
+@media only screen and (max-width: 480px) {
+	#projects h1 {
+		font-size: 180%;
+		padding-top: 50px;
+		padding-bottom: 10px;
+	}
+
+	.pic div {
+		margin-bottom: 3%;
+		padding: 10px;
+		max-width: 280px;
+	}
+
+	.pic img {
+		height: 150px;
+	}
+
+	.project-date {
+		font-size: 12px;
+	}
+
+	.slider-image {
+		height: 250px;
+	}
+
+	.projects .closeButtonResponsive {
+		display: block;
+	}
+
+	.project-title-settings {
+		font-size: 16px;
+	}
+
+	.modal-title {
+		font-size: 16px;
+	}
+	.modal-description {
+		font-size: 10px;
+	}
+}

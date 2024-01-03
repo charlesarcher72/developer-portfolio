@@ -1,0 +1,64 @@
+/////////////////////////////
+// EXPERIENCE STYLE
+/////////////////////////////
+#experience {
+	height: 100vh;
+}
+
+#experience h1 {
+	padding-top: 100px;
+	padding-bottom: 50px;
+	font-size: 200%;
+	letter-spacing: 3px;
+	font-weight: 600 !important;
+	font-family: 'Roboto Mono', monospace;
+	text-align: center;
+}
+
+.experience-icon {
+	font-size: 300%;
+	margin-top: 25%;
+	text-align: center;
+}
+
+.main-badge {
+	font-size: 13px !important;
+	text-align: left !important;
+	padding: 5px 8px 5px 8px !important;
+	vertical-align: baseline;
+	font-weight: lighter !important;
+}
+
+.experience-badge {
+	font-size: 11px !important;
+	text-align: left !important;
+	padding: 5px 8px 5px 8px !important;
+	vertical-align: baseline;
+	background-color: #f9f5e9 !important;
+	color: black;
+	font-weight: lighter !important;
+	font-family: 'Roboto Mono', monospace;
+}
+
+// MOBILE
+@media only screen and (max-width: 480px) {
+	#experience .col {
+		padding-bottom: 60%;
+	}
+
+	#experience h1 {
+		font-size: 180%;
+		padding-top: 50px;
+		padding-bottom: 10px;
+
+	}
+
+}
+
+@media only screen and (max-width: 1170px) {
+	.experience-icon {
+		font-size: 170%;
+		margin-top: 27%;
+		text-align: center;
+	}
+}

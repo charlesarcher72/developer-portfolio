@@ -35,38 +35,65 @@
   },
   "skills": {
     "icons": [
+      {"name": "BASH", "class": "devicon-bash-plain"},
       {"name": "C", "class": "devicon-c-plain"},
       {"name": "C++", "class": "devicon-cplusplus-plain"},
-      {"name": "JAVA", "class": "devicon-java-plain"},
-      {"name": "PYTHON", "class": "devicon-python-plain"},
-      {"name": "HTML", "class": "devicon-html5-plain"},
       {"name": "CSS", "class": "devicon-css3-plain"},
+      {"name": "HTML", "class": "devicon-html5-plain"},
+      {"name": "JAVA", "class": "devicon-java-plain"},
       {"name": "JAVASCRIPT", "class": "devicon-javascript-plain"},
+      {"name": "LUA", "class": "devicon-lua-plain"},
+      {"name": "PYTHON", "class": "devicon-python-plain"},
       {"name": "REACT", "class": "devicon-react-plain"},
       {"name": "VUE", "class": "devicon-vuejs-plain"},
-      {"name": "AWS", "class": "devicon-amazonwebservices-plain"},
+      {"name": "BITBUCKET", "class": "devicon-bitbucket-original"},
+      {"name": "CONFLUENCE", "class": "devicon-confluence-original"},
       {"name": "GIT", "class": "devicon-git-plain"},
+      {"name": "GITLAB", "class": "devicon-gitlab-plain"},
       {"name": "GITHUB", "class": "devicon-github-plain"},
-      {"name": "VSCODE", "class": "devicon-vscode-plain"},
+      {"name": "JIRA", "class": "devicon-jira-plain"},
+      {"name": "AWS", "class": "devicon-amazonwebservices-plain"},
       {"name": "LINUX", "class": "devicon-linux-plain"},
       {"name": "MACOS", "class": "devicon-apple-plain"},
-      {"name": "WINDOWS", "class": "devicon-windows8-plain"}
+      {"name": "WINDOWS", "class": "devicon-windows8-plain"},
+      {"name": "ECLIPSE", "class": "fas fa-eclipse"},
+      {"name": "VSCODE", "class": "devicon-vscode-plain"}
     ]
-  },
+  },  
   "experience": [
     {
       "company": "Lockheed Martin",
       "title": "Software Engineer",
-      "years": "January 2021 - Present",
-      "description": "In my role at Lockheed Martin, I design and develop software for a high fidelity flight simulation training environment...",
-      "technologies": ["C++", "Python", "Ada", "Linux", "Bash"]
+      "subtitle": "Advanced Development Programs",
+      "years": "July 2023 - Present",
+      "description": "In my current role, I specialize in developing mission-critical displays using Lua and C++. I contribute to achieving comprehensive unit test coverage, streamlining workflows through automated test report generation, and ensuring ongoing reliability and performance optimization of critical systems.",
+      "technologies": ["Lua", "C++", "Git", "Gitlab"]
+    },
+    {
+      "company": "Lockheed Martin",
+      "title": "Software Engineer",
+      "subtitle": "Simulation and System Test",
+      "years": "January 2021 - July 2023",
+      "description": "In my previous position, I spearheaded initiatives to enhance pilot training devices for aircrafts. My contributions included creating interfaces for real-time simulations, designing C++ solutions for effective data communication, and streamlining subsystem integration and testing processes. ",
+      "technologies": ["C++", "Python", "Linux", "Bash"]
     }
   ],
   "projects": [
     {
+      "title": "Cryptocurrency Trading Bot",
+      "date": "2023",
+      "description": "I designed and developed the front end and database for a cryptocurrency trading app, using React for the UI and MongoDB for efficient data storage. The app seamlessly integrates TradingView alerts via webhooks to execute transactions on Binance, featuring user-friendly functions like token management, transaction history, and profit analytics.",
+      "images": [
+        "images/portfolio/sillybot/history.png",
+        "images/portfolio/sillybot/token.png",
+        "images/portfolio/sillybot/popup.png",
+        "images/portfolio/sillybot/db.png"
+      ]
+    },
+    {
       "title": "Buxon Development Group",
       "date": "2022",
-      "description": "I supported this Non-Fungible Token project by designing and developing the web applications to support its blockchain utility...",
+      "description": "I led the design and development of web applications for a Non-Fungible Token project on the Solana blockchain, also managing their deployment on AWS for seamless integration. Additionally, I contributed as the main artist, shaping the project's visual identity and artistic elements.",
       "images": [
         "images/portfolio/buxons/main.png",
         "images/portfolio/buxons/staking2.png",
@@ -80,7 +107,7 @@
     {
       "title": "Staking Platforms",
       "date": "2022",
-      "description": "I spearheaded the front-end design and development of Solana staking platforms for several NFT projects...",
+      "description": "I spearheaded the development of Solana staking platforms for multiple NFT projects, enhancing user engagement through the creation of intuitive interfaces. Additionally,  my role in these projects also involved managing AWS deployment for seamless implementation.",
       "images": [
         "images/portfolio/staking/solraiderz.png",
         "images/portfolio/staking/germination.png",

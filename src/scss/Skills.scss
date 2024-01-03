@@ -1,0 +1,59 @@
+/////////////////////////////
+// SKILLS STYLE
+/////////////////////////////
+#skills {
+	min-height: 200px;
+	width: 100%;
+	overflow: hidden;
+	height: 100vh;
+}
+
+.skills-tile {
+	padding: 10% 10% 5% 10%;
+	width: 150px;
+	margin: 5% 0 5% 0;
+	border-radius: 50px;
+	font-family: 'Roboto Mono', monospace;
+}
+
+.skills-tile:hover {
+	-webkit-transform: scale(1.01);
+	-moz-transform: scale(1.01);
+	transform: scale(1.01);
+	z-index: 10;
+	-webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+	-moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+}
+
+.skills-tile p {
+	font-family: 'Roboto Mono', monospace;
+}
+
+.skill-icon {
+	font-size: 160%;
+	text-align: center;
+	position: relative;
+}
+
+#skills h1 {
+	padding-top: 100px;
+	font-size: 200%;
+	letter-spacing: 3px;
+	font-weight: 600 !important;
+	font-family: 'Roboto Mono', monospace;
+	text-align: center;
+}
+
+// MOBILE
+@media only screen and (max-width: 480px) {
+	.skills-tile {
+		width: 50px;
+		border-radius: 10px;
+		font-size: 9px;
+	}
+	#skills h1 {
+		font-size: 180%;
+		padding-top: 50px;
+	}
+}

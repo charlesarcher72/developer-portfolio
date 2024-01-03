@@ -61,30 +61,6 @@ header {
    }
  }
  
- // Skills Style
- #skills {
-   background-color: #F7F6F2;
-   h1 {
-     color: #D3504A;
-   }
- }
- 
- .skills-tile {
-   background-color: #A63636;
- }
- 
- .skills-tile i {
-   color: #F7F6F2;
- }
- 
- .skills-tile p {
-   color: #F7F6F2;
- }
- 
- .skills-tile:hover {
-   background-color: #D3504A;
- }
- 
  // Experience Style
  #experience {
    background: #F7F6F2;
@@ -132,6 +108,10 @@ header {
    border-width: 3px;
    border-radius: 25px;
  }
+
+ .modal-title {
+  color: #A63636;
+ }
  
  .awssld {
    border-color: #A63636;
@@ -140,6 +120,31 @@ header {
  .close-icon {
    color: #A63636;
  }
+
+  
+ // Skills Style
+ #skills {
+  background-color: #F7F6F2;
+  h1 {
+    color: #D3504A;
+  }
+}
+
+.skills-tile {
+  background-color: #A63636;
+}
+
+.skills-tile i {
+  color: #F7F6F2;
+}
+
+.skills-tile p {
+  color: #F7F6F2;
+}
+
+.skills-tile:hover {
+  background-color: #D3504A;
+}
  
  // Services Style
  #services {
