@@ -4,11 +4,13 @@ class About extends Component {
   render() {
     const { sharedData } = this.props;
 
-    if (sharedData.info) {
-      var profilepic = "images/" + sharedData.info.image;
-      var sectionName = sharedData.info.section_name.about;
-      var about = sharedData.info.description;
+    if (!sharedData.info) {
+      return null;
     }
+
+    var profilepic = "images/" + sharedData.info.image;
+    var sectionName = sharedData.info.section_name.about;
+    var about = sharedData.info.description;
 
     return (
       <section id="about">
