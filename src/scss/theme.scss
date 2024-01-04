@@ -7,6 +7,11 @@ $bg-accent-color: #E4E1D4;
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
+// Global Style
+body, html {
+  background-color: $bg-color;
+}
+
 // Nav Style 
 nav {
   color: $font-color;
@@ -120,7 +125,7 @@ header {
 
   .project-title-settings {
     color: $bg-color;
-    font: 20px $font-family;
+    font: $font-family;
   }
 }
 
