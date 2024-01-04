@@ -1,6 +1,5 @@
-/////////////////////////////
-// PROJECTS STYLE
-/////////////////////////////
+// Projects Style
+
 #projects {
 	height: 100vh;
 	overflow: hidden;
@@ -12,13 +11,11 @@
 	font-size: 200%;
 	letter-spacing: 3px;
 	font-weight: 600 !important;
-	font-family: 'Roboto Mono', monospace;
 	text-align: center;
 }
 
 .project-date {
 	font-size: 16px;
-	font-family: 'Roboto Mono', monospace;
 	padding: 5px 15px 5px 15px;
 	position: relative;
 	z-index: -500;
@@ -62,7 +59,6 @@
 
 .project-title-settings {
 	margin-top: 5%;
-	font: 20px 'Roboto Mono', monospace;
 	text-transform: uppercase;
 	text-align: center;
 }
@@ -84,24 +80,29 @@
 }
 
 .modal-title {
-	font: 20px 'Roboto Mono', monospace;
-	text-align: justify;
+	text-align: center;
 	text-transform: uppercase;
+	font-size: 20px;
+
 }
 
 .modal-description {
 	padding: 5px 5px 0 5px;
 	margin-bottom: 20px;
 	font-size: 18px;
-	font-family: 'Roboto Mono', monospace;
 	text-align: justify;
 	line-height: 180%;
-	font-family: 'Roboto Mono', monospace;
 }
 
 .modal-open {
 	overflow: hidden;
 }
+
+.modal-inside .modal-content {
+	border-width: 3px;
+	border-radius: 25px;
+}
+ 
 
 .projects .projects-item .projects-item-caption {
 	-webkit-transition: all ease 0.5s;
@@ -117,10 +118,6 @@
 
 .projects .projects-item .projects-item-caption .projects-item-caption-content {
 	font-size: 1.5rem;
-}
-
-.slider-image {
-	border: 5px solid #A63636;
 }
 
 // MOBILE

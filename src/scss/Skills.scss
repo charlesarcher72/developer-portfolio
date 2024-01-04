@@ -1,6 +1,5 @@
-/////////////////////////////
-// SKILLS STYLE
-/////////////////////////////
+// Skills Style
+
 #skills {
 	min-height: 200px;
 	width: 100%;
@@ -13,7 +12,6 @@
 	width: 150px;
 	margin: 5% 0 5% 0;
 	border-radius: 50px;
-	font-family: 'Roboto Mono', monospace;
 }
 
 .skills-tile:hover {
@@ -24,10 +22,6 @@
 	-webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
 	-moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
 	box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-}
-
-.skills-tile p {
-	font-family: 'Roboto Mono', monospace;
 }
 
 .skill-icon {
@@ -41,7 +35,6 @@
 	font-size: 200%;
 	letter-spacing: 3px;
 	font-weight: 600 !important;
-	font-family: 'Roboto Mono', monospace;
 	text-align: center;
 }
 

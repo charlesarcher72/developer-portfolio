@@ -1,11 +1,19 @@
+// Imports
 @import './theme.scss';
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import './Nav.scss';
+@import './Header.scss';
+@import './About.scss';
+@import './Experience.scss';
+@import './Projects.scss';
+@import './Skills.scss';
+@import './Services.scss';
+@import './Footer.scss';
 
-html {
+// Global Styles
+body, html {
 	font-size: 62.5%;
 	-webkit-font-smoothing: antialiased;
-	margin: 0;
-	padding: 0;
+	height: 100%;
 	overflow: hidden;
 }
 
@@ -15,11 +23,3 @@ html {
 	justify-content: center;
 }
 
-@import './Nav.scss';
-@import './Header.scss';
-@import './About.scss';
-@import './Experience.scss';
-@import './Projects.scss';
-@import './Skills.scss';
-@import './Services.scss';
-@import './Footer.scss';

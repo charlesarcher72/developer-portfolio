@@ -1,6 +1,5 @@
-/////////////////////////////
-// SERVICES STYLE
-/////////////////////////////
+// Services Style
+
 #services 
 {
 	height         : 85vh;
@@ -14,7 +13,6 @@
 	font-size      : 200%;
 	letter-spacing : 3px;
 	font-weight    : 600 !important;
-	font-family    : 'Roboto Mono', monospace;
 	text-align     : center;
 }
 
@@ -25,7 +23,6 @@
 	height        : 100%;
 	margin        : 5% 0 5% 0;
 	border-radius : 50px;
-	font-family   : 'Roboto Mono', monospace;
 }
 
 .services-icon 
@@ -44,11 +41,6 @@
 	-webkit-box-shadow : 0 10px 20px rgba(0, 0, 0, .7);
 	-moz-box-shadow    : 0 10px 20px rgba(0, 0, 0, .7);
 	box-shadow         : 0 10px 20px rgba(0, 0, 0, .7);
-}
-
-.services-tile p
-{
-	font-family : 'Roboto Mono', monospace;
 }
 
 // MOBILE

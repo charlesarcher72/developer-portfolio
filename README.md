@@ -56,6 +56,29 @@ To personalize this portfolio for yourself, follow these steps:
 
 3. Ensure that all URLs in the JSON file point to your actual profiles, live demos, or images.
 
+4. **Open the theme.scss file:**
+   Open the `theme.scss` file in your code editor. This file contains all the styles for your portfolio.
+
+5. **Update Color Variables:**
+   - Locate the color variables at the beginning of the file. They look like this:
+     ```scss
+     $font-family: 'Roboto Mono', monospace;
+     $bg-color: #F7F6F2;
+     $font-color: #A63636;
+     $font-accent-color: #D3504A;
+     $bg-accent-color: #E4E1D4;
+     ```
+   - Replace the hex values (`#F7F6F2`, `#A63636`, `#D3504A`, `#E4E1D4`) with the desired colors for your theme.
+
+6. **Update Font Variables:**
+   - If you want to change the font, update the `$font-family` variable with the desired font name.
+     ```scss
+     $font-family: 'Your-Desired-Font', sans-serif;
+     ```
+
+7. **Save the Changes:**
+   Save the `theme.scss` file after making the changes.
+
 ---
 ### Feel free to reach out for any questions or feedback! 📧👋
 [![Powered by Vercel](https://img.shields.io/badge/Powered%20by-Vercel-blue)](https://vercel.com/) [![Built with React](https://img.shields.io/badge/Built%20with-React-blue)](https://reactjs.org/)

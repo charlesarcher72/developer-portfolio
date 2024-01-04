@@ -1,187 +1,234 @@
+// Theme Variables
+$font-family: 'Roboto Mono', monospace;
+$bg-color: #F7F6F2;
+$font-color: #A63636;
+$font-accent-color: #D3504A;
+$bg-accent-color: #E4E1D4;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 // Nav Style 
-nav{
-	color: #A63636;
-   background-color: #F7F6F2;
-}
+nav {
+  color: $font-color;
+  background-color: $bg-color;
+  font-family: $font-family;
 
-nav span:hover
-{
-	border-bottom : 1px solid #D3504A;
+  span:hover {
+    border-bottom: 1px solid $font-accent-color;
+  }
 }
 
 // Header Style
 header {
-   background-color: #F7F6F2;
-   h1 {
-     color: #A63636;
-   }
- }
- 
- .title-styles {
-   color: #D3504A;
- }
- 
- .header-icon {
-   opacity: 0.8;
- }
- 
- .header-icon-links {
-   font-size: 40px;
-   cursor: pointer;
-   a, a:visited {
-     color: #A63636;
-   }
-   a:hover, a:focus {
-     color: #D3504A;
-   }
- }
- 
- // About Style
- #about {
-   background-color: #F7F6F2;
-   h1 span {
-     color: #D3504A;
-   }
-   .profile_pic span {
-     background: #D3504A;
-   }
-   .card {
-     background: #F7F6F2;
-     color: #A63636;
-   }
-   .res-button a {
-     border: 2px solid #D3504A;
-     color: #A63636;
-   }
-   .res-button a:hover {
-     border: 2px solid #D3504A;
-     color: #A63636;
-     background-color: rgba(#A63636, 0.1);
-   }
- }
- 
- // Experience Style
- #experience {
-   background: #F7F6F2;
-   h1 span {
-     color: #D3504A;
-   }
-   .experience-badge {
-     background: #e4e1d4 !important;
-     color: #A63636;
-   }
-   .main-badge {
-     background: #919191 !important;
-   }
-   .vertical-timeline::before {
-     background: #A63636;
-   }
- }
- 
- // Projects Style
- #projects {
-   background: #F7F6F2;
-   .section-title {
-     color: #D3504A !important;
-   }
-   .pic div {
-     background: #A63636;
-   }
-   .project-title-settings {
-     color: #F7F6F2;
-   }
- }
- 
- .project-date {
-   background-color: #e4e1d4;
-   color: #A63636;
- }
- 
- .project-description {
-   color: #F7F6F2;
- }
- 
- .modal-inside .modal-content {
-   background: #F7F6F2;
-   border-color: #A63636;
-   border-width: 3px;
-   border-radius: 25px;
- }
+  background-color: $bg-color;
 
- .modal-title {
-  color: #A63636;
- }
- 
- .awssld {
-   border-color: #A63636;
- }
- 
- .close-icon {
-   color: #A63636;
- }
-
-  
- // Skills Style
- #skills {
-  background-color: #F7F6F2;
   h1 {
-    color: #D3504A;
+    color: $font-color;
+    font-family: $font-family;
+  }
+
+  .title-styles {
+    color: $font-accent-color;
+    font-family: $font-family;
+  }
+
+  .header-icon {
+    opacity: 0.8;
+  }
+
+  .header-icon-links {
+    font-size: 40px;
+    cursor: pointer;
+
+    a, a:visited {
+      color: $font-color;
+    }
+
+    a:hover, a:focus {
+      color: $font-accent-color;
+    }
+  }
+}
+
+// About Style
+#about {
+  background-color: $bg-color;
+
+  h1 span {
+    color: $font-accent-color;
+    font-family: $font-family;
+  }
+
+  .profile_pic span {
+    background: $font-accent-color;
+  }
+
+  .card {
+    background: $bg-color;
+    color: $font-color;
+    font-family: $font-family;
+  }
+
+  .res-button a {
+    border: 2px solid $font-accent-color;
+    color: $font-color;
+    font-family: $font-family;
+  }
+
+  .res-button a:hover {
+    border: 2px solid $font-accent-color;
+    color: $font-color;
+    background-color: rgba($font-color, 0.1);
+  }
+}
+
+// Experience Style
+#experience {
+  background: $bg-color;
+
+  h1 span {
+    color: $font-accent-color;
+    font-family: $font-family;
+  }
+
+  .experience-badge {
+    background: #e4e1d4 !important;
+    color: $font-color;
+    font-family: $font-family;
+  }
+
+  .main-badge {
+    background: #919191 !important;
+  }
+
+  .vertical-timeline::before {
+    background: $font-color;
+  }
+}
+
+// Projects Style
+#projects {
+  background: $bg-color;
+
+  .section-title {
+    color: $font-accent-color !important;
+    font-family: $font-family;
+  }
+
+  .pic div {
+    background: $font-color;
+  }
+
+  .project-title-settings {
+    color: $bg-color;
+    font: 20px $font-family;
+  }
+}
+
+.project-date {
+  background-color: $bg-accent-color;
+  color: $font-color;
+  font-family: $font-family;
+}
+
+.project-description {
+  color: $bg-color;
+}
+
+.modal-title,
+.modal-description {
+  font-family: $font-family;
+}
+
+.modal-inside .modal-content {
+  background: $bg-color;
+  border-color: $font-color;
+}
+
+.slider-image {
+  border: 5px solid $font-color;
+}
+
+.modal-title {
+  color: $font-color;
+}
+
+.awssld {
+  border-color: $font-color;
+}
+
+.close-icon {
+  color: $font-color;
+}
+
+// Skills Style
+#skills {
+  background-color: $bg-color;
+
+  h1 {
+    color: $font-accent-color;
+    font-family: $font-family;
   }
 }
 
 .skills-tile {
-  background-color: #A63636;
+  background-color: $font-color;
+  font-family: $font-family;
+
+  i {
+    color: $bg-color;
+  }
+
+  p {
+    color: $bg-color;
+    font-family: $font-family;
+  }
+
+  &:hover {
+    background-color: $font-accent-color;
+  }
 }
 
-.skills-tile i {
-  color: #F7F6F2;
+// Services Style
+#services {
+  background-color: $bg-color;
+
+  h1 {
+    color: $font-accent-color;
+    font-family: $font-family;
+  }
 }
 
-.skills-tile p {
-  color: #F7F6F2;
+.services-tile {
+  background-color: $font-color;
+  font-family: $font-family;
+
+  i {
+    color: $bg-color;
+  }
+
+  p {
+    color: $bg-color;
+    font-family: $font-family;
+  }
+
+  &:hover {
+    background-color: $font-accent-color;
+  }
 }
 
-.skills-tile:hover {
-  background-color: #D3504A;
+// Footer Style
+footer a,
+footer a:visited {
+  color: $font-color;
 }
- 
- // Services Style
- #services {
-   background-color: #F7F6F2;
-   h1 {
-     color: #D3504A;
-   }
- }
- 
- .services-tile {
-   background-color: #A63636;
- }
- 
- .services-tile i {
-   color: #F7F6F2;
- }
- 
- .services-tile p {
-   color: #F7F6F2;
- }
- 
- .services-tile:hover {
-   background-color: #D3504A;
- }
- 
- // Footer Style
- footer a,
- footer a:visited {
-   color: #A63636;
- }
- 
- footer a:hover,
- footer a:focus {
-   color: #D3504A;
- }
- 
- footer {
-   background: #F7F6F2;
-   color: #A63636;
- } 
+
+footer a:hover,
+footer a:focus {
+  color: $font-accent-color;
+}
+
+footer {
+  background: $bg-color;
+  color: $font-color;
+}
