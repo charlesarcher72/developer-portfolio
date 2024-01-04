@@ -124,8 +124,7 @@
   @media only screen and (max-width: 480px) {
 	#projects h1 {
 	  font-size: 180%;
-	  padding-top: 50px;
-	  padding-bottom: 10px;
+	  padding-top: 15%;
 	}
   
 	.pic div {
@@ -134,12 +133,8 @@
 	  max-width: 240px;
 	}
   
-	.pic img {
-	  height: 120px;
-	}
-  
 	.project-date {
-	  font-size: 12px;
+	  font-size: 100%;
 	}
   
 	.slider-image {
@@ -151,7 +146,7 @@
 	}
   
 	.project-title-settings {
-	  font-size: 12px;
+	  font-size: 120%;
 	}
   
 	.modal-title {
