@@ -66,7 +66,7 @@
       "title": "Software Engineer",
       "subtitle": "Advanced Development Programs",
       "years": "July 2023 - Present",
-      "description": "In my current role, I specialize in developing mission-critical displays using Lua and C++. I contribute to achieving comprehensive unit test coverage, streamlining workflows through automated test report generation, and ensuring ongoing reliability and performance optimization of critical systems.",
+      "description": "In my current role, I specialize in developing mission-critical displays for ground station operations using Lua and C++.",
       "technologies": ["Lua", "C++", "Git", "Gitlab"]
     },
     {
@@ -74,13 +74,13 @@
       "title": "Software Engineer",
       "subtitle": "Simulation and System Test",
       "years": "January 2021 - July 2023",
-      "description": "In my previous position, I spearheaded initiatives to enhance pilot training devices for aircrafts. My contributions included creating interfaces for real-time simulations, designing C++ solutions for effective data communication, and streamlining subsystem integration and testing processes. ",
+      "description": "In my previous role, I enhanced pilot training devices for aircraft by creating real-time simulation interfaces and C++ solutions.",
       "technologies": ["C++", "Python", "Linux", "Bash"]
     }
   ],
   "projects": [
     {
-      "title": "Cryptocurrency Trading Bot",
+      "title": "Silly Bot",
       "date": "2023",
       "description": "I designed and developed the front end and database for a cryptocurrency trading app, using React for the UI and MongoDB for efficient data storage. The app seamlessly integrates TradingView alerts via webhooks to execute transactions on Binance, featuring user-friendly functions like token management, transaction history, and profit analytics.",
       "images": [

@@ -7,7 +7,8 @@
 }
 
 #about h1 {
-  padding-top: 100px;
+  padding-top: 5%;
+  padding-bottom: 2%;
   font-size: 200%;
   letter-spacing: 3px;
   font-weight: 600 !important;
@@ -22,7 +23,7 @@
 
 #about .profile_pic span {
   display: inline-block;
-  margin: 30px 75px 2px;
+  margin: auto;
   padding: 5px;
   text-align: center;
   border-radius: 50%;
@@ -38,11 +39,11 @@
 }
 
 #about .card {
-  font-size: 180%;
+  font-size: 140%;
   text-align: center;
   line-height: 180%;
   border: none;
-  margin-bottom: 22px;
+  margin-bottom: 5%;
 }
 
 #about .res-button a {
@@ -50,7 +51,6 @@
   -moz-appearance: button;
   appearance: button;
   padding: 5px 20px;
-  margin-bottom: 0px;
   font-size: 145%;
   text-align: center;
   text-decoration: none;
@@ -66,6 +66,6 @@
 
   #about h1 {
     font-size: 180%;
-    padding-top: 50px;
+    padding-top: 15%;
   }
 }
