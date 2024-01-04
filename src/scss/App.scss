@@ -1,18 +1,12 @@
-// Imports
-@import './theme.scss';
-@import './Nav.scss';
-@import './Header.scss';
-@import './About.scss';
-@import './Experience.scss';
-@import './Projects.scss';
-@import './Skills.scss';
-@import './Services.scss';
-@import './Footer.scss';
 
-// Global Styles
-body, html {
+html {
 	font-size: 62.5%;
 	-webkit-font-smoothing: antialiased;
+	margin: 0;
+	padding: 0;
+}
+
+body, html {
 	height: 100%;
 	overflow: hidden;
 }
@@ -23,3 +17,14 @@ body, html {
 	justify-content: center;
 }
 
+
+
+@import './theme.scss';
+@import './Nav.scss';
+@import './Header.scss';
+@import './About.scss';
+@import './Experience.scss';
+@import './Projects.scss';
+@import './Skills.scss';
+@import './Services.scss';
+@import './Footer.scss';
