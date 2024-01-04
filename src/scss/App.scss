@@ -1,24 +1,3 @@
-
-html {
-	font-size: 62.5%;
-	-webkit-font-smoothing: antialiased;
-	margin: 0;
-	padding: 0;
-}
-
-body, html {
-	height: 100%;
-	overflow: hidden;
-}
-
-.aligner {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-
-
 @import './theme.scss';
 @import './Nav.scss';
 @import './Header.scss';
@@ -28,3 +7,26 @@ body, html {
 @import './Skills.scss';
 @import './Services.scss';
 @import './Footer.scss';
+
+html {
+	font-size: 62.5%;
+	-webkit-font-smoothing: antialiased;
+	margin: 0;
+	padding: 0;
+	overflow-y: scroll;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0; 
+}
+
+.aligner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

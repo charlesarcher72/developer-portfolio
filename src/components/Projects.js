@@ -11,15 +11,22 @@ class Projects extends Component {
   }
 
   showModal = (data) => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
     this.setState({ showModal: true, deps: data });
     document.body.classList.add("modal-open");
+    document.body.style.top = `-${scrollTop}px`;
+    document.body.style.position = 'fixed';
   };
-
+  
   closeModal = () => {
+    const scrollTop = parseInt(document.body.style.top, 10) || 0;
     this.setState({ showModal: false });
     document.body.classList.remove("modal-open");
+    document.body.style.top = "";
+    document.body.style.position = '';
+    window.scrollTo(0, -scrollTop);
   };
-
+  
   render() {
     const { projects, info } = this.props.sharedData;
     const sectionName = info?.section_name?.projects;

@@ -2,7 +2,6 @@
 
 #projects {
 	height: 100vh;
-	overflow: hidden;
 }
 
 #projects h1 {
@@ -94,11 +93,7 @@
 	text-align: justify;
 	line-height: 180%;
 }
-
-.modal-open {
-	overflow: hidden;
-}
-
+  
 .modal-inside .modal-content {
 	border-width: 3px;
 	border-radius: 25px;
