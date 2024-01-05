@@ -1,4 +1,3 @@
-@import './theme.scss';
 @import './Nav.scss';
 @import './Header.scss';
 @import './About.scss';
@@ -35,3 +34,5 @@ body {
 * {
   box-sizing: border-box;
 }
+
+@import './theme.scss';
