@@ -38,7 +38,7 @@ class Projects extends Component {
           <div className="row" key={i}>
             {projects.slice(i, i + 2).map((project) => (
               <div
-                className="col-sm-12 col-md-6 col-lg-6 mx-auto"
+                className="col-sm-12 col-md-6 col-lg-4 mx-auto"
                 key={project.title}
                 style={{
                   cursor: "pointer",

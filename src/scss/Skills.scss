@@ -48,15 +48,3 @@
 		padding-top: 50px;
 	}
 }
-
-// LARGER SCREEN
-@media only screen and (min-width: 1200px) {
-	.skills-tile {
-		width: 150px;
-		border-radius: 40px;
-	}
-	
-	.skill-icon {
-		font-size: 180%;
-	}
-  }

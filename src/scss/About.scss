@@ -8,7 +8,7 @@
 
 #about h1 {
   padding-top: 5%;
-  padding-bottom: 2%;
+  padding-bottom: 1%;
   font-size: 200%;
   letter-spacing: 3px;
   font-weight: 600 !important;
@@ -43,7 +43,7 @@
   text-align: center;
   line-height: 180%;
   border: none;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
 }
 
 #about .res-button a {
@@ -64,12 +64,5 @@
   #about h1 {
     font-size: 180%;
     padding-top: 50px;
-  }
-}
-
-// LARGER SCREEN
-@media only screen and (min-width: 1200px) {
-  #about .card {
-    font-size: 180%;
   }
 }
