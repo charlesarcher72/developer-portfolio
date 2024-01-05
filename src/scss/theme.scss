@@ -201,38 +201,38 @@ header {
     color: $font-accent-color;
     font-family: $font-family;
   }
-}
 
-.services-tile {
-  background-color: $font-color;
-  font-family: $font-family;
-
-  i {
-    color: $bg-color;
-  }
-
-  p {
-    color: $bg-color;
+  .services-tile {
+    background-color: $font-color;
     font-family: $font-family;
-  }
 
-  &:hover {
-    background-color: $font-accent-color;
+    i {
+      color: $bg-color;
+    }
+
+    p {
+      color: $bg-color;
+      font-family: $font-family;
+    }
+
+    &:hover {
+      background-color: $font-accent-color;
+    }
   }
 }
 
 // Footer Style
-footer a,
-footer a:visited {
-  color: $font-color;
-}
-
-footer a:hover,
-footer a:focus {
-  color: $font-accent-color;
-}
-
 footer {
   background: $bg-color;
   color: $font-color;
+
+  a,
+  a:visited {
+    color: $font-color;
+  }
+
+  a:hover,
+  a:focus {
+    color: $font-accent-color;
+  }
 }
