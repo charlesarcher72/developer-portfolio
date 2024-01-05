@@ -39,7 +39,7 @@
 }
 
 #about .card {
-  font-size: 140%;
+  font-size: 120%;
   text-align: center;
   line-height: 180%;
   border: none;
@@ -60,12 +60,16 @@
 
 // MOBILE
 @media only screen and (max-width: 480px) {
-  #about .card {
-    font-size: 120%;
-  }
 
   #about h1 {
     font-size: 180%;
     padding-top: 50px;
+  }
+}
+
+// LARGER SCREEN
+@media only screen and (min-width: 1200px) {
+  #about .card {
+    font-size: 180%;
   }
 }

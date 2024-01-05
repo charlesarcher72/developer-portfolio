@@ -6,6 +6,7 @@
   
   #projects h1 {
 	padding-top: 5%;
+	padding-bottom: 2%;
 	font-size: 200%;
 	letter-spacing: 3px;
 	font-weight: 600 !important;
@@ -24,15 +25,15 @@
 	display: block;
 	width: 100%;
 	height: 100%;
-	min-height: 140px;
-	border-radius: 5%; 
+	min-height: 120px;
+	border-radius: 20px; 
 	object-fit: cover;
   }
 
   .pic div {
 	display: inline-block;
-	margin-top: 5%;
-	margin-bottom: 5%;
+	margin-top: 3%;
+	margin-bottom: 3%;
 	padding: 5%;
 	max-width: 400px;
 	width: 100%;
@@ -61,7 +62,7 @@
   }
   
   .project-title-settings {
-	font-size: 160%;
+	font-size: 170%;
 	text-transform: uppercase;
 	text-align: center;
 	white-space: nowrap;

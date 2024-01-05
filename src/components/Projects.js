@@ -74,7 +74,7 @@ class Projects extends Component {
           <h1 className="section-title">
             <span>{sectionName}</span>
           </h1>
-          <div className="col-md-6 mx-auto">
+          <div className="col-md-8 mx-auto">
             {projectsRows}
           </div>
           <ProjectModal

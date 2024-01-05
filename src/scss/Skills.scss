@@ -7,9 +7,9 @@
 
 .skills-tile {
 	padding: 10% 10% 5% 10%;
-	width: 150px;
-	margin: 5% 0 5% 0;
-	border-radius: 50px;
+	width: 100px;
+	margin: 2% 0 2% 0;
+	border-radius: 25px;
 }
 
 .skills-tile:hover {
@@ -48,3 +48,15 @@
 		padding-top: 50px;
 	}
 }
+
+// LARGER SCREEN
+@media only screen and (min-width: 1200px) {
+	.skills-tile {
+		width: 150px;
+		border-radius: 40px;
+	}
+	
+	.skill-icon {
+		font-size: 180%;
+	}
+  }
