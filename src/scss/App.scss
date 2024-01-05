@@ -9,29 +9,37 @@
 @import './Footer.scss';
 
 html {
-	font-size: 62.5%;
-	-webkit-font-smoothing: antialiased;
-	margin: 0;
-	padding: 0;
-	overflow-y: scroll;
-	min-width: 100%;
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  min-width: 100%;
 }
 
 body {
-    margin: 0;
-    overflow-x: hidden;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
-    width: 0; 
+  width: 0;
 }
 
 .aligner {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#services {
+  background-color: $bg-color;
+}
+
+footer {
+  background-color: $bg-color;
 }
