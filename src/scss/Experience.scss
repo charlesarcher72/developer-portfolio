@@ -1,12 +1,13 @@
 // Experience Style
 
 #experience {
-	height: 100vh;
+ min-height: 100vh;
+ height: auto;
 }
 
 #experience h1 {
 	padding-top: 5%;
-  	padding-bottom: 1%;
+ padding-bottom: 1%;
 	font-size: 200%;
 	letter-spacing: 3px;
 	font-weight: 600 !important;
