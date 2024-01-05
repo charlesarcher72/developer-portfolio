@@ -32,18 +32,6 @@ class App extends Component {
     };
   }
 
-  preventPullToRefresh = (e) => {
-    e.preventDefault();
-  };
-
-  componentDidMount() {
-    document.addEventListener('touchmove', this.preventPullToRefresh, { passive: false });
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('touchmove', this.preventPullToRefresh);
-  }
-
   render() {
     return (
       // Components
