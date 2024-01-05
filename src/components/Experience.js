@@ -13,7 +13,7 @@ class Experience extends Component {
       const workElements = experience.map((work, i) => {
         const technologies = work.technologies;
         const tech = technologies.map((technology, j) => (
-          <Badge pill className="experience-badge mr-2 mb-2" key={j}>
+          <Badge pill className="experience-badge mr-2" key={j}>
             {technology}
           </Badge>
         ));
@@ -47,21 +47,21 @@ class Experience extends Component {
             <p className="vertical-timeline-element-subtitle" style={{ textAlign: "left" }}>
               {work.description}
             </p>
-            <div style={{ textAlign: "left", marginTop: "15px" }}>{tech}</div>
+            <div style={{ textAlign: "left", marginTop: "5px" }}>{tech}</div>
           </VerticalTimelineElement>
         );
       });
 
       return (
         <section id="experience">
-          <div className="col-md-12 mx-auto">
-            <div className="col-md-12">
+          <div>
+            <div>
               <h1>
                 <span>{sectionName}</span>
               </h1>
             </div>
           </div>
-          <div className="col col-md-8 mx-auto">
+          <div className="col col-md-10 mx-auto">
             <VerticalTimeline lineColor="#A63636">
               {workElements}
               <VerticalTimelineElement
