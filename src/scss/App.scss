@@ -22,10 +22,6 @@ body {
     overflow-x: hidden;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 ::-webkit-scrollbar {
     width: 0; 
 }
@@ -34,4 +30,8 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+* {
+    box-sizing: border-box;
 }
