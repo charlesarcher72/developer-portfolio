@@ -33,7 +33,7 @@ class About extends Component {
             </div>
             <div className="res-button center">
               <a
-                href="CharlesArcher_Resume_2024.pdf"
+                href="Charles_Archer_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
