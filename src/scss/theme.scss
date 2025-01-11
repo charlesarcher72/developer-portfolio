@@ -38,7 +38,7 @@ header {
   }
 
 
-  .header-icon {
+  .header-icon.visible {
     opacity: 0.8;
     box-shadow: 0 0 10px 4px $font-accent-color;
     border-color: $font-color;

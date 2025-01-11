@@ -2,13 +2,10 @@ import React, { Component } from "react";
 import Typical from "react-typical";
 
 class Header extends Component {
-  titles = [];
-
   constructor() {
     super();
     this.state = { 
-      checked: false,
-      iconLoaded: false
+      iconLoaded: false 
     };
   }
 
@@ -23,7 +20,7 @@ class Header extends Component {
     if (info) {
       const name = info.name;
       const logo = `images/${info.logo}`;
-      this.titles = info.titles.map((x) => [x.toUpperCase(), 1500]).flat();
+      const titles = info.titles.map((x) => [x.toUpperCase(), 1500]).flat();
 
       const networks = info.social.map((network) => (
         <span key={network.name} className="m-4">
@@ -34,7 +31,7 @@ class Header extends Component {
       ));
 
       const HeaderTitleTypeAnimation = React.memo(() => (
-        <Typical className="title-styles" steps={this.titles} loop={50} />
+        <Typical className="title-styles" steps={titles} loop={50} />
       ));
 
       return (
@@ -46,7 +43,7 @@ class Header extends Component {
                   <div className="spinner"></div>
                 )}
                 <img
-                  className="iconify header-icon"
+                  className={`iconify header-icon ${iconLoaded ? 'visible' : 'hidden'}`}
                   alt="logo"
                   src={logo}
                   onLoad={this.handleImageLoad}

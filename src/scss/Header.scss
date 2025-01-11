@@ -9,13 +9,36 @@
 	font-size: 250%;
 }
 
-.header-icon {
+.header-icon.visible {
 	width: 18vw;
 	margin-bottom: 3%;
 	border-radius: 50%;
 	border: 2px solid;
 }
 
+.header-icon.hidden {
+	display: none;
+}
+
+  
+  .spinner {
+	border-radius: 50%;
+	margin: auto;
+	animation: spin 1s linear infinite;
+	width: 18vw;
+	height: 18vw;
+  }
+  
+  @keyframes spin {
+	0% {
+	  transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+  }
+
+  
 .spinner {
 	border-radius: 50%;
 	margin: auto;
@@ -63,7 +86,7 @@ header h1 {
 
 // MOBILE
 @media only screen and (max-width: 768px) {
-	.header-icon {
+	.header-icon.visible {
 		width: 150px;
 		margin-bottom: 30px;
 	}
