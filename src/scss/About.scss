@@ -80,3 +80,11 @@
   }
   
 }
+
+@media only screen and (max-height: 600px) {
+  #about .card {
+    font-size: 12px; /* Adjusted font size for very small screens */
+    line-height: 2;
+
+  }
+}
