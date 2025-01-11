@@ -81,10 +81,10 @@
   
 }
 
+// HEIGHT CHECK
 @media only screen and (max-height: 600px) {
   #about .card {
-    font-size: 12px; /* Adjusted font size for very small screens */
+    font-size: 12px;
     line-height: 2;
-
   }
 }
