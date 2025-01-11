@@ -1,9 +1,9 @@
 {
   "info": {
     "name": "Charles Archer",
-    "titles": ["Full Stack Software Engineer"],
+    "titles": ["Software Engineer"],
     "image": "headshot.jpg",
-    "logo": "logo.png",
+    "logo": "logo.svg",
     "description": "Welcome to my digital portfolio! I'm Charles Archer, a dynamic Software Engineer with a passion for crafting innovative solutions. My expertise lies in developing mission-critical software and advanced simulations, as showcased in my work in the aerospace industry. I thrive on enhancing system accuracy and reliability, leveraging languages like C++, Lua, and Python. Explore my diverse projects, from pioneering aerospace initiatives to creating a cryptocurrency trading bot and web applications for Non-Fungible Token projects. With a robust skill set in languages, frameworks, and cloud technologies, I am dedicated to driving future advancements in the field. Let's explore the possibilities together.",
     "social": [
       {

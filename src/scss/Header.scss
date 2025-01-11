@@ -1,25 +1,23 @@
 // Header Style
 
 #home {
-	min-height: 100vh;
+ min-height: 100vh;
  height: auto;
 }
 
 .title-styles {
-	font-size: 200%;
+	font-size: 250%;
 }
 
 .header-icon {
-	height: 150px;
-	width: 150px;
-	margin-bottom: 20px;
+	width: 18vw;
+	margin-bottom: 3%;
+	border-radius: 500%; /* Crop the image into a circle */
+	border: 2px solid;
 }
 
 header {
 	position: relative;
-	height: 520px;
-	min-height: 450px;
-	width: 100%;
 	background-size: cover;
 	-webkit-background-size: cover;
 	text-align: center;
@@ -27,15 +25,14 @@ header {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	padding-top: 150px;
-	padding-bottom: 0;
+	padding-top: 160px;
 }
 
 header h1 {
 	font-size: 350%;
 	text-align: center;
 	font-weight: 600 !important;
-	margin: 0 auto 18px auto;
+	margin: 0 auto 1% auto;
 	width: 100%;
 }
 
@@ -44,5 +41,18 @@ header h1 {
 }
 
 .header-icon-links {
-    font-size: 40px;
+    font-size: 400%;
+}
+
+// MOBILE
+@media only screen and (max-width: 768px) {
+	.header-icon {
+		width: 150px;
+		margin-bottom: 30px;
+	}
+
+	.spinner {
+		width: 150px;
+		height: 150px;
+	  }
 }

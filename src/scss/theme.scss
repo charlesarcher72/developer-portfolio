@@ -37,8 +37,11 @@ header {
     font-family: $font-family;
   }
 
+
   .header-icon {
     opacity: 0.8;
+    box-shadow: 0 0 10px 4px $font-accent-color; /* Slightly smaller glow effect */
+    border-color: $font-color;
   }
 
   .header-icon-links {
