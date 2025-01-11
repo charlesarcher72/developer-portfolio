@@ -8,17 +8,18 @@
 }
 
 #about h1 {
-  padding-top: 5%;
+  padding-top: 6%;
   padding-bottom: 1%;
   font-size: 200%;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   font-weight: 600 !important;
   text-align: center;
 }
 
 #about .profile_pic img {
   display: block;
-  max-width: 400px;
+  width: 18vw;
+  height: 18vw;
   border-radius: 50%;
 }
 
@@ -37,14 +38,15 @@
   transition: all .20s linear;
   z-index: 0;
   position: relative;
+  margin-bottom: 3%;
 }
 
 #about .card {
-  font-size: 120%;
+  font-size: 2vh;
   text-align: center;
-  line-height: 180%;
+  line-height: 3vh;
   border: none;
-  margin-bottom: 2%;
+  margin-bottom: 3%;
 }
 
 #about .res-button a {
@@ -60,10 +62,21 @@
 }
 
 // MOBILE
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
 
   #about h1 {
     font-size: 180%;
     padding-top: 50px;
   }
+
+  #about .profile_pic img {
+		width: 150px;
+		height: 150px;
+	}
+
+  #about .card {
+    font-size: 1.5vh;
+    line-height: 2.8vh;
+  }
+  
 }

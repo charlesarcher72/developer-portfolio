@@ -20,41 +20,22 @@
 	display: none;
 }
 
-  
-  .spinner {
-	border-radius: 50%;
-	margin: auto;
-	animation: spin 1s linear infinite;
-	width: 18vw;
-	height: 18vw;
-  }
-  
-  @keyframes spin {
-	0% {
-	  transform: rotate(0deg);
-	}
-	100% {
-	  transform: rotate(360deg);
-	}
-  }
-
-  
 .spinner {
 	border-radius: 50%;
 	margin: auto;
 	animation: spin 1s linear infinite;
 	width: 18vw;
 	height: 18vw;
-  }
+}
 
-  @keyframes spin {
+@keyframes spin {
 	0% {
-	  transform: rotate(0deg);
+		transform: rotate(0deg);
 	}
 	100% {
-	  transform: rotate(360deg);
+		transform: rotate(360deg);
 	}
-  }
+}
 
 header {
 	position: relative;
@@ -95,5 +76,4 @@ header h1 {
 		width: 150px;
 		height: 150px;
 	  }
-	  
 }
