@@ -62,16 +62,23 @@
   "experience": [
     {
       "company": "Lockheed Martin",
+      "title": "Deputy Product Owner",
+      "description": "Leading a team of 10+ engineers in developing a Command and Control (C2) system",
+      "years": "October 2024 - Present",
+      "technologies": ["Lua", "Jira", "Git", "Gitlab"]
+    },
+    {
+      "company": "Lockheed Martin",
       "title": "Senior Software Engineer",
-      "subtitle": "Advanced Development Programs",
-      "years": "July 2023 - Present",
-      "technologies": ["Lua", "C++", "Git", "Gitlab"]
+      "years": "May 2024 - Present",
+      "description": "Developing software for a Command and Control (C2) ground station to support air refueling operations",
+      "technologies": ["Lua", "C++", "Gitlab", "Python"]
     },
     {
       "company": "Lockheed Martin",
       "title": "Software Engineer",
-      "subtitle": "Simulation and System Test",
-      "years": "January 2021 - July 2023",
+      "years": "January 2021 - May 2024",
+      "description": "Developed software for a high-fidelity, real-time simulation system to simulate environmental data for pilot training devices",
       "technologies": ["C++", "Python", "Linux", "Bash"]
     }
   ],

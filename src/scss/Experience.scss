@@ -6,8 +6,8 @@
 }
 
 #experience h1 {
-	padding-top: 5%;
- padding-bottom: 1%;
+	padding-top: 6%;
+	padding-bottom: 1%;
 	font-size: 200%;
 	letter-spacing: 3px;
 	font-weight: 600 !important;
@@ -37,7 +37,7 @@
 }
 
 // MOBILE
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
 	#experience .col {
 		padding-bottom: 60%;
 	}
@@ -45,15 +45,11 @@
 	#experience h1 {
 		font-size: 180%;
 		padding-top: 50px;
-		padding-bottom: 25px;
 	}
-
 }
 
 @media only screen and (max-width: 1170px) {
 	.experience-icon {
 		font-size: 170%;
-		margin-top: 27%;
-		text-align: center;
 	}
 }
