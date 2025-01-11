@@ -40,8 +40,14 @@ header {
 
   .header-icon {
     opacity: 0.8;
-    box-shadow: 0 0 10px 4px $font-accent-color; /* Slightly smaller glow effect */
+    box-shadow: 0 0 10px 4px $font-accent-color;
     border-color: $font-color;
+  }
+
+  .spinner {
+    border: 4px solid $bg-accent-color;
+    border-left-color: $font-color;
+  
   }
 
   .header-icon-links {

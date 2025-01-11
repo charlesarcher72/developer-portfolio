@@ -6,11 +6,19 @@ class Header extends Component {
 
   constructor() {
     super();
-    this.state = { checked: false };
+    this.state = { 
+      checked: false,
+      iconLoaded: false
+    };
   }
+
+  handleImageLoad = () => {
+    this.setState({ iconLoaded: true });
+  };
 
   render() {
     const { info } = this.props.sharedData;
+    const { iconLoaded } = this.state;
 
     if (info) {
       const name = info.name;
@@ -30,11 +38,19 @@ class Header extends Component {
       ));
 
       return (
-        <header id="home" style={{display: "block" }}>
+        <header id="home" style={{ display: "block" }}>
           <div className="row aligner" style={{ height: '75%' }}>
             <div className="col-md-10">
               <div>
-                <img className="iconify header-icon" alt="logo" src={logo} />
+                {!iconLoaded && (
+                  <div className="spinner"></div>
+                )}
+                <img
+                  className="iconify header-icon"
+                  alt="logo"
+                  src={logo}
+                  onLoad={this.handleImageLoad}
+                />
                 <br />
                 <h1 className="mb-10">
                   <Typical steps={[name]} wrapper="p" />
