@@ -84,6 +84,14 @@
   ],
   "projects": [
     {
+      "title": "Musician Portfolio",
+      "date": "2024",
+      "description": "I developed a responsive musician portfolio website using React and hosted it on Vercel. The site serves as a landing page with links to social media, streaming platforms, and highlights of recent projects, offering a clean and mobile-friendly design.",
+      "images": [
+        "images/portfolio/musician-portfolio/main.png"
+      ]
+    },
+    {
       "title": "Silly Bot",
       "date": "2023",
       "description": "I designed and developed the front end and database for a cryptocurrency trading app, using React for the UI and MongoDB for efficient data storage. The app seamlessly integrates TradingView alerts via webhooks to execute transactions on Binance, featuring user-friendly functions like token management, transaction history, and profit analytics.",

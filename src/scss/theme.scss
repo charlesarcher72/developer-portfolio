@@ -128,24 +128,23 @@ header {
     font-family: $font-family;
   }
 
-  .pic div {
-    background: $font-color;
+  .project-card {
+    border-color: $font-color;
   }
 
-  .project-title-settings {
+  .project-title {
     color: $bg-color;
     font: $font-family;
   }
-}
 
-.project-date {
-  background-color: $bg-accent-color;
-  color: $font-color;
-  font-family: $font-family;
-}
-
-.project-description {
-  color: $bg-color;
+  .project-date {
+    color: $bg-color;
+    font: $font-family;
+  }
+  
+  .project-description {
+    color: $bg-color;
+  }
 }
 
 .modal-title,
@@ -159,6 +158,10 @@ header {
 }
 
 .slider-image {
+  border: 5px solid $font-color;
+}
+
+.single-image {
   border: 5px solid $font-color;
 }
 
