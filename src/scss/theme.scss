@@ -200,9 +200,7 @@ header {
     font-family: $font-family;
   }
 
-  &:hover {
-    background-color: $font-accent-color;
-  }
+  box-shadow: 0 0 5px $font-accent-color, 0 0 10px $font-accent-color;
 }
 
 // Services Style
