@@ -10,7 +10,6 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Services from "./components/Services";
-import Footer from "./components/Footer";
 
 // APP
 class App extends Component {
@@ -43,7 +42,6 @@ class App extends Component {
         <Projects sharedData={this.state.sharedData} />
         <Skills sharedData={this.state.sharedData} />
         <Services sharedData={this.state.sharedData} />
-        <Footer sharedData={this.state.sharedData} />
       </NavProvider>
     );
   }

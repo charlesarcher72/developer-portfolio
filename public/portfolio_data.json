@@ -134,9 +134,10 @@
   ],
   "services": {
     "icons": [
-      {"name": "FULL STACK DEVELOPMENT", "class": "col-0 fa fa-cogs"},
-      {"name": "WEB DESIGN", "class": "col-0 fa fa-globe"},
-      {"name": "SOFTWARE DEVELOPMENT", "class": "col-0 fa fa-code"}
+      {"name": "FULL STACK DEVELOPMENT", "class": "col-0 fa fa-code"},
+      {"name": "FRONT END DEVELOPMENT", "class": "col-0 fa fa-palette"},
+      {"name": "BACK END DEVELOPMENT", "class": "col-0 fa fa-cogs"},
+      {"name": "WEB DEVELOPMENT", "class": "col-0 fa fa-globe"}
     ]
   }
 }

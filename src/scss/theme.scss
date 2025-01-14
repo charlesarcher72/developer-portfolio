@@ -215,7 +215,7 @@ header {
   .services-tile {
     background-color: $font-color;
     font-family: $font-family;
-
+    border: none;
     i {
       color: $bg-color;
     }
@@ -245,4 +245,16 @@ footer {
   a:focus {
     color: $font-accent-color;
   }
+}
+
+#footer-icons-container {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	background-color: $bg-color;
+
 }

@@ -1,56 +1,68 @@
-/* Services Style */
+/* Services Section Styles */
 
 #services {
-  min-height: 75vh;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  width: 100%;
+  background-size: cover;
+	-webkit-background-size: cover;
+	text-align: center;
+	min-height: 100vh;
+	height: auto;
 }
 
-#services h1 {
-  padding-top: 5%;
-  font-size: 200%;
-  letter-spacing: 3px;
-  font-weight: 600 !important;
-  text-align: center;
-  margin: 0;
+.section-title {
+	padding-top: 8%;
+	font-size: 200%;
+	letter-spacing: 3px;
+	font-weight: 600 !important;
+	text-align: center;
+}
+
+.service-icon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  list-style-type: none;
+  padding: 0;
 }
 
 .services-tile {
-  padding: 10% 10% 5% 10%;
-  width: 350px;
-  height: 100%;
-  margin: 5% 0;
-  border-radius: 50px;
-}
-
-.services-icon {
-  font-size: 160%;
+  width: 300px;
+  padding: 20px;
+  border-radius: 20px;
   text-align: center;
-  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: none;
 }
 
+.services-tile:focus {
+  outline: none; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
 .services-tile:hover {
-  -webkit-transform: scale(1.01);
-  -moz-transform: scale(1.01);
-  transform: scale(1.01);
-  z-index: 10;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+  transform: translateY(-8px) scale(1.05);
 }
 
-/* MOBILE */
-@media only screen and (max-width: 480px) {
+.services-tile i {
+  font-size: 3rem;
+  transition: color 0.3s ease;
+}
+
+.service-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 15px;
+  transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
   .services-tile {
-      width: 200px;
-      border-radius: 10px;
-      font-size: 10px;
+    width: 250px;
+    padding: 15px;
   }
 
-  #services h1 {
-      font-size: 180%;
-      padding-top: 50px;
-  }
+	.section-title {
+		font-size: 180%;
+		padding-top: 50px;
+	}
 }

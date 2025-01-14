@@ -1,6 +1,9 @@
 /* Projects Style */
 
 #projects {
+	background-size: cover;
+	-webkit-background-size: cover;
+	text-align: center;
 	min-height: 100vh;
 	height: auto;
 }
@@ -24,7 +27,6 @@
 .project-item {
 	cursor: pointer;
 	transition: transform 0.3s ease;
-	height: 40vh;
 }
 
 .project-item:hover {
@@ -37,6 +39,8 @@
 	border-radius: 15px;
 	border: 2px solid;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	max-width: 80%;
+	margin: 0 auto;
 }
 
 .project-image {
