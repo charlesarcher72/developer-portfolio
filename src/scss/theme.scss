@@ -65,7 +65,7 @@ header {
 
 // About Style
 #about {
-  background-color: $bg-color;
+  background-color: $bg-accent-color;
 
   h1 span {
     color: $font-accent-color;
@@ -77,7 +77,7 @@ header {
   }
 
   .card {
-    background: $bg-color;
+    background: $bg-accent-color;
     color: $font-color;
     font-family: $font-family;
   }
@@ -121,7 +121,7 @@ header {
 
 // Projects Style
 #projects {
-  background-color: $bg-color;
+  background-color: $bg-accent-color;
 
   .section-title {
     color: $font-accent-color !important;
@@ -209,7 +209,7 @@ header {
 
 // Services Style
 #services {
-  background-color: $bg-color;
+  background-color: $bg-accent-color;
 
   h1 {
     color: $font-accent-color;
