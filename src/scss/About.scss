@@ -1,96 +1,120 @@
-// About Style
+/* About Style */
+
 #about {
-  background-size: cover;
-  -webkit-background-size: cover;
-  text-align: center;
-  min-height: 100vh;
-  height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    text-align: center;
+    min-width: 320px;
+    min-height: 800px;
+    height: 100vh;
+    box-sizing: border-box;
 }
 
 .center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #about h1 {
-  padding-top: 8%;
-  padding-bottom: 1%;
-  font-size: 200%;
-  letter-spacing: 4px;
-  font-weight: 600 !important;
-  text-align: center;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.2;
 }
 
 #about .profile_pic img {
-  display: block;
-  width: 18vw;
-  height: 18vw;
-  border-radius: 50%;
+    display: block;
+    width: 18vw;
+    height: 18vw;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 #about .profile_pic span {
-  display: inline-block;
-  margin: auto;
-  padding: 5px;
-  text-align: center;
-  border-radius: 50%;
-  text-decoration: none;
-  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
-  -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
-  -webkit-transition: all .20s linear;
-  -moz-transition: all .20s linear;
-  transition: all .20s linear;
-  z-index: 0;
-  position: relative;
-  margin-bottom: 3%;
+    display: inline-block;
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s linear;
+    position: relative;
+    margin-bottom: 3%;
 }
 
 #about .card {
-  font-size: 2em;
-  text-align: center;
-  line-height: 3vh;
-  border: none;
-  margin-bottom: 3%;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.5;
+    border: none;
+    margin-bottom: 3%;
+    padding: 10px;
 }
 
 #about .res-button a {
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  padding: 5px 20px;
-  font-size: 145%;
-  text-align: center;
-  text-decoration: none;
-  width: 130px;
-  border-radius: 8px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-// MOBILE
-@media only screen and (max-width: 768px) {
-
-  #about h1 {
-    font-size: 180%;
-    padding-top: 50px;
-  }
-
-  #about .profile_pic img {
-		width: 150px;
-		height: 150px;
+/* Responsive Adjustments */
+@media only screen and (max-width: 575px) {
+    #about {
+        min-height: 667px;
 	}
 
-  #about .card {
-    font-size: 1.5vh;
-    line-height: 2.8vh;
-  }
-  
+    #about h1 {
+        font-size: 1.5rem;
+    }
+
+    #about .profile_pic img {
+        width: 120px;
+        height: 120px;
+    }
+
+    #about .card {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    #about .res-button a {
+        font-size: 1rem;
+        padding: 8px 16px;
+        width: auto;
+    }
 }
 
-// HEIGHT CHECK
-@media only screen and (max-height: 600px) {
-  #about .card {
-    font-size: 12px;
-    line-height: 2;
-  }
+@media only screen and (max-height: 800px) {
+    #about h1 {
+        font-size: 1.5rem;
+    }
+
+    #about .profile_pic img {
+        width: 120px;
+        height: 120px;
+    }
+
+    #about .card {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    #about .res-button a {
+        font-size: 1rem;
+        padding: 8px 16px;
+        width: auto;
+    }
 }

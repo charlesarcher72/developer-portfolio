@@ -37,7 +37,7 @@ class ProjectModal extends Component {
           <i className="fas fa-times fa-3x close-icon"></i>
         </span>
         <div className="col-md-12">
-          <div className="col-md-12 mx-auto" style={{ paddingBottom: "10px" }}>
+          <div className="slider col-md-12 mx-auto" style={{ paddingBottom: "10px" }}>
             {img && img.length > 1 ? (
               <Slider
                 cssModule={[SliderStyle]}

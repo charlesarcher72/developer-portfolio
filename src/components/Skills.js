@@ -7,7 +7,7 @@ class Skills extends Component {
     if (skills && info) {
       var sectionName = info.section_name.skills;
       var skillsList = skills.icons.map((skill, i) => (
-        <li className="list-inline-item mx-3 my-5" key={i}>
+        <li className="list-inline-item mx-3 my-3" key={i}>
           <span>
             <div className="skills-tile">
               <i className={skill.class}>
@@ -22,9 +22,7 @@ class Skills extends Component {
     return (
       <section id="skills">
         <div className="col-md-12">
-          <div className="col-md-12">
-            <h1><span>{sectionName}</span></h1>
-          </div>
+          <h1><span>{sectionName}</span></h1>
           <div className="col-md-12 text-center">
             <ul className="list-inline mx-auto skill-icon">{skillsList}</ul>
           </div>

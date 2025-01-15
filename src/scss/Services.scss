@@ -1,68 +1,93 @@
-/* Services Section Styles */
+/* Services Styles */
 
 #services {
-  background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-size: cover;
 	-webkit-background-size: cover;
-	text-align: center;
-	min-height: 100vh;
-	height: auto;
+	min-width: 320px;
+	min-height: 800px;
+	height: 100vh;
+	box-sizing: border-box;
 }
 
-.section-title {
-	padding-top: 8%;
-	font-size: 200%;
-	letter-spacing: 3px;
-	font-weight: 600 !important;
+#services h1 {
+	padding-top: 10%;
+	padding-bottom: 2%;
+	font-size: 2rem;
+	letter-spacing: 4px;
+	font-weight: 600;
 	text-align: center;
+	line-height: 1.2;
 }
 
-.service-icon {
+.services-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
   list-style-type: none;
   padding: 0;
+  margin: 0;
+}
+
+.service-item {
+  width: 100%;
+  max-width: 400px;
 }
 
 .services-tile {
-  width: 300px;
-  padding: 20px;
-  border-radius: 20px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  border: none;
 }
 
-.services-tile:focus {
-  outline: none; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-}
 .services-tile:hover {
-  transform: translateY(-8px) scale(1.05);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .services-tile i {
   font-size: 3rem;
-  transition: color 0.3s ease;
+  margin-bottom: 1rem;
 }
 
 .service-name {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  margin-top: 15px;
-  transition: color 0.3s ease;
+  color: #333;
 }
 
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .services-tile {
-    width: 250px;
-    padding: 15px;
+
+  #services {
+    min-height: 667px;
   }
 
-	.section-title {
-		font-size: 180%;
-		padding-top: 50px;
-	}
+  #services h1 {
+    font-size: 1.5rem;
+  }
+
+  .services-tile {
+    padding: 1rem;
+  }
+
+  .services-tile i {
+    font-size: 2.5rem;
+  }
+
+  .service-name {
+    font-size: 1rem;
+  }
 }

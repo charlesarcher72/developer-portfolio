@@ -6,7 +6,6 @@ nav {
 	z-index: 10;
 	top: 0;
 	padding: 1.2em 0;
-	max-height: 4em;
 	text-align: center;
 }
 
@@ -27,8 +26,8 @@ nav span.activeClass {
 	border-bottom-color: var(--lightAccent);
 }
 
-// MOBILE
-@media only screen and (max-width: 768px) {
+/* Responsive Adjustments */
+@media only screen and (max-width: 575px) {
 	nav span {
 		font-size: 100%;
 	}

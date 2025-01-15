@@ -1,58 +1,123 @@
-// Experience Style
+/* Experience Style */
 
 #experience {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	background-size: cover;
 	-webkit-background-size: cover;
-	text-align: center;
-	min-height: 100vh;
-	height: auto;
+	min-width: 320px;
+	min-height: 800px;
+	height: 100vh;
+	box-sizing: border-box;
 }
 
 #experience h1 {
-	padding-top: 8%;
-	padding-bottom: 1%;
-	font-size: 200%;
-	letter-spacing: 3px;
-	font-weight: 600 !important;
+	padding-top: 10%;
+	font-size: 2rem;
+	letter-spacing: 4px;
+	font-weight: 600;
 	text-align: center;
+	line-height: 1.2;
+}
+
+#experience h3 {
+	font-size: 1.8rem;
+}
+
+#experience h4 {
+	font-size: 1.5rem;
+}
+
+#experience h5 {
+	font-size: 1.5rem;
+}
+
+#experience p {
+	font-size: 1.2rem;
 }
 
 .experience-icon {
-	font-size: 300%;
-	margin-top: 25%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
 	text-align: center;
-}
-
-.main-badge {
-	font-size: 12px !important;
-	text-align: left !important;
-	padding: 5px 8px 5px 8px !important;
-	vertical-align: baseline;
-	font-weight: lighter !important;
+	height: 100%;
 }
 
 .experience-badge {
-	font-size: 11px !important;
-	text-align: left !important;
-	padding: 5px 8px 5px 8px !important;
-	vertical-align: baseline;
-	font-weight: lighter !important;
+    font-size: 1rem !important;
+    text-align: left !important;
+    padding: 5px 8px !important;
+    vertical-align: baseline;
+    font-weight: lighter !important;
 }
 
-// MOBILE
-@media only screen and (max-width: 768px) {
-	#experience .col {
-		padding-bottom: 60%;
+/* Responsive Adjustments */
+@media only screen and (max-width: 575px) {
+	#experience {
+        min-height: 667px;
 	}
 
-	#experience h1 {
-		font-size: 180%;
-		padding-top: 50px;
-	}
+    #experience h1 {
+        font-size: 1.5rem;
+    }
+
+    #experience h3 {
+        font-size: 1rem;
+    }
+
+    #experience h4 {
+        font-size: 1rem;
+    }
+
+    #experience h5 {
+        font-size: 1rem;
+    }
+
+    #experience p {
+        font-size: 0.8rem;
+    }
+
+    .experience-icon {
+        font-size: 2rem;
+    }
+
+    .main-badge,
+    .experience-badge {
+        font-size: 0.625rem !important;
+    }
 }
 
-@media only screen and (max-width: 1170px) {
-	.experience-icon {
-		font-size: 170%;
-	}
+@media only screen and (max-height: 800px) {
+    #experience h1 {
+        font-size: 1.5rem;
+    }
+
+    #experience h3 {
+        font-size: 1rem;
+    }
+
+    #experience h4 {
+        font-size: 1rem;
+    }
+
+    #experience h5 {
+        font-size: 1rem;
+    }
+
+    #experience p {
+        font-size: 0.8rem;
+    }
+
+    .experience-icon {
+        font-size: 2rem;
+    }
+
+    .main-badge,
+    .experience-badge {
+        font-size: 0.625rem !important;
+    }
 }

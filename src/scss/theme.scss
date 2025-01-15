@@ -14,8 +14,8 @@ body, html {
 
 // Nav Style 
 nav {
-  color: $font-color;
-  background-color: $bg-color;
+  color: $bg-color;
+  background-color: $font-color;
   font-family: $font-family;
 
   span:hover {
@@ -121,7 +121,7 @@ header {
 
 // Projects Style
 #projects {
-  background: $bg-color;
+  background-color: $bg-color;
 
   .section-title {
     color: $font-accent-color !important;
@@ -145,6 +145,10 @@ header {
   .project-description {
     color: $bg-color;
   }
+}
+
+.slider nav {
+  color: $bg-color;
 }
 
 .modal-title,
