@@ -30,8 +30,8 @@ class Services extends Component {
 
     return (
       <section id="services">
+        <h1 className="section-title">{sectionName}</h1>
         <div className="container">
-          <h1 className="section-title">{sectionName}</h1>
           <ul className="services-list">{servicesList}</ul>
         </div>
       </section>

@@ -3,14 +3,14 @@
 #about {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-size: cover;
     -webkit-background-size: cover;
     text-align: center;
-    min-width: 320px;
-    min-height: 800px;
+    width: 100%;
     height: 100vh;
+	min-width: 320px;
     box-sizing: border-box;
 }
 
@@ -21,8 +21,8 @@
 }
 
 #about h1 {
-    padding-top: 10%;
-    padding-bottom: 5%;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
     font-size: 2rem;
     letter-spacing: 4px;
     font-weight: 600;
@@ -72,14 +72,6 @@
 
 /* Responsive Adjustments */
 @media only screen and (max-width: 575px) {
-    #about {
-        min-height: 667px;
-	}
-
-    #about h1 {
-        font-size: 1.5rem;
-    }
-
     #about .profile_pic img {
         width: 120px;
         height: 120px;
@@ -98,8 +90,8 @@
 }
 
 @media only screen and (max-height: 800px) {
-    #about h1 {
-        font-size: 1.5rem;
+    #about {
+        min-height: 800px;
     }
 
     #about .profile_pic img {

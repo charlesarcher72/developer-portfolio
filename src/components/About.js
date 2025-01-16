@@ -28,7 +28,7 @@ class About extends Component {
             </div>
             <div className="center">
               <div className="center col-md-8">
-                <div className="card center">{about} </div>
+                <div className="card center">{about}</div>
               </div>
             </div>
             <div className="res-button center">
