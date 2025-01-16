@@ -1,14 +1,14 @@
 #home {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-size: cover;
     -webkit-background-size: cover;
     text-align: center;
-    min-width: 320px;
-    min-height: 800px;
+    width: 100%;
     height: 100vh;
+    min-width: 320px;
     box-sizing: border-box;
 }
 
@@ -73,10 +73,21 @@ header h1 {
 }
 
 @media only screen and (max-width: 575px) {
-    #home {
-        min-height: 667px;
+    .header-icon.visible {
+        width: 150px;
+        margin-bottom: 30px;
     }
 
+    .spinner {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media only screen and (max-height: 800px) {
+    #home{
+        min-height: 800px;
+    }
     .header-icon.visible {
         width: 150px;
         margin-bottom: 30px;

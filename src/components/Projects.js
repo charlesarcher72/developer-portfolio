@@ -32,10 +32,10 @@ const Projects = ({ sharedData }) => {
         <h1 className="section-title">
           <span>{sectionName}</span>
         </h1>
-        <div className="row project-grid">
+        <div className="project-grid">
           {projects?.map((project) => (
             <div
-              className="col-sm-6 col-md-6 col-lg-5 project-item"
+              className="project-item"
               key={project.title}
               onClick={() => showModalHandler(project)}
             >

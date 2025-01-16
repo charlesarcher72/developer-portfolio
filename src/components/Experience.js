@@ -27,9 +27,10 @@ class Experience extends Component {
               border: "2px solid #A63636",
               textAlign: "center",
             }}
+            date={work.years}
             icon={<i className="fas fa-code experience-icon"></i>}
             key={i}
-            contentStyle={{ background: '#A63636', color: '#F7F6F2' }}
+            contentStyle={{ background: '#A63636', color: '#F7F6F2'}}
             contentArrowStyle={{ borderRight: '7px solid  #A63636' }}
           >
             <h3 className="vertical-timeline-element-title" style={{ textAlign: "left" }}>
@@ -38,10 +39,7 @@ class Experience extends Component {
             <h4 className="vertical-timeline-element-subtitle" style={{ textAlign: "left" }}>
               {work.company}
             </h4>
-            <h5 className="vertical-timeline-element-subtitle" style={{ textAlign: "left" }}>
-              {work.years}
-            </h5>
-            <p>{work.description}</p>
+            <p style={{ textAlign: "left", marginTop: "5px" }}>{work.description}</p>
             <div style={{ textAlign: "left", marginTop: "5px" }}>{tech}</div>
           </VerticalTimelineElement>
         );
@@ -54,7 +52,7 @@ class Experience extends Component {
               <span>{sectionName}</span>
             </h1>
             <div className="row center mx-auto mb-5">
-              <VerticalTimeline lineColor="#A63636">
+              <VerticalTimeline lineColor="#A63636" layout="1-column-left">
                 {workElements}
                 <VerticalTimelineElement
                   icon={<i className="fas fa-clock mx-auto experience-icon"></i>}

@@ -25,10 +25,12 @@
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
+    margin: 0px 20%;
 }
 
 .project-item {
     cursor: pointer;
+    margin: 1%;
     transition: transform 0.3s ease;
 }
 
@@ -40,16 +42,18 @@
     position: relative;
     overflow: hidden;
     border-radius: 15px;
-    width: 75%;
+    width: 25vw;
+    min-width: 200px;
     border: 2px solid;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 0 auto;
+    margin: 0 0;
     height: auto;
 }
 
 .project-image {
     display: block;
     width: 100%;
+    min-width: 200px;
     height: auto;
     object-fit: cover;
     transition: transform 0.3s ease;
@@ -135,26 +139,12 @@
         gap: 1rem;
     }
 
-    .project-card {
-        max-width: 50%;
-        height: auto;
-        margin-bottom: 1rem;
-    }
-
     .project-title {
         font-size: 1.2rem;
     }
 
     .project-date {
         font-size: 1rem;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .project-card {
-        max-width: 50%;
-        height: auto;
-        margin-bottom: 1rem;
     }
 }
 
