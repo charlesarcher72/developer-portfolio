@@ -1,92 +1,89 @@
-/* Header Style */
-
 #home {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background-size: cover;
-	-webkit-background-size: cover;
-	text-align: center;
-	min-width: 320px;
-	min-height: 800px;
-	height: 100vh;
-	box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    text-align: center;
+    min-width: 320px;
+    min-height: 800px;
+    height: 100vh;
+    box-sizing: border-box;
 }
 
 .title-styles {
-	font-size: 250%;
+    font-size: 250%;
 }
 
 .header-icon.visible {
-	width: 18vw;
-	margin-bottom: 3%;
-	border-radius: 50%;
-	border: 2px solid;
+    width: 18vw;
+    margin-bottom: 3%;
+    border-radius: 50%;
+    border: 2px solid;
 }
 
 .header-icon.hidden {
-	display: none;
+    display: none;
 }
 
 .spinner {
-	border-radius: 50%;
-	margin: auto;
-	animation: spin 1s linear infinite;
-	width: 18vw;
-	height: 18vw;
+    border-radius: 50%;
+    margin: auto;
+    animation: spin 1s linear infinite;
+    width: 18vw;
+    height: 18vw;
 }
 
 @keyframes spin {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 header {
-	position: relative;
-	background-size: cover;
-	-webkit-background-size: cover;
-	text-align: center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	padding-top: 160px;
+    position: relative;
+    background-size: cover;
+    -webkit-background-size: cover;
+    text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 160px;
 }
 
 header h1 {
-	font-size: 350%;
-	text-align: center;
-	font-weight: 600 !important;
-	margin: 0 auto 1% auto;
-	width: 100%;
+    font-size: 350%;
+    text-align: center;
+    font-weight: 600 !important;
+    margin: 0 auto 1% auto;
+    width: 100%;
 }
 
 .header-network-icons {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .header-icon-links {
     font-size: 400%;
 }
 
-/* Responsive Adjustments */
 @media only screen and (max-width: 575px) {
     #home {
         min-height: 667px;
-	}
+    }
 
-	.header-icon.visible {
-		width: 150px;
-		margin-bottom: 30px;
-	}
+    .header-icon.visible {
+        width: 150px;
+        margin-bottom: 30px;
+    }
 
-	.spinner {
-		width: 150px;
-		height: 150px;
-	  }
+    .spinner {
+        width: 150px;
+        height: 150px;
+    }
 }

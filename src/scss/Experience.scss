@@ -1,5 +1,3 @@
-/* Experience Style */
-
 #experience {
     display: flex;
     flex-direction: column;
@@ -9,42 +7,42 @@
     -webkit-background-size: cover;
     width: 100%;
     height: 100vh;
-	min-width: 320px;
+    min-width: 320px;
     box-sizing: border-box;
 }
 
 #experience h1 {
     padding-top: 10vh;
-	font-size: 2rem;
-	letter-spacing: 4px;
-	font-weight: 600;
-	text-align: center;
-	line-height: 1.2;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.2;
 }
 
 #experience h3 {
-	font-size: 1.8rem;
+    font-size: 1.8rem;
 }
 
 #experience h4 {
-	font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 #experience h5 {
-	font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 #experience p {
-	font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 
 .experience-icon {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 2rem;
-	text-align: center;
-	height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-align: center;
+    height: 100%;
 }
 
 .experience-badge {
@@ -55,7 +53,6 @@
     font-weight: lighter !important;
 }
 
-/* Responsive Adjustments */
 @media only screen and (max-width: 575px) {
     #experience h3 {
         font-size: 1rem;

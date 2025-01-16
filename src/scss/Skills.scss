@@ -7,52 +7,52 @@
     -webkit-background-size: cover;
     width: 100%;
     height: 100vh;
-	min-width: 320px;
+    min-width: 320px;
     box-sizing: border-box;
-  }
-  
-  #skills h1 {
-    padding-top: 10vh;
-	padding-bottom: 2vh;
-	font-size: 2rem;
-	letter-spacing: 4px;
-	font-weight: 600;
-	text-align: center;
-	line-height: 1.2;
 }
-  .skills-tile {
-	padding: 8% 8% 4% 8%;
-	width: 10rem;
-	height: 10rem;
-	border-radius: 25px;
-	background-color: #ffffff;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-	transition: box-shadow 0.3s ease-in-out;
-  }
   
-  .skill-icon {
-	font-size: 4rem;
-  }
-  
-  .skill-name {
-	font-size: 1rem;
-	margin-top: 8px;
-	text-align: center;
-  }
-  
-  .skills-tile div {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
-  }
+#skills h1 {
+    padding-top: 10vh;
+    padding-bottom: 2vh;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.2;
+}
 
-/* Responsive Adjustments */
+.skills-tile {
+    padding: 8% 8% 4% 8%;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 25px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+  
+.skill-icon {
+    font-size: 4rem;
+}
+  
+.skill-name {
+    font-size: 1rem;
+    margin-top: 8px;
+    text-align: center;
+}
+  
+.skills-tile div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
 @media only screen and (max-width: 660px) {
     .skills-tile {
         width: 5rem;
@@ -68,7 +68,6 @@
         font-size: 0.5rem;
     }
 
-
     .skills-tile p {
         margin-top: 6px;
         margin-bottom: 6px;
@@ -76,8 +75,8 @@
 }
 
 @media only screen and (max-height: 800px) {
-	#skills {
-		min-height: 800px;
+    #skills {
+        min-height: 800px;
 	}
 
     .skills-tile {
@@ -93,7 +92,6 @@
     .skill-name {
         font-size: 0.5rem;
     }
-
 
     .skills-tile p {
         margin-top: 6px;

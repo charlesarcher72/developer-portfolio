@@ -1,5 +1,3 @@
-/* Projects Style */
-
 #projects {
     display: flex;
     flex-direction: column;
@@ -14,171 +12,170 @@
 
 #projects h1 {
     padding-top: 10vh;
-	padding-bottom: 2vh;
-	font-size: 2rem;
-	letter-spacing: 4px;
-	font-weight: 600;
-	text-align: center;
-	line-height: 1.2;
+    padding-bottom: 2vh;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.2;
 }
 
 .project-grid {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 2rem;
-	justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
 }
 
 .project-item {
-	cursor: pointer;
-	transition: transform 0.3s ease;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .project-item:hover {
-	transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .project-card {
-	position: relative;
-	overflow: hidden;
-	border-radius: 15px;
-	border: 2px solid;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-	margin: 0 auto;
-	height: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 2px solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    height: auto;
 }
 
 .project-image {
-	display: block;
-	width: 100%;
-	height: auto;
-	object-fit: cover;
-	transition: transform 0.3s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
 .single-image {
-	width: 100%;
-	height: auto;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .project-card:hover .project-image {
-	transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .project-overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.7);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	opacity: 0;
-	transition: opacity 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .project-card:hover .project-overlay {
-	opacity: 1;
+    opacity: 1;
 }
 
 .project-title {
-	font-size: clamp(1rem, 2vw, 2rem);
-	font-weight: 600;
-	margin: 0;
-	color: #fff;
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-weight: 600;
+    margin: 0;
+    color: #fff;
 }
 
 .project-date {
-	font-size: clamp(0.9rem, 1.5vw, 1.5rem);
-	margin-top: 0.5rem;
-	color: #fff;
+    font-size: clamp(0.9rem, 1.5vw, 1.5rem);
+    margin-top: 0.5rem;
+    color: #fff;
 }
 
 .modal-close {
-	text-align: right;
-	padding: 10px 15px 10px 15px;
-	cursor: pointer;
+    text-align: right;
+    padding: 10px 15px 10px 15px;
+    cursor: pointer;
 }
 
 .close-icon {
-	font-weight: lighter !important;
+    font-weight: lighter !important;
 }
 
 .modal-title {
-	text-align: center;
-	text-transform: uppercase;
-	font-size: clamp(1.5rem, 2.5vw, 2rem);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
 }
 
 .modal-description {
-	padding: 5px;
-	margin-bottom: 20px;
-	font-size: clamp(1rem, 1.5vw, 1.2rem);
-	text-align: justify;
-	line-height: 180%;
+    padding: 5px;
+    margin-bottom: 20px;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    text-align: justify;
+    line-height: 180%;
 }
 
 .modal-inside .modal-content {
-	border-width: 3px;
-	border-radius: 25px;
+    border-width: 3px;
+    border-radius: 25px;
 }
 
 .slider nav {
-	max-height: 4em;
+    max-height: 4em;
 }
 
-/* Responsive Adjustments */
 @media only screen and (max-width: 575px) {
-	.project-grid {
-		gap: 1rem;
-	}
+    .project-grid {
+        gap: 1rem;
+    }
 
-	.project-card {
-		max-width: 50%;
-		height: auto;
-		margin-bottom: 1rem;
-	}
+    .project-card {
+        max-width: 50%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
 
-	.project-title {
-		font-size: 1.2rem;
-	}
+    .project-title {
+        font-size: 1.2rem;
+    }
 
-	.project-date {
-		font-size: 1rem;
-	}
+    .project-date {
+        font-size: 1rem;
+    }
 }
 
 @media only screen and (max-width: 992px) {
-	.project-card {
-		max-width: 50%;
-		height: auto;
-		margin-bottom: 1rem;
-	}
+    .project-card {
+        max-width: 50%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
 }
 
 @media only screen and (max-height: 800px) {
-	#projects {
-		min-height: 800px;
-	}
+    #projects {
+        min-height: 800px;
+    }
 
-	.project-grid {
-		gap: 1rem;
-	}
+    .project-grid {
+        gap: 1rem;
+    }
 
-	.project-title {
-		font-size: 1.2rem;
-	}
+    .project-title {
+        font-size: 1.2rem;
+    }
 
-	.project-date {
-		font-size: 1rem;
-	}
+    .project-date {
+        font-size: 1rem;
+    }
 
-	.project-card {
-		height: auto;
-		margin-bottom: 1rem;
-	}
+    .project-card {
+        height: auto;
+        margin-bottom: 1rem;
+    }
 }
