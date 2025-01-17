@@ -8,7 +8,7 @@ nav {
 }
 
 nav span {
-	  font-size: 200%;
+	  font-size: 2rem;
 	  border-bottom: 1px solid transparent;
 	  transition: border-bottom 0.2s ease;
 	  transition-delay: 0.25s;
@@ -26,12 +26,12 @@ nav span.activeClass {
 
 @media only screen and (max-width: 575px) {
 	  nav span {
-		    font-size: 0.8rem;
+		    font-size: 1rem;
     }
 }
 
 @media only screen and (max-height: 800px) {
   nav span {
-		  font-size: 0.8rem;
+		  font-size: 1rem;
 	  }
 }
