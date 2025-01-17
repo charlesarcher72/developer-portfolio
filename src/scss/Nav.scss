@@ -26,12 +26,12 @@ nav span.activeClass {
 
 @media only screen and (max-width: 575px) {
 	  nav span {
-		    font-size: 100%;
+		    font-size: 0.6rem;
     }
 }
 
 @media only screen and (max-height: 800px;) {
   nav span {
-		  font-size: 1rem;
+		  font-size: 0.6rem;
 	  }
 }
