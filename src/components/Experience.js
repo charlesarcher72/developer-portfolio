@@ -52,7 +52,7 @@ class Experience extends Component {
               <span>{sectionName}</span>
             </h1>
             <div className="row center mx-auto mb-5">
-              <VerticalTimeline lineColor="#A63636" layout="1-column-left">
+              <VerticalTimeline className="timeline" lineColor="#A63636" layout="1-column-left">
                 {workElements}
                 <VerticalTimelineElement
                   icon={<i className="fas fa-clock mx-auto experience-icon"></i>}
