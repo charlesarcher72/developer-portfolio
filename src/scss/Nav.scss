@@ -1,34 +1,37 @@
-// Nav Style
-
 nav {
-	width: 100vw;
-	position: fixed;
-	z-index: 10;
-	top: 0;
-	padding: 1.2em 0;
-	text-align: center;
+	  width: 100vw;
+	  position: fixed;
+	  z-index: 10;
+	  top: 0;
+	  padding: 1.2em 0;
+	  text-align: center;
 }
 
 nav span {
-	font-size: 200%;
-	border-bottom: 1px solid transparent;
-	transition: border-bottom 0.2s ease;
-	transition-delay: 0.25s;
-	margin: 2%;
-	padding-bottom: 0.3em;
+	  font-size: 200%;
+	  border-bottom: 1px solid transparent;
+	  transition: border-bottom 0.2s ease;
+	  transition-delay: 0.25s;
+	  margin: 2%;
+	  padding-bottom: 0.3em;
 }
 
 nav span:hover {
-	cursor: pointer;
+	  cursor: pointer;
 }
 
 nav span.activeClass {
-	border-bottom-color: var(--lightAccent);
+	  border-bottom-color: var(--lightAccent);
 }
 
-/* Responsive Adjustments */
 @media only screen and (max-width: 575px) {
-	nav span {
-		font-size: 100%;
-	}
+	  nav span {
+		    font-size: 100%;
+    }
+}
+
+@media only screen and (max-height: 800px;) {
+  nav span {
+		  font-size: 100%;
+	  }
 }
