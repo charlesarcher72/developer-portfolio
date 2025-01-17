@@ -68,7 +68,7 @@ header {
   background-color: $bg-accent-color;
 
   h1 span {
-    color: $font-accent-color;
+    color: $font-color;
     font-family: $font-family;
   }
 
@@ -100,7 +100,7 @@ header {
   background: $bg-color;
 
   h1 span {
-    color: $font-accent-color;
+    color: $font-color;
     font-family: $font-family;
   }
 
@@ -124,7 +124,7 @@ header {
   background-color: $bg-accent-color;
 
   .section-title {
-    color: $font-accent-color !important;
+    color: $font-color !important;
     font-family: $font-family;
   }
 
@@ -186,7 +186,7 @@ header {
   background-color: $bg-color;
 
   h1 {
-    color: $font-accent-color;
+    color: $font-color;
     font-family: $font-family;
   }
 }
@@ -212,7 +212,7 @@ header {
   background-color: $bg-accent-color;
 
   h1 {
-    color: $font-accent-color;
+    color: $font-color;
     font-family: $font-family;
   }
 
@@ -233,32 +233,4 @@ header {
       background-color: $font-accent-color;
     }
   }
-}
-
-// Footer Style
-footer {
-  background: $bg-color;
-  color: $font-color;
-
-  a,
-  a:visited {
-    color: $font-color;
-  }
-
-  a:hover,
-  a:focus {
-    color: $font-accent-color;
-  }
-}
-
-#footer-icons-container {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	padding: 10px;
-	background-color: $bg-color;
-
 }
