@@ -21,12 +21,12 @@ const NavLink = ({ navLinkId, scrollToId }) => {
 };
 
 const navLinks = [
-  { navLinkId: 'Home', scrollToId: 'home' },
-  { navLinkId: 'About', scrollToId: 'about' },
-  { navLinkId: 'Experience', scrollToId: 'experience' },
-  { navLinkId: 'Projects', scrollToId: 'projects' },
-  { navLinkId: 'Skills', scrollToId: 'skills' },
-  { navLinkId: 'Services', scrollToId: 'services' }
+  { navLinkId: 'HOME', scrollToId: 'home' },
+  { navLinkId: 'ABOUT', scrollToId: 'about' },
+  { navLinkId: 'EXPERIENCE', scrollToId: 'experience' },
+  { navLinkId: 'PROJECTS', scrollToId: 'projects' },
+  { navLinkId: 'SKILLS', scrollToId: 'skills' },
+  { navLinkId: 'SERVICES', scrollToId: 'services' }
 ];
 
 const Nav = () => {
