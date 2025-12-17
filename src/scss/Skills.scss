@@ -194,7 +194,7 @@
 
   i {
     font-size: 2rem;
-    color: var(--text-primary);
+    color: var(--accent-primary);
     transition: all var(--transition-base);
     display: block;
     margin: 0;
@@ -222,7 +222,7 @@
 .skill-name {
   font-size: 0.6875rem;
   font-weight: 500;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   text-align: center;
   font-family: var(--font-mono);
   letter-spacing: 0.02em;
