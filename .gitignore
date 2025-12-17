@@ -94,14 +94,6 @@ $RECYCLE.BIN/
 # TypeScript
 *.tsbuildinfo
 
-# Next.js (if used)
-.next/
-out/
-
-# Gatsby (if used)
-.cache/
-public
-
 # Vercel
 .vercel
 
