@@ -1,84 +1,241 @@
-# 🚀 Charles Archer's Developer Portfolio 🚀
+# Developer Portfolio
 
-## Overview
+A modern, responsive portfolio website built with React, featuring smooth animations, theme switching, and easy customization through JSON configuration.
 
-Welcome to my developer portfolio! 🌟 This project showcases my skills, projects, and experience as a software developer. It's built using React and hosted on Vercel.
+![Portfolio Preview](public/images/preview.png)
 
-## Live Demo
+## ✨ Features
 
-Check out the live demo [here](https://charlesarcher.me). 🌐
+- **Responsive Design** - Optimized for all device sizes
+- **Dark/Light Theme** - Seamless theme switching with persistent preferences
+- **Smooth Animations** - Engaging transitions and scroll effects
+- **Easy Customization** - Update content through a single JSON file
+- **Project Showcase** - Interactive project cards with modal galleries
+- **Skills Display** - Organized skill categories with icon integration
+- **Experience Timeline** - Professional work history presentation
+- **Contact Integration** - Direct email and social media links
 
-## Technologies Used
+## 🚀 Quick Start
 
-- [React](https://reactjs.org/) ⚛️
-- [Vercel](https://vercel.com/docs) 🚀
+### Prerequisites
 
-## Features
+- Node.js
+- npm or yarn
 
-- **Responsive Design:** Ensuring a seamless experience on various devices. 📱💻
-- **Project Showcase:** Highlighting key projects with descriptions and technologies used 🛠️🚀
-- **Skills and Expertise:** Showcasing the skills and technologies I'm proficient in. 💡
-- **Contact Information:** Ways for potential employers or collaborators to get in touch with me. 📬
+### Installation
 
-## Getting Started
+1. Clone the repository
+```bash
+git clone https://github.com/charlesarcher72/developer-portfolio.git
+cd developer-portfolio
+```
 
-To run the project locally:
+2. Install dependencies
+```bash
+npm install
+```
 
-1. Clone the repository:
-    ```bas
-    git clone https://github.com/charlesarcher72/developer-portfolio.git
-    ```
-2. Navigate to the project directory:
-   ```bash
-   cd your-portfolio
-3. Install dependencies
-    ```bash
-    npm install
-4. Run the development server
-    ```bash
-    npm start
-5. Open your browser and visit http://localhost:3000 to view the portfolio locally. 🌐
+3. Start the development server
+```bash
+npm start
+```
 
-## Customizing
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-To personalize this portfolio for yourself, follow these steps:
+## 📝 Customization
 
-1. Open the `portfolio.json` file and update the information with your own details. Here's a breakdown of the key sections:
-    - **info:** Update your personal details such as name, titles, images, and a brief description.
-    - **social:** Add or remove social media links as needed. Ensure you update the URLs and images.
-    - **section_name:** Customize section names for different parts of your portfolio.
-    - **skills:** Modify the skills section by adding or removing skills as necessary.
-    - **experience:** Add your professional experience details including company name, title, years, description, and technologies used.
-    - **projects:** Add details for your projects, including title, date, description, and images. Update image paths accordingly.
-    - **services:** Customize the services section by adding or removing service offerings.
+### Update Portfolio Content
 
-2. Replace the placeholder images in the `images` directory with your own headshot, logo, social media icons, project images, etc.
+All portfolio content is managed through `public/portfolio_data.json`. Simply edit this file to update:
 
-3. Ensure that all URLs in the JSON file point to your actual profiles, live demos, or images.
+- Personal information and bio
+- Skills and technologies
+- Work experience
+- Projects and case studies
+- Services offered
+- Social media links
 
-4. **Open the theme.scss file:**
-   Open the `theme.scss` file in your code editor. This file contains all the styles for your portfolio.
+### Example Configuration
 
-5. **Update Color Variables:**
-   - Locate the color variables at the beginning of the file. They look like this:
-     ```scss
-     $font-family: 'Roboto Mono', monospace;
-     $bg-color: #F7F6F2;
-     $font-color: #A63636;
-     $font-accent-color: #D3504A;
-     $bg-accent-color: #E4E1D4;
-     ```
-   - Replace the hex values (`#F7F6F2`, `#A63636`, `#D3504A`, `#E4E1D4`) with the desired colors for your theme.
+```json
+{
+  "info": {
+    "name": "Your Name",
+    "titles": ["Software Engineer", "Full Stack Developer"],
+    "description": "Your professional bio...",
+    "social": [
+      {
+        "name": "linkedin",
+        "url": "https://linkedin.com/in/yourprofile"
+      }
+    ]
+  }
+}
+```
 
-6. **Update Font Variables:**
-   - If you want to change the font, update the `$font-family` variable with the desired font name.
-     ```scss
-     $font-family: 'Your-Desired-Font', sans-serif;
-     ```
+### Add Your Images
 
-7. **Save the Changes:**
-   Save the `theme.scss` file after making the changes.
+Place your images in the `public/images/` directory:
+- `headshot.jpg` - Your profile photo
+- `logo-light.png` - Light theme logo
+- `logo-dark.png` - Dark theme logo
+- `icons/` - Social media icons (github.png, linkedin.png, mail.png)
+- `portfolio/` - Project screenshots organized in subdirectories
+  - Create a folder for each project (e.g., `portfolio/my-project/`)
+  - Add multiple images per project for the gallery view
+- `favicon.ico` - Browser tab icon (in public root)
+- `YourName_Resume.pdf` - Your resume file (in public root)
+
+### Theme Customization
+
+Modify theme colors in `src/scss/theme.scss`:
+
+```scss
+:root {
+  --primary-color: #your-color;
+  --background-color: #your-color;
+  // ... more variables
+}
+```
+
+## 🛠️ Technologies Used
+
+- **React** - UI framework
+- **React Bootstrap** - UI components
+- **SCSS** - Styling and theming
+- **React Typical** - Text animations
+- **Font Awesome & Devicon** - Icons
+
+## 📦 Project Structure
+
+```
+developer-portfolio/
+├── public/
+│   ├── images/
+│   ├── portfolio_data.json
+│   ├── index.html
+│   ├── manifest.json
+│   └── favicon.ico
+├── src/
+│   ├── components/          # React components
+│   │   ├── About.js
+│   │   ├── Experience.js
+│   │   ├── Footer.js
+│   │   ├── Header.js
+│   │   ├── Nav.js
+│   │   ├── ProjectModal.js
+│   │   ├── Projects.js
+│   │   ├── Services.js
+│   │   ├── Skills.js
+│   │   └── ThemeToggle.js
+│   ├── scss/               # Component stylesheets
+│   │   ├── About.scss
+│   │   ├── App.scss
+│   │   ├── Experience.scss
+│   │   ├── Footer.scss
+│   │   ├── Header.scss
+│   │   ├── Nav.scss
+│   │   ├── Projects.scss
+│   │   ├── Services.scss
+│   │   ├── Skills.scss
+│   │   ├── theme.scss      # Theme variables
+│   │   └── ThemeToggle.scss
+│   ├── context/            # React context providers
+│   │   └── NavContext.js
+│   ├── App.js              # Main app component
+│   ├── index.js            # Entry point
+│   ├── index.scss
+│   └── serviceWorker.js
+└── package.json
+```
+
+## 🎨 Components
+
+### Header
+Hero section with animated typing effect and binary rain background
+
+### Nav
+Sticky navigation bar with smooth scrolling and mobile menu
+
+### About
+Personal introduction with profile photo and resume download
+
+### Experience
+Professional work history with technologies used
+
+### Projects
+Interactive project showcase with image galleries and detailed modals
+
+### Skills
+Categorized skill display with icon integration
+
+### Services
+Offered services with email contact functionality
+
+### Footer
+Social media links and copyright information
+
+### ThemeToggle
+Dark/light theme switcher with persistent preferences
+
+## 📱 Responsive Breakpoints
+
+- Mobile: < 768px
+- Tablet: 768px - 1024px
+- Desktop: > 1024px
+
+## 🚢 Deployment
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Deploy to Vercel
+
+1. Install Vercel CLI
+```bash
+npm i -g vercel
+```
+
+2. Deploy
+```bash
+vercel
+```
+
+### Deploy to Netlify
+
+1. Build the project
+```bash
+npm run build
+```
+
+2. Drag and drop the `build` folder to Netlify
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to:
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📧 Contact
+
+Charles Archer - [@charlesarcher72](https://github.com/charlesarcher72)
+
+Project Link: [https://github.com/charlesarcher72/developer-portfolio](https://github.com/charlesarcher72/developer-portfolio)
+
+## 🙏 Acknowledgments
+
+- [React](https://reactjs.org/)
+- [Font Awesome](https://fontawesome.com/)
+- [Devicon](https://devicon.dev/)
+- [React Bootstrap](https://react-bootstrap.github.io/)
 
 ---
-### Feel free to reach out for any questions or feedback! 📧👋
-[![Powered by Vercel](https://img.shields.io/badge/Powered%20by-Vercel-blue)](https://vercel.com/) [![Built with React](https://img.shields.io/badge/Built%20with-React-blue)](https://reactjs.org/)
+
+Made with ❤️ by Charles Archer

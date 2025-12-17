@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../scss/Services.scss";
 
 class Services extends Component {
   capitalizeWords = (text) => {
@@ -10,29 +11,36 @@ class Services extends Component {
   render() {
     const { services, info } = this.props.sharedData;
 
-    const sectionName = info?.section_name?.services || "Services";
+    if (!services || !info) {
+      return null;
+    }
+
+    const sectionName = info?.section_name?.services || "SERVICES";
     const servicesList = services?.icons?.map((service, i) => {
       const subject = `Requesting ${this.capitalizeWords(service.name)}`;
       return (
-        <li className="service-item" key={i}>
+        <div className="service-item" key={i}>
           <button
-            className="services-tile text-center"
+            className="services-tile"
             onClick={() =>
-              (window.location.href = `mailto:?subject=${encodeURIComponent(subject)}`)
+              (window.location.href = `mailto:charlesarcher72@gmail.com?subject=${encodeURIComponent(subject)}`)
             }
+            aria-label={`Request ${service.name}`}
           >
             <i className={service.class}></i>
-            <p className="service-name">{service.name}</p>
+            <span className="service-name">{service.name}</span>
           </button>
-        </li>
+        </div>
       );
     });
 
     return (
       <section id="services">
-        <h1 className="section-title">{sectionName}</h1>
-        <div className="container">
-          <ul className="services-list">{servicesList}</ul>
+        <div className="services-container">
+          <h2 className="section-title">
+            <span>{sectionName}</span>
+          </h2>
+          <div className="services-grid">{servicesList}</div>
         </div>
       </section>
     );

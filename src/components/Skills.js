@@ -1,30 +1,48 @@
 import React, { Component } from "react";
+import "../scss/Skills.scss";
 
 class Skills extends Component {
   render() {
-    const { skills, info } = this.props.sharedData;
+    const { skills, info } = this.props.sharedData || {};
 
-    if (skills && info) {
-      var sectionName = info.section_name.skills;
-      var skillsList = skills.icons.map((skill, i) => (
-        <li className="list-inline-item mx-3 my-3" key={i}>
-          <span>
-            <div className="skills-tile">
-              <i className={skill.class}>
-                <p className="skill-name">{skill.name}</p>
-              </i>
-            </div>
-          </span>
-        </li>
-      ));
+    if (!skills || !info || !skills.categories) {
+      return null;
     }
+
+    const sectionName = info.section_name?.skills || "SKILLS";
 
     return (
       <section id="skills">
-        <div className="col-md-12">
-          <h1><span>{sectionName}</span></h1>
-          <div className="col-md-12 text-center">
-            <ul className="list-inline mx-auto skill-icon">{skillsList}</ul>
+        <div className="skills-container">
+          <h2 className="section-title">
+            <span>{sectionName}</span>
+          </h2>
+
+          <div className="categories-wrapper">
+            {skills.categories.map((category, categoryIndex) => (
+              <div
+                key={categoryIndex}
+                className="skill-category visible"
+              >
+                <h3 className="category-title">{category.name}</h3>
+                <div className="skills-grid">
+                  {category.items && category.items.map((skill, i) => (
+                    <div
+                      className="skill-item"
+                      key={i}
+                      style={{ '--delay': `${i * 0.05}s` }}
+                    >
+                      <div className="skills-tile">
+                        <div className="skill-icon-wrapper">
+                          <i className={skill.class}></i>
+                        </div>
+                        <p className="skill-name">{skill.name}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

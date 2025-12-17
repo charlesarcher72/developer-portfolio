@@ -1,33 +1,76 @@
 import React, { Component } from "react";
 import Typical from "react-typical";
+import "../scss/Header.scss";
 
 class Header extends Component {
   constructor() {
     super();
     this.state = { 
-      iconLoaded: false 
+      iconLoaded: false,
+      currentTheme: 'light'
     };
   }
+
+  componentDidMount() {
+    this.updateTheme();
+    this.themeObserver = new MutationObserver(() => {
+      this.updateTheme();
+    });
+    
+    this.themeObserver.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme']
+    });
+  }
+
+  componentWillUnmount() {
+    if (this.themeObserver) {
+      this.themeObserver.disconnect();
+    }
+  }
+
+  updateTheme = () => {
+    const theme = document.documentElement.getAttribute('data-theme') || 'light';
+    if (theme !== this.state.currentTheme) {
+      this.setState({ 
+        currentTheme: theme,
+        iconLoaded: false
+      });
+    }
+  };
 
   handleImageLoad = () => {
     this.setState({ iconLoaded: true });
   };
 
+  generateBinaryString = (length) => {
+    return Array.from({ length }, () => Math.random() > 0.5 ? '1' : '0').join('');
+  };
+
   render() {
     const { info } = this.props.sharedData;
-    const { iconLoaded } = this.state;
+    const { iconLoaded, currentTheme } = this.state;
 
     if (info) {
       const name = info.name;
-      const logo = `images/${info.logo}`;
+      
+      const logoFilename = typeof info.logo === 'object' 
+        ? info.logo[currentTheme] 
+        : info.logo;
+      const logo = `images/${logoFilename}`;
+      
       const titles = info.titles.map((x) => [x.toUpperCase(), 1500]).flat();
 
       const networks = info.social.map((network) => (
-        <span key={network.name} className="m-4">
-          <a href={network.url} target="_blank" rel="noopener noreferrer">
-            <i className={network.class}></i>
-          </a>
-        </span>
+        <a 
+          key={network.name} 
+          href={network.url} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          aria-label={network.name}
+        >
+          <i className={network.class}></i>
+        </a>
       ));
 
       const HeaderTitleTypeAnimation = React.memo(() => (
@@ -35,28 +78,48 @@ class Header extends Component {
       ));
 
       return (
-        <header id="home" style={{ display: "block" }}>
-          <div className="row aligner" style={{ height: '75%' }}>
-            <div className="col-md-10">
-              <div>
-                {!iconLoaded && (
-                  <div className="spinner"></div>
-                )}
-                <img
-                  className={`iconify header-icon ${iconLoaded ? 'visible' : 'hidden'}`}
-                  alt="logo"
-                  src={logo}
-                  onLoad={this.handleImageLoad}
-                />
-                <br />
-                <h1 className="mb-10">
-                  <Typical steps={[name]} wrapper="p" />
-                </h1>
-                <div className="title-container">
-                  <HeaderTitleTypeAnimation />
+        <header id="home">
+          <div className="header-background">
+            <div className="code-glow glow-1"></div>
+            <div className="code-glow glow-2"></div>
+            
+            <div className="binary-rain">
+              {[...Array(10)].map((_, i) => (
+                <div key={i} className="binary-col">
+                  {[...Array(40)].map((_, j) => (
+                    <React.Fragment key={j}>
+                      {this.generateBinaryString(1)}<br/>
+                    </React.Fragment>
+                  ))}
                 </div>
-                <div className="header-icon-links">{networks}</div>
-              </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="header-content">
+            <div className="header-logo-container">
+              {!iconLoaded && (
+                <div className="spinner"></div>
+              )}
+              <img
+                className={`header-icon ${iconLoaded ? 'visible' : 'hidden'}`}
+                alt="logo"
+                src={logo}
+                onLoad={this.handleImageLoad}
+                key={logo}
+              />
+            </div>
+            
+            <div className="header-name">
+              <Typical steps={[name]} wrapper="p" />
+            </div>
+            
+            <div className="title-container">
+              <HeaderTitleTypeAnimation />
+            </div>
+            
+            <div className="header-icon-links">
+              {networks}
             </div>
           </div>
         </header>

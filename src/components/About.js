@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../scss/About.scss";
 
 class About extends Component {
   render() {
@@ -8,37 +9,41 @@ class About extends Component {
       return null;
     }
 
-    var profilepic = "images/" + sharedData.info.image;
-    var sectionName = sharedData.info.section_name.about;
-    var about = sharedData.info.description;
+    const profilepic = "images/" + sharedData.info.image;
+    const sectionName = sharedData.info.section_name.about;
+    const about = sharedData.info.description;
 
     return (
       <section id="about">
-        <div className="col-md-12">
-          <h1>
+        <div className="about-container">
+          <h2 className="section-title">
             <span>{sectionName}</span>
-          </h1>
-          <div className="row center mx-auto mb-5">
-            <div className="mb-3 center">
-              <div className="profile_pic">
-                <span style={{ cursor: "auto" }}>
-                  <img height="200px" src={profilepic} alt="Me" />
-                </span>
+          </h2>
+          
+          <div className="about-content">
+            <div className="profile-section">
+              <div className="profile-pic-container">
+                <div className="profile_pic">
+                  <img src={profilepic} alt={sharedData.info.name} />
+                </div>
+              </div>
+              
+              <div className="res-button">
+                <a
+                  href="Charles_Archer_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fas fa-file"></i>
+                  Resume
+                </a>
               </div>
             </div>
-            <div className="center">
-              <div className="center col-md-8">
-                <div className="card center">{about}</div>
+            
+            <div className="about-text">
+              <div className="about-description">
+                {about}
               </div>
-            </div>
-            <div className="res-button center">
-              <a
-                href="Charles_Archer_Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                RESUME
-              </a>
             </div>
           </div>
         </div>

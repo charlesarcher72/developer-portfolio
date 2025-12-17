@@ -3,7 +3,10 @@
     "name": "Charles Archer",
     "titles": ["Software Engineer"],
     "image": "headshot.jpg",
-    "logo": "logo.svg",
+    "logo": {
+      "light": "logo-light.png",
+      "dark": "logo-dark.png"
+    },
     "description": "Welcome to my digital portfolio! I'm Charles Archer, a dynamic Software Engineer with a passion for crafting innovative solutions. My expertise lies in developing mission-critical software and advanced simulations, as showcased in my work in the aerospace industry. I thrive on enhancing system accuracy and reliability, leveraging languages like C++, Lua, and Python. Explore my diverse projects, from pioneering aerospace initiatives to creating a cryptocurrency trading bot and web applications for Non-Fungible Token projects. With a robust skill set in languages, frameworks, and cloud technologies, I am dedicated to driving future advancements in the field. Let's explore the possibilities together.",
     "social": [
       {
@@ -34,33 +37,58 @@
     }
   },
   "skills": {
-    "icons": [
-      {"name": "BASH", "class": "devicon-bash-plain"},
-      {"name": "C", "class": "devicon-c-plain"},
-      {"name": "C++", "class": "devicon-cplusplus-plain"},
-      {"name": "CSS", "class": "devicon-css3-plain"},
-      {"name": "HTML", "class": "devicon-html5-plain"},
-      {"name": "JAVA", "class": "devicon-java-plain"},
-      {"name": "JAVASCRIPT", "class": "devicon-javascript-plain"},
-      {"name": "LUA", "class": "devicon-lua-plain"},
-      {"name": "PYTHON", "class": "devicon-python-plain"},
-      {"name": "REACT", "class": "devicon-react-plain"},
-      {"name": "VUE", "class": "devicon-vuejs-plain"},
-      {"name": "BITBUCKET", "class": "devicon-bitbucket-original"},
-      {"name": "CONFLUENCE", "class": "devicon-confluence-plain"},
-      {"name": "GIT", "class": "devicon-git-plain"},
-      {"name": "GITLAB", "class": "devicon-gitlab-plain"},
-      {"name": "GITHUB", "class": "devicon-github-plain"},
-      {"name": "JIRA", "class": "devicon-jira-plain"},
-      {"name": "AWS", "class": "devicon-amazonwebservices-plain"},
-      {"name": "VERCEL", "class": "devicon-vercel-original"},
-      {"name": "LINUX", "class": "devicon-linux-plain"},
-      {"name": "MACOS", "class": "devicon-apple-plain"},
-      {"name": "WINDOWS", "class": "devicon-windows8-plain"},
-      {"name": "ECLIPSE", "class": "fas fa-eclipse"},
-      {"name": "VSCODE", "class": "devicon-vscode-plain"}
+    "categories": [
+      {
+        "name": "Languages",
+        "items": [
+          {"name": "C", "class": "devicon-c-plain"},
+          {"name": "C++", "class": "devicon-cplusplus-plain"},
+          {"name": "PYTHON", "class": "devicon-python-plain"},
+          {"name": "JAVASCRIPT", "class": "devicon-javascript-plain"},
+          {"name": "LUA", "class": "devicon-lua-plain"},
+          {"name": "JAVA", "class": "devicon-java-plain"},
+          {"name": "BASH", "class": "devicon-bash-plain"},
+          {"name": "HTML", "class": "devicon-html5-plain"},
+          {"name": "CSS", "class": "devicon-css3-plain"}
+        ]
+      },
+      {
+        "name": "Frameworks & Libraries",
+        "items": [
+          {"name": "REACT", "class": "devicon-react-plain"},
+          {"name": "VUE", "class": "devicon-vuejs-plain"}
+        ]
+      },
+      {
+        "name": "Tools & Platforms",
+        "items": [
+          {"name": "GIT", "class": "devicon-git-plain"},
+          {"name": "GITHUB", "class": "devicon-github-plain"},
+          {"name": "GITLAB", "class": "devicon-gitlab-plain"},
+          {"name": "BITBUCKET", "class": "devicon-bitbucket-original"},
+          {"name": "JIRA", "class": "devicon-jira-plain"},
+          {"name": "CONFLUENCE", "class": "devicon-confluence-plain"},
+          {"name": "VSCODE", "class": "devicon-vscode-plain"},
+          {"name": "ECLIPSE", "class": "fas fa-eclipse"}
+        ]
+      },
+      {
+        "name": "Cloud & Deployment",
+        "items": [
+          {"name": "AWS", "class": "devicon-amazonwebservices-plain"},
+          {"name": "VERCEL", "class": "devicon-vercel-original"}
+        ]
+      },
+      {
+        "name": "Operating Systems",
+        "items": [
+          {"name": "LINUX", "class": "devicon-linux-plain"},
+          {"name": "MACOS", "class": "devicon-apple-plain"},
+          {"name": "WINDOWS", "class": "devicon-windows8-plain"}
+        ]
+      }
     ]
-  },  
+  },
   "experience": [
     {
       "company": "Lockheed Martin",
