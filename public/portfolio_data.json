@@ -119,22 +119,6 @@
   ],
   "projects": [
     {
-      "title": "KEVIN - Social Review Platform",
-      "date": "2024",
-      "description": "Developed a full-stack React Native social review application with AWS Amplify backend. Features include Cognito authentication, S3 image storage, AppSync GraphQL API, customizable user profiles, review posting with ratings and images, venue tagging, following/follower system, threaded comments, and real-time like functionality. Built with cross-platform compatibility for web, iOS, and Android with configurable architecture supporting any review format.",
-      "images": [
-        "images/portfolio/kevin/main.png"
-      ]
-    },
-    {
-      "title": "Monaco - Real Estate AI Assistant",
-      "date": "2024",
-      "description": "Built an AI-powered real estate chatbot using React Native and AWS Amplify. Features conversational interface with voice and text chat enabling agents to query MLS listings, analyze market trends, manage leads, and automate workflows. Includes automated CMA document generation producing professional reports with property images, comparable sales analysis, and market positioning recommendations.",
-      "images": [
-        "images/portfolio/monaco/main.png"
-      ]
-    },
-    {
       "title": "Musician Portfolio",
       "date": "2024",
       "description": "I developed a responsive musician portfolio website using React and hosted it on Vercel. The site serves as a landing page with links to social media, streaming platforms, and highlights of recent projects, offering a clean and mobile-friendly design.",
@@ -187,7 +171,11 @@
       {"name": "BACK END DEVELOPMENT", "class": "col-0 fa fa-cogs"},
       {"name": "WEB DEVELOPMENT", "class": "col-0 fa fa-globe"},
       {"name": "MOBILE DEVELOPMENT", "class": "col-0 fa fa-mobile-alt"},
-      {"name": "TECHNICAL LEADERSHIP", "class": "col-0 fa fa-users"}
+      {"name": "TECHNICAL LEADERSHIP", "class": "col-0 fa fa-users"},
+      {"name": "UI/UX DESIGN", "class": "col-0 fa fa-pencil-ruler"},
+      {"name": "CLOUD SOLUTIONS", "class": "col-0 fa fa-cloud"},
+      {"name": "GRAPHIC DESIGN", "class": "col-0 fa fa-paint-brush"},
+      {"name": "AUTOMATION", "class": "col-0 fa fa-robot"}
     ]
   }
 }
