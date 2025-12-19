@@ -30,7 +30,7 @@ class About extends Component {
               
               <div className="res-button">
                 <a
-                  href="Charles_Archer_Resume.pdf"
+                  href="https://drive.google.com/file/d/1XaCkiQAn_rlJVb89y7zFBgkHsA0QUXzP/view"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

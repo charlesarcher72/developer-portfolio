@@ -7,7 +7,7 @@
       "light": "logo-light.png",
       "dark": "logo-dark.png"
     },
-    "description": "Welcome to my digital portfolio! I'm Charles Archer, a dynamic Software Engineer with a passion for crafting innovative solutions. My expertise lies in developing mission-critical software and advanced simulations, as showcased in my work in the aerospace industry. I thrive on enhancing system accuracy and reliability, leveraging languages like C++, Lua, and Python. Explore my diverse projects, from pioneering aerospace initiatives to creating a cryptocurrency trading bot and web applications for Non-Fungible Token projects. With a robust skill set in languages, frameworks, and cloud technologies, I am dedicated to driving future advancements in the field. Let's explore the possibilities together.",
+    "description": "I'm Charles Archer, a Senior Software Engineer specializing in full-stack development and technical leadership. I lead engineering teams in developing mission-critical aerospace systems while also building modern web and mobile applications. My expertise spans from low-level systems programming to cloud-native applications, working across the full technology stack. Whether developing command and control systems, building cross-platform mobile apps with React Native and AWS, or creating intuitive web experiences, I bring technical excellence and proven leadership to every project. Let's build something remarkable together.",
     "social": [
       {
         "name": "linkedin",
@@ -43,40 +43,45 @@
         "items": [
           {"name": "C", "class": "devicon-c-plain"},
           {"name": "C++", "class": "devicon-cplusplus-plain"},
-          {"name": "PYTHON", "class": "devicon-python-plain"},
+          {"name": "JAVA", "class": "devicon-java-plain"},
           {"name": "JAVASCRIPT", "class": "devicon-javascript-plain"},
           {"name": "LUA", "class": "devicon-lua-plain"},
-          {"name": "JAVA", "class": "devicon-java-plain"},
-          {"name": "BASH", "class": "devicon-bash-plain"},
+          {"name": "PYTHON", "class": "devicon-python-plain"},
+          {"name": "TYPESCRIPT", "class": "devicon-typescript-plain"}
+        ]
+      },
+      {
+        "name": "Frontend",
+        "items": [
+          {"name": "CSS", "class": "devicon-css3-plain"},
+          {"name": "EXPO", "class": "fas fa-mobile-alt"},
           {"name": "HTML", "class": "devicon-html5-plain"},
-          {"name": "CSS", "class": "devicon-css3-plain"}
-        ]
-      },
-      {
-        "name": "Frameworks & Libraries",
-        "items": [
           {"name": "REACT", "class": "devicon-react-plain"},
-          {"name": "VUE", "class": "devicon-vuejs-plain"}
+          {"name": "REACT NATIVE", "class": "devicon-react-plain"},
+          {"name": "VUE.JS", "class": "devicon-vuejs-plain"}
         ]
       },
       {
-        "name": "Tools & Platforms",
+        "name": "Backend & Cloud",
         "items": [
+          {"name": "AWS", "class": "devicon-amazonwebservices-plain"},
+          {"name": "AMPLIFY", "class": "fas fa-rocket"},
+          {"name": "COGNITO", "class": "fas fa-user-shield"},
+          {"name": "S3", "class": "fas fa-database"},
+          {"name": "MONGODB", "class": "devicon-mongodb-plain"},
+          {"name": "VERCEL", "class": "devicon-vercel-original"}
+        ]
+      },
+      {
+        "name": "Development Tools",
+        "items": [
+          {"name": "BITBUCKET", "class": "devicon-bitbucket-original"},
+          {"name": "CONFLUENCE", "class": "devicon-confluence-plain"},
           {"name": "GIT", "class": "devicon-git-plain"},
           {"name": "GITHUB", "class": "devicon-github-plain"},
           {"name": "GITLAB", "class": "devicon-gitlab-plain"},
-          {"name": "BITBUCKET", "class": "devicon-bitbucket-original"},
           {"name": "JIRA", "class": "devicon-jira-plain"},
-          {"name": "CONFLUENCE", "class": "devicon-confluence-plain"},
-          {"name": "VSCODE", "class": "devicon-vscode-plain"},
-          {"name": "ECLIPSE", "class": "fas fa-eclipse"}
-        ]
-      },
-      {
-        "name": "Cloud & Deployment",
-        "items": [
-          {"name": "AWS", "class": "devicon-amazonwebservices-plain"},
-          {"name": "VERCEL", "class": "devicon-vercel-original"}
+          {"name": "VS CODE", "class": "devicon-vscode-plain"}
         ]
       },
       {
@@ -113,6 +118,22 @@
     }
   ],
   "projects": [
+    {
+      "title": "KEVIN - Social Review Platform",
+      "date": "2024",
+      "description": "Developed a full-stack React Native social review application with AWS Amplify backend. Features include Cognito authentication, S3 image storage, AppSync GraphQL API, customizable user profiles, review posting with ratings and images, venue tagging, following/follower system, threaded comments, and real-time like functionality. Built with cross-platform compatibility for web, iOS, and Android with configurable architecture supporting any review format.",
+      "images": [
+        "images/portfolio/kevin/main.png"
+      ]
+    },
+    {
+      "title": "Monaco - Real Estate AI Assistant",
+      "date": "2024",
+      "description": "Built an AI-powered real estate chatbot using React Native and AWS Amplify. Features conversational interface with voice and text chat enabling agents to query MLS listings, analyze market trends, manage leads, and automate workflows. Includes automated CMA document generation producing professional reports with property images, comparable sales analysis, and market positioning recommendations.",
+      "images": [
+        "images/portfolio/monaco/main.png"
+      ]
+    },
     {
       "title": "Musician Portfolio",
       "date": "2024",
@@ -164,7 +185,9 @@
       {"name": "FULL STACK DEVELOPMENT", "class": "col-0 fa fa-code"},
       {"name": "FRONT END DEVELOPMENT", "class": "col-0 fa fa-palette"},
       {"name": "BACK END DEVELOPMENT", "class": "col-0 fa fa-cogs"},
-      {"name": "WEB DEVELOPMENT", "class": "col-0 fa fa-globe"}
+      {"name": "WEB DEVELOPMENT", "class": "col-0 fa fa-globe"},
+      {"name": "MOBILE DEVELOPMENT", "class": "col-0 fa fa-mobile-alt"},
+      {"name": "TECHNICAL LEADERSHIP", "class": "col-0 fa fa-users"}
     ]
   }
 }
