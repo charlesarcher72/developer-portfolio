@@ -34,7 +34,16 @@
       "experience": "EXPERIENCE",
       "projects": "PROJECTS",
       "services": "SERVICES"
-    }
+    },
+    "education": [
+      {
+        "institution": "The University of Alabama",
+        "degree": "BS in Computer Engineering",
+        "honors": "Magna Cum Laude",
+        "minors": ["Computer Science", "Mathematics"],
+        "graduation": "December 2020"
+      }
+    ]
   },
   "skills": {
     "categories": [
