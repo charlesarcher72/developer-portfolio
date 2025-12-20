@@ -51,8 +51,6 @@ class About extends Component {
     const sectionName = sharedData.info.section_name.about;
     const about = sharedData.info.description;
     const education = sharedData.info.education;
-    
-    // Derive stats from other data
     const yearsExp = this.calculateYearsExperience(sharedData.experience);
     const projectCount = sharedData.projects ? sharedData.projects.length : 0;
     const techCount = this.countTechnologies(sharedData.skills);
@@ -96,21 +94,21 @@ class About extends Component {
                   <div className="about-main-text">
                     {about}
                   </div>
-
-                  <div className="about-stats">
-                    <div className="stat-item">
-                      <span className="stat-value">{yearsExp}+</span>
-                      <span className="stat-label">years</span>
-                    </div>
-                    <div className="stat-item">
-                      <span className="stat-value">{projectCount}</span>
-                      <span className="stat-label">projects</span>
-                    </div>
-                    <div className="stat-item">
-                      <span className="stat-value">{techCount}</span>
-                      <span className="stat-label">skills</span>
-                    </div>
-                  </div>
+                </div>
+              </div>
+              
+              <div className="about-stats">
+                <div className="stat-item">
+                  <span className="stat-value">{yearsExp}+</span>
+                  <span className="stat-label">years</span>
+                </div>
+                <div className="stat-item">
+                  <span className="stat-value">{projectCount}</span>
+                  <span className="stat-label">projects</span>
+                </div>
+                <div className="stat-item">
+                  <span className="stat-value">{techCount}</span>
+                  <span className="stat-label">skills</span>
                 </div>
               </div>
             </div>
@@ -122,7 +120,7 @@ class About extends Component {
                 rel="noopener noreferrer"
               >
                 <i className="fas fa-file"></i>
-                Resume
+                <span>Resume</span>
               </a>
             </div>
           </div>
