@@ -105,25 +105,32 @@
   },
   "experience": [
     {
-      "company": "Lockheed Martin",
+      "company": "Lockheed Martin Aeronautics",
       "title": "Deputy Product Owner",
-      "description": "Leading a team of 10+ engineers in developing a Command and Control (C2) system",
+      "description": "Leading a team of 10+ engineers in developing a Command and Control (C2) system for air refueling operations through code reviews, feature integration, and stakeholder coordination.",
       "years": "October 2024 - Present",
-      "technologies": ["Lua", "Jira", "Git", "Gitlab"]
+      "technologies": ["Lua", "Jira", "Git", "Gitlab", "Leadership"]
     },
     {
-      "company": "Lockheed Martin",
+      "company": "Lockheed Martin Aeronautics",
       "title": "Senior Software Engineer",
       "years": "May 2024 - Present",
-      "description": "Developing software for a Command and Control (C2) ground station to support air refueling operations",
+      "description": "Developing software for Command and Control (C2) ground stations supporting multiple unmanned aerial vehicle platforms, delivering mission-critical capabilities and cutting-edge pilot vehicle interfaces.",
       "technologies": ["Lua", "C++", "Gitlab", "Python"]
     },
     {
-      "company": "Lockheed Martin",
+      "company": "Lockheed Martin Aeronautics",
       "title": "Software Engineer",
-      "years": "January 2021 - May 2024",
-      "description": "Developed software for a high-fidelity, real-time simulation system to simulate environmental data for pilot training devices",
-      "technologies": ["C++", "Python", "Linux", "Bash"]
+      "years": "August 2022 - May 2024",
+      "description": "Developed software for a high-fidelity, real-time simulation system to simulate environmental data for pilot training devices and contributed to Command and Control (C2) ground station development.",
+      "technologies": ["C++", "Python", "Linux", "Bash", "Lua"]
+    },
+    {
+      "company": "Lockheed Martin Aeronautics",
+      "title": "Associate Software Engineer",
+      "years": "January 2021 - August 2022",
+      "description": "Supported a high-fidelity, real-time simulation software system by diagnosing and resolving complex defects and streamlining data manipulation processes to improve efficiency.",
+      "technologies": ["C++", "XML", "Shell", "Python", "Linux"]
     }
   ],
   "projects": [
