@@ -151,7 +151,7 @@
         "images/portfolio/kevin/10.png",
         "images/portfolio/kevin/11.png"
       ],
-      "technologies": ["React Native", "AWS Amplify", "AWS Cognito", "AWS S3", "AWS AppSync", "GraphQL", "TypeScript"],
+      "technologies": ["React Native", "Expo", "AWS ", "TypeScript"],
       "features": [
         "Cognito authentication with customizable profiles",
         "Review posting with ratings, images, and venue tagging",
@@ -159,7 +159,8 @@
         "Threaded comments with like functionality",
         "Real-time updates via GraphQL",
         "Configurable architecture for multiple review formats"
-      ]
+      ],
+      "url": "https://www.ratekevin.com/"
     },
     {
       "title": "Monaco",
@@ -175,7 +176,7 @@
         "images/portfolio/monaco/7.png",
         "images/portfolio/monaco/8.png"
       ],
-      "technologies": ["React Native", "AWS Amplify", "AWS Cognito", "AWS S3", "AI Integration", "TypeScript"],
+      "technologies": ["React Native", "Expo", "AWS ", "TypeScript"],
       "features": [
         "Voice and text conversational interface",
         "MLS listing queries via natural language",
