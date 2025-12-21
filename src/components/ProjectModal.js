@@ -8,6 +8,13 @@ const ProjectModal = ({ show, onHide, data }) => {
   const touchStartX = React.useRef(null);
   const touchEndX = React.useRef(null);
 
+  React.useEffect(() => {
+    if (show) {
+      setCurrentImageIndex(0);
+    }
+  }, [show, data]);
+
+  
   const handlePrevImage = (e) => {
     e.stopPropagation();
     e.preventDefault();
