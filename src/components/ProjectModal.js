@@ -5,9 +5,12 @@ import "../scss/Projects.scss";
 const ProjectModal = ({ show, onHide, data }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const modalWrapperRef = React.useRef(null);
+  const touchStartX = React.useRef(null);
+  const touchEndX = React.useRef(null);
 
   const handlePrevImage = (e) => {
     e.stopPropagation();
+    e.preventDefault();
     setCurrentImageIndex((prev) => 
       prev === 0 ? data.images.length - 1 : prev - 1
     );
@@ -15,6 +18,7 @@ const ProjectModal = ({ show, onHide, data }) => {
 
   const handleNextImage = (e) => {
     e.stopPropagation();
+    e.preventDefault();
     setCurrentImageIndex((prev) => 
       prev === data.images.length - 1 ? 0 : prev + 1
     );
@@ -24,15 +28,31 @@ const ProjectModal = ({ show, onHide, data }) => {
     setCurrentImageIndex(index);
   };
 
-  React.useEffect(() => {
-    if (show) {
-      setCurrentImageIndex(0);
-      // Scroll to top when modal opens
-      if (modalWrapperRef.current) {
-        modalWrapperRef.current.scrollTop = 0;
-      }
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    
+    const distance = touchStartX.current - touchEndX.current;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe && data.images && data.images.length > 1) {
+      handleNextImage({ stopPropagation: () => {}, preventDefault: () => {} });
     }
-  }, [show]);
+    if (isRightSwipe && data.images && data.images.length > 1) {
+      handlePrevImage({ stopPropagation: () => {}, preventDefault: () => {} });
+    }
+
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
 
   const handleClose = () => {
     onHide();
@@ -67,30 +87,30 @@ const ProjectModal = ({ show, onHide, data }) => {
       keyboard={true}
     >
       <div className="modal-wrapper" ref={modalWrapperRef}>
-        <button 
-          onClick={handleClose} 
-          className="modal-close"
-          aria-label="Close modal"
-        >
-          <svg 
-            className="close-icon" 
-            width="24" 
-            height="24" 
-            viewBox="0 0 24 24" 
-            fill="none"
-          >
-            <path 
-              d="M18 6L6 18M6 6L18 18" 
-              stroke="currentColor" 
-              strokeWidth="2" 
-              strokeLinecap="round" 
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
-
         <div className="modal-content-wrapper">
           <div className="modal-header">
+            <button 
+              onClick={handleClose} 
+              className="modal-close"
+              aria-label="Close modal"
+            >
+              <svg 
+                className="close-icon" 
+                width="24" 
+                height="24" 
+                viewBox="0 0 24 24" 
+                fill="none"
+              >
+                <path 
+                  d="M18 6L6 18M6 6L18 18" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+            
             <div className="modal-title-row">
               <h2 className="modal-title">{data.title}</h2>
               {data.url && (
@@ -116,7 +136,12 @@ const ProjectModal = ({ show, onHide, data }) => {
 
           {hasImages && (
             <div className="modal-gallery">
-              <div className="gallery-main">
+              <div 
+                className="gallery-main"
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
+              >
                 {renderGalleryImage()}
                 
                 {hasMultipleImages && (

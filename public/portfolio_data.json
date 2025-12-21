@@ -135,6 +135,36 @@
   ],
   "projects": [
     {
+      "title": "KEVIN",
+      "date": "2025",
+      "description": "A cross-platform social review application built with React Native and AWS, enabling users to share reviews with ratings, images, and venue tagging. The platform features a configurable architecture that can be adapted to any review format through centralized parameter management, supporting use cases from restaurant reviews to product ratings. Deployed via AWS Amplify with full compatibility across web, iOS, and Android platforms.",
+      "images": [],
+      "technologies": ["React Native", "AWS Amplify", "AWS Cognito", "AWS S3", "AWS AppSync", "GraphQL", "TypeScript"],
+      "features": [
+        "Cognito authentication with customizable profiles",
+        "Review posting with ratings, images, and venue tagging",
+        "Following/follower system with social features",
+        "Threaded comments with like functionality",
+        "Real-time updates via GraphQL",
+        "Configurable architecture for multiple review formats"
+      ]
+    },
+    {
+      "title": "Monaco",
+      "date": "2025",
+      "description": "An AI-powered real estate chatbot built with React Native and AWS, providing agents with conversational access to MLS listings, market analysis, and automated workflow tools. The application features voice and text chat interfaces that enable natural language interactions for querying properties, analyzing market trends, managing leads, and generating professional CMA documents. Deployed cross-platform via AWS Amplify for web, iOS, and Android.",
+      "images": [],
+      "technologies": ["React Native", "AWS Amplify", "AWS Cognito", "AWS S3", "AI Integration", "TypeScript"],
+      "features": [
+        "Voice and text conversational interface",
+        "MLS listing queries via natural language",
+        "Automated CMA document generation",
+        "Market trend analysis and insights",
+        "Lead management automation",
+        "Cross-platform deployment (web, iOS, Android)"
+      ]
+    },
+    {
       "title": "Miramar Pain Medicine",
       "date": "2025",
       "description": "A comprehensive React-based website for a pain medicine practice featuring a modern design system with gradient backgrounds, responsive navigation, and content-driven architecture. The site dynamically loads all content from JSON configuration files, making updates seamless without code changes. Built with accessibility and user experience as top priorities, it includes contact form integration with API endpoints, animated FAQ accordions, detailed service descriptions, and a professional footer with business hours. The design emphasizes trust and professionalism through clean layouts, consistent theming, and intuitive navigation patterns.",
@@ -148,33 +178,15 @@
         "images/portfolio/miramar-pain-med/7.png",
         "images/portfolio/miramar-pain-med/8.png",
         "images/portfolio/miramar-pain-med/9.png"
-
       ],
-      "technologies": [
-        "React",
-        "React Router",
-        "CSS Variables",
-        "React Icons",
-        "JavaScript",
-        "REST API"
-      ],
+      "technologies": ["React", "React Router", "CSS Variables", "REST API"],
       "features": [
-        "JSON-driven content management system for easy updates",
-        "Custom theming with CSS variables for brand consistency",
-        "Fully responsive design optimized for mobile, tablet, and desktop",
-        "Dynamic service catalog with category organization",
-        "Interactive contact form with API integration and validation",
-        "Animated FAQ accordion with smooth transitions",
-        "Sticky navigation with scroll-based styling",
-        "Modal overlays for success messages and loading states",
-        "Professional gradient banners across all pages",
-        "Service detail pages with dynamic routing",
-        "Comprehensive footer with business hours and location",
-        "Mobile-friendly hamburger menu with overlay navigation",
-        "Accessibility-focused with ARIA labels and focus states",
-        "Video integration for practice introduction",
-        "Doctor credentials showcase with icon-based cards",
-        "Certification logos display section"
+        "JSON-driven content management",
+        "Custom theming with CSS variables",
+        "Interactive contact form with API integration",
+        "Animated FAQ accordion",
+        "Responsive mobile-first design",
+        "Dynamic service catalog"
       ],
       "url": "https://www.miramarpainmed.com/"
     },
@@ -189,15 +201,10 @@
       ],
       "technologies": ["React", "CSS", "JavaScript"],
       "features": [
-        "Smooth scroll-triggered animations throughout",
-        "Automatic dark/light theme based on system preferences",
-        "Responsive design optimized for all devices",
-        "Custom loading animation with house icon",
-        "Embedded video demonstration with overlay",
-        "Social proof section with brokerage logos",
-        "Multiple strategic call-to-action buttons",
-        "Floating background shapes and grid patterns",
-        "Performance-optimized with minimal dependencies"
+        "Smooth scroll animations",
+        "Dark/light theme switching",
+        "Embedded video demonstration",
+        "Performance-optimized design"
       ],
       "url": "https://learnmonaco.com/"
     },
@@ -212,17 +219,13 @@
         "images/portfolio/musician-portfolio/4.png",
         "images/portfolio/musician-portfolio/5.png"
       ],
-      "technologies": ["React", "React Router", "Font Awesome", "Context API", "CSS", "JavaScript"],
+      "technologies": ["React", "React Router", "Context API", "CSS"],
       "features": [
-        "Dynamic content loading from JSON configuration",
-        "Integrated music player with album/track navigation",
-        "Dark/light theme toggle with persistent preferences",
-        "Animated page transitions using Framer Motion",
-        "Conditional navigation based on available content",
-        "Photo gallery with lightbox functionality",
-        "Tour dates listing with venue and ticket information",
-        "Merchandise store integration",
-        "Fully responsive design for all devices"
+        "Integrated music player",
+        "Dark/light theme toggle",
+        "Photo gallery with lightbox",
+        "Dynamic JSON content loading",
+        "Conditional navigation system"
       ],
       "url": "https://chucksavage.me/",
       "github": "https://github.com/charlesarcher72/musician-profile"
@@ -232,17 +235,22 @@
       "date": "2023",
       "description": "A modern, responsive portfolio website built with React, featuring smooth animations, theme switching, and easy customization through JSON configuration. The site showcases my professional experience, technical skills, and project work through an engaging, interactive interface optimized for all device sizes. Built with a focus on performance and user experience, it includes a dark/light theme toggle, smooth scroll animations, and a comprehensive project showcase with modal galleries.",
       "images": [
+        "images/portfolio/developer-portfolio/1.png",
+        "images/portfolio/developer-portfolio/2.png",
+        "images/portfolio/developer-portfolio/3.png",
+        "images/portfolio/developer-portfolio/4.png",
+        "images/portfolio/developer-portfolio/5.png",
+        "images/portfolio/developer-portfolio/6.png",
+        "images/portfolio/developer-portfolio/7.png",
+        "images/portfolio/developer-portfolio/8.png"
       ],
-      "technologies": ["React", "React Bootstrap", "SCSS", "JavaScript", "AWS Amplify", "Font Awesome", "Devicon"],
+      "technologies": ["React", "React Bootstrap", "SCSS", "AWS Amplify"],
       "features": [
-        "Responsive design optimized for mobile, tablet, and desktop",
-        "Dark/light theme switching with persistent preferences",
-        "Smooth animations and scroll effects throughout",
-        "Interactive project cards with modal image galleries",
-        "JSON-based content management for easy updates",
-        "Organized skills display with category grouping",
-        "Professional experience timeline presentation",
-        "Direct contact integration with email and social links"
+        "Dark/light theme switching",
+        "Smooth scroll animations",
+        "Interactive project galleries",
+        "JSON-based content management",
+        "Responsive design optimization"
       ],
       "url": "https://charlesarcher.me/",
       "github": "https://github.com/charlesarcher72/developer-portfolio"
