@@ -138,7 +138,19 @@
       "title": "KEVIN",
       "date": "2025",
       "description": "A cross-platform social review application built with React Native and AWS, enabling users to share reviews with ratings, images, and venue tagging. The platform features a configurable architecture that can be adapted to any review format through centralized parameter management, supporting use cases from restaurant reviews to product ratings. Deployed via AWS Amplify with full compatibility across web, iOS, and Android platforms.",
-      "images": [],
+      "images": [
+        "images/portfolio/kevin/1.png",
+        "images/portfolio/kevin/2.png",
+        "images/portfolio/kevin/3.png",
+        "images/portfolio/kevin/4.png",
+        "images/portfolio/kevin/5.png",
+        "images/portfolio/kevin/6.png",
+        "images/portfolio/kevin/7.png",
+        "images/portfolio/kevin/8.png",
+        "images/portfolio/kevin/9.png",
+        "images/portfolio/kevin/10.png",
+        "images/portfolio/kevin/11.png"
+      ],
       "technologies": ["React Native", "AWS Amplify", "AWS Cognito", "AWS S3", "AWS AppSync", "GraphQL", "TypeScript"],
       "features": [
         "Cognito authentication with customizable profiles",
@@ -153,7 +165,16 @@
       "title": "Monaco",
       "date": "2025",
       "description": "An AI-powered real estate chatbot built with React Native and AWS, providing agents with conversational access to MLS listings, market analysis, and automated workflow tools. The application features voice and text chat interfaces that enable natural language interactions for querying properties, analyzing market trends, managing leads, and generating professional CMA documents. Deployed cross-platform via AWS Amplify for web, iOS, and Android.",
-      "images": [],
+      "images": [
+        "images/portfolio/monaco/1.png",
+        "images/portfolio/monaco/2.png",
+        "images/portfolio/monaco/3.png",
+        "images/portfolio/monaco/4.png",
+        "images/portfolio/monaco/5.png",
+        "images/portfolio/monaco/6.png",
+        "images/portfolio/monaco/7.png",
+        "images/portfolio/monaco/8.png"
+      ],
       "technologies": ["React Native", "AWS Amplify", "AWS Cognito", "AWS S3", "AI Integration", "TypeScript"],
       "features": [
         "Voice and text conversational interface",
@@ -162,7 +183,8 @@
         "Market trend analysis and insights",
         "Lead management automation",
         "Cross-platform deployment (web, iOS, Android)"
-      ]
+      ],
+      "url": "https://www.monacoapp.ai/"
     },
     {
       "title": "Miramar Pain Medicine",
