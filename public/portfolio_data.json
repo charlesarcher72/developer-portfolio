@@ -135,20 +135,6 @@
   ],
   "projects": [
     {
-      "title": "KEVIN - Social Review Platform",
-      "date": "2025",
-      "description": "",
-      "images": [
-      ]
-    },
-    {
-      "title": "Monaco - AI Real Estate Assistant",
-      "date": "2025",
-      "description": "",
-      "images": [
-      ]
-    },
-    {
       "title": "Miramar Pain Medicine",
       "date": "2025",
       "description": "A comprehensive React-based website for a pain medicine practice featuring a modern design system with gradient backgrounds, responsive navigation, and content-driven architecture. The site dynamically loads all content from JSON configuration files, making updates seamless without code changes. Built with accessibility and user experience as top priorities, it includes contact form integration with API endpoints, animated FAQ accordions, detailed service descriptions, and a professional footer with business hours. The design emphasizes trust and professionalism through clean layouts, consistent theming, and intuitive navigation patterns.",
