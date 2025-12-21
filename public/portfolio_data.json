@@ -154,11 +154,10 @@
       "technologies": ["React Native", "Expo", "AWS ", "TypeScript"],
       "features": [
         "Cognito authentication with customizable profiles",
-        "Review posting with ratings, images, and venue tagging",
-        "Following/follower system with social features",
+        "Review posting with ratings, images, and venues",
+        "Following system with social features",
         "Threaded comments with like functionality",
-        "Real-time updates via GraphQL",
-        "Configurable architecture for multiple review formats"
+        "Configurable architecture"
       ],
       "url": "https://www.ratekevin.com/"
     },
@@ -279,7 +278,7 @@
       "github": "https://github.com/charlesarcher72/developer-portfolio"
     },
     {
-      "title": "Cryptocurrency Trading Bot",
+      "title": "Crypto Trading Bot",
       "date": "2023",
       "description": "I designed and developed the front end and database for a cryptocurrency trading app, using React for the UI and MongoDB for efficient data storage. The app seamlessly integrates TradingView alerts via webhooks to execute transactions on Binance, featuring user-friendly functions like token management, transaction history, and profit analytics.",
       "images": [
