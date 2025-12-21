@@ -135,48 +135,235 @@
   ],
   "projects": [
     {
-      "title": "Musician Portfolio",
-      "date": "2024",
-      "description": "I developed a responsive musician portfolio website using React and hosted it on Vercel. The site serves as a landing page with links to social media, streaming platforms, and highlights of recent projects, offering a clean and mobile-friendly design.",
+      "title": "KEVIN - Social Review Platform",
+      "date": "2025",
+      "description": "",
       "images": [
-        "images/portfolio/musician-portfolio/main.png"
       ]
     },
     {
-      "title": "Silly Bot",
+      "title": "Monaco - AI Real Estate Assistant",
+      "date": "2025",
+      "description": "",
+      "images": [
+      ]
+    },
+    {
+      "title": "Miramar Pain Medicine",
+      "date": "2025",
+      "description": "A comprehensive React-based website for a pain medicine practice featuring a modern design system with gradient backgrounds, responsive navigation, and content-driven architecture. The site dynamically loads all content from JSON configuration files, making updates seamless without code changes. Built with accessibility and user experience as top priorities, it includes contact form integration with API endpoints, animated FAQ accordions, detailed service descriptions, and a professional footer with business hours. The design emphasizes trust and professionalism through clean layouts, consistent theming, and intuitive navigation patterns.",
+      "images": [
+        "images/portfolio/miramar-pain-med/1.png",
+        "images/portfolio/miramar-pain-med/2.png",
+        "images/portfolio/miramar-pain-med/3.png",
+        "images/portfolio/miramar-pain-med/4.png",
+        "images/portfolio/miramar-pain-med/5.png",
+        "images/portfolio/miramar-pain-med/6.png",
+        "images/portfolio/miramar-pain-med/7.png",
+        "images/portfolio/miramar-pain-med/8.png",
+        "images/portfolio/miramar-pain-med/9.png"
+
+      ],
+      "technologies": [
+        "React",
+        "React Router",
+        "CSS Variables",
+        "React Icons",
+        "JavaScript",
+        "REST API"
+      ],
+      "features": [
+        "JSON-driven content management system for easy updates",
+        "Custom theming with CSS variables for brand consistency",
+        "Fully responsive design optimized for mobile, tablet, and desktop",
+        "Dynamic service catalog with category organization",
+        "Interactive contact form with API integration and validation",
+        "Animated FAQ accordion with smooth transitions",
+        "Sticky navigation with scroll-based styling",
+        "Modal overlays for success messages and loading states",
+        "Professional gradient banners across all pages",
+        "Service detail pages with dynamic routing",
+        "Comprehensive footer with business hours and location",
+        "Mobile-friendly hamburger menu with overlay navigation",
+        "Accessibility-focused with ARIA labels and focus states",
+        "Video integration for practice introduction",
+        "Doctor credentials showcase with icon-based cards",
+        "Certification logos display section"
+      ],
+      "url": "https://www.miramarpainmed.com/"
+    },
+    {
+      "title": "About Monaco",
+      "date": "2025",
+      "description": "A modern, single-page React application serving as the marketing landing page for Monaco, an AI-powered real estate assistant. The site features smooth scroll animations, responsive design, and a polished user experience with dark/light theme support. Built to convert visitors into waitlist signups, it showcases Monaco's key features through engaging visuals, testimonials, and strategic call-to-action placements. The design emphasizes clean aesthetics and performance optimization for maximum conversion.",
+      "images": [
+        "images/portfolio/about-monaco/1.png",
+        "images/portfolio/about-monaco/2.png",
+        "images/portfolio/about-monaco/3.png"
+      ],
+      "technologies": ["React", "CSS", "JavaScript"],
+      "features": [
+        "Smooth scroll-triggered animations throughout",
+        "Automatic dark/light theme based on system preferences",
+        "Responsive design optimized for all devices",
+        "Custom loading animation with house icon",
+        "Embedded video demonstration with overlay",
+        "Social proof section with brokerage logos",
+        "Multiple strategic call-to-action buttons",
+        "Floating background shapes and grid patterns",
+        "Performance-optimized with minimal dependencies"
+      ],
+      "url": "https://learnmonaco.com/"
+    },
+    {
+      "title": "Musician Portfolio",
+      "date": "2024",
+      "description": "A React-based web application designed to showcase an artist's complete profile, including bio, music catalog, tour dates, photo gallery, and merchandise. The app dynamically loads content from a JSON file and presents it through an engaging, user-friendly interface with smooth animations and theme switching. Built with conditional rendering to ensure only available content sections are displayed, creating a clean and professional experience tailored to the artist's current offerings.",
+      "images": [
+        "images/portfolio/musician-portfolio/1.png",
+        "images/portfolio/musician-portfolio/2.png",
+        "images/portfolio/musician-portfolio/3.png",
+        "images/portfolio/musician-portfolio/4.png",
+        "images/portfolio/musician-portfolio/5.png"
+      ],
+      "technologies": ["React", "React Router", "Font Awesome", "Context API", "CSS", "JavaScript"],
+      "features": [
+        "Dynamic content loading from JSON configuration",
+        "Integrated music player with album/track navigation",
+        "Dark/light theme toggle with persistent preferences",
+        "Animated page transitions using Framer Motion",
+        "Conditional navigation based on available content",
+        "Photo gallery with lightbox functionality",
+        "Tour dates listing with venue and ticket information",
+        "Merchandise store integration",
+        "Fully responsive design for all devices"
+      ],
+      "url": "https://chucksavage.me/",
+      "github": "https://github.com/charlesarcher72/musician-profile"
+    },
+    {
+      "title": "Developer Portfolio",
+      "date": "2023",
+      "description": "A modern, responsive portfolio website built with React, featuring smooth animations, theme switching, and easy customization through JSON configuration. The site showcases my professional experience, technical skills, and project work through an engaging, interactive interface optimized for all device sizes. Built with a focus on performance and user experience, it includes a dark/light theme toggle, smooth scroll animations, and a comprehensive project showcase with modal galleries.",
+      "images": [
+      ],
+      "technologies": ["React", "React Bootstrap", "SCSS", "JavaScript", "AWS Amplify", "Font Awesome", "Devicon"],
+      "features": [
+        "Responsive design optimized for mobile, tablet, and desktop",
+        "Dark/light theme switching with persistent preferences",
+        "Smooth animations and scroll effects throughout",
+        "Interactive project cards with modal image galleries",
+        "JSON-based content management for easy updates",
+        "Organized skills display with category grouping",
+        "Professional experience timeline presentation",
+        "Direct contact integration with email and social links"
+      ],
+      "url": "https://charlesarcher.me/",
+      "github": "https://github.com/charlesarcher72/developer-portfolio"
+    },
+    {
+      "title": "Cryptocurrency Trading Bot",
       "date": "2023",
       "description": "I designed and developed the front end and database for a cryptocurrency trading app, using React for the UI and MongoDB for efficient data storage. The app seamlessly integrates TradingView alerts via webhooks to execute transactions on Binance, featuring user-friendly functions like token management, transaction history, and profit analytics.",
       "images": [
-        "images/portfolio/sillybot/history.png",
-        "images/portfolio/sillybot/token.png",
-        "images/portfolio/sillybot/popup.png",
-        "images/portfolio/sillybot/db.png"
-      ]
+        "images/portfolio/sillybot/1.png",
+        "images/portfolio/sillybot/2.png",
+        "images/portfolio/sillybot/3.png",
+        "images/portfolio/sillybot/4.png"
+      ],
+      "technologies": ["React", "Node.js", "MongoDB", "Binance API", "TradingView", "Vercel"],
+      "features": [
+        "Real-time TradingView webhook integration",
+        "Automated Binance trade execution",
+        "Token management dashboard",
+        "Transaction history tracking",
+        "Profit and loss analytics",
+        "Secure API key management"
+      ],
+      "url": "https://github.com/charlesarcher72/silly-bot-lite",
+      "github": "https://github.com/charlesarcher72/silly-bot-lite"
     },
     {
       "title": "Buxon Development Group",
       "date": "2022",
       "description": "I led the design and development of web applications for a Non-Fungible Token project on the Solana blockchain, also managing their deployment on AWS for seamless integration. Additionally, I contributed as the main artist, shaping the project's visual identity and artistic elements.",
       "images": [
-        "images/portfolio/buxons/main.png",
-        "images/portfolio/buxons/staking2.png",
-        "images/portfolio/buxons/muttant_mint.png",
-        "images/portfolio/buxons/kennel_mint.png",
-        "images/portfolio/buxons/mint.png",
-        "images/portfolio/buxons/slots.png",
-        "images/portfolio/buxons/staking1.png"
+        "images/portfolio/buxons/1.png",
+        "images/portfolio/buxons/2.png",
+        "images/portfolio/buxons/3.png",
+        "images/portfolio/buxons/4.png",
+        "images/portfolio/buxons/5.png",
+        "images/portfolio/buxons/6.png",
+        "images/portfolio/buxons/7.png"
+      ],
+      "technologies": ["React", "CSS", "Vue.js", "TypeScript", "AWS", "Solana"],
+      "features": [
+        "Multi-framework architecture demonstration",
+        "NFT marketplace integration",
+        "Custom brand identity and artwork",
+        "Blockchain wallet connectivity",
+        "Responsive web application design",
+        "AWS cloud infrastructure deployment"
       ]
     },
     {
-      "title": "Staking Platforms",
+      "title": "Metajuana NFT Staking",
       "date": "2022",
-      "description": "I spearheaded the development of Solana staking platforms for multiple NFT projects, enhancing user engagement through the creation of intuitive interfaces. Additionally,  my role in these projects also involved managing AWS deployment for seamless implementation.",
+      "description": "I developed a Vue.js-based staking platform for the Metajuana NFT collection, focusing on creating an intuitive user interface that simplified the staking process for NFT holders. The platform featured real-time reward tracking and wallet integration, all deployed on AWS for reliable performance and scalability.",
       "images": [
-        "images/portfolio/staking/solraiderz.png",
-        "images/portfolio/staking/germination.png",
-        "images/portfolio/staking/curation.png",
-        "images/portfolio/staking/beartoshi.png",
-        "images/portfolio/staking/buxons.png"
+        "images/portfolio/metajuana/1.png",
+        "images/portfolio/metajuana/2.png",
+        "images/portfolio/metajuana/3.png"
+      ],
+      "technologies": ["Vue.js", "TypeScript", "CSS", "AWS", "Solana"],
+      "features": [
+        "Real-time staking rewards calculation",
+        "Seamless wallet integration",
+        "Responsive user interface",
+        "AWS cloud deployment"
+      ]
+    },
+    {
+      "title": "Beartoshi NFT Staking",
+      "date": "2022",
+      "description": "I engineered a TypeScript-powered staking solution for the Beartoshi NFT project, emphasizing performance optimization and user experience. The application provided NFT holders with a streamlined interface to manage their staked assets and monitor rewards, leveraging AWS infrastructure for robust deployment.",
+      "images": [
+        "images/portfolio/beartoshi/1.png"
+      ],
+      "technologies": ["Vue.js", "TypeScript", "CSS", "AWS", "Solana"],
+      "features": [
+        "Optimized staking interface",
+        "Asset management dashboard",
+        "Reward monitoring system",
+        "Cloud-based infrastructure"
+      ]
+    },
+    {
+      "title": "Sol Raiderz NFT Staking",
+      "date": "2022",
+      "description": "I built a comprehensive staking platform for Sol Raiderz NFT holders using Vue.js and TypeScript, creating a visually engaging interface that enhanced community participation. The project included custom CSS animations and responsive design patterns, all managed through AWS for seamless scalability and deployment.",
+      "images": [
+        "images/portfolio/solraiderz/1.png"
+      ],
+      "technologies": ["Vue.js", "TypeScript", "CSS", "AWS", "Solana"],
+      "features": [
+        "Custom UI animations",
+        "Community engagement tools",
+        "Responsive design system",
+        "Scalable AWS deployment"
+      ]
+    },
+    {
+      "title": "Zankoku NFT Staking",
+      "date": "2022",
+      "description": "I developed and deployed a Solana-based staking interface for the Zankoku NFT collection, utilizing Vue.js and TypeScript to deliver a polished, user-friendly experience. The platform featured advanced CSS styling and interactive elements, with AWS handling the backend infrastructure to ensure reliable uptime and performance.",
+      "images": [],
+      "technologies": ["Vue.js", "TypeScript", "CSS", "AWS", "Solana"],
+      "features": [
+        "Interactive staking interface",
+        "Advanced styling and UX",
+        "Blockchain integration",
+        "Reliable AWS infrastructure"
       ]
     }
   ],

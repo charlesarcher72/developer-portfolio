@@ -108,7 +108,7 @@ class About extends Component {
                 </div>
                 <div className="stat-item">
                   <span className="stat-value">{techCount}</span>
-                  <span className="stat-label">skills</span>
+                  <span className="stat-label">technologies</span>
                 </div>
               </div>
             </div>

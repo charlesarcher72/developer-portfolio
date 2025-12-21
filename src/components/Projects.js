@@ -18,6 +18,25 @@ const Projects = ({ sharedData }) => {
   const { projects, info } = sharedData;
   const sectionName = info?.section_name?.projects;
 
+  const renderProjectImage = (project) => {
+    if (project.images && project.images.length > 0 && project.images[0]) {
+      return (
+        <img
+          src={project.images[0]}
+          alt={project.title}
+          className="project-image"
+          loading="lazy"
+        />
+      );
+    }
+
+    return (
+      <div className="project-image-placeholder">
+        <i className="fas fa-code placeholder-icon"></i>
+      </div>
+    );
+  };
+
   return (
     <section id="projects">
       <div className="projects-container">
@@ -42,12 +61,7 @@ const Projects = ({ sharedData }) => {
             >
               <div className="project-card">
                 <div className="project-image-container">
-                  <img
-                    src={project.images[0]}
-                    alt={project.title}
-                    className="project-image"
-                    loading="lazy"
-                  />
+                  {renderProjectImage(project)}
                   <div className="project-image-overlay"></div>
                 </div>
                 
@@ -77,21 +91,7 @@ const Projects = ({ sharedData }) => {
                   <div className="project-action">
                     <span className="view-more">
                       View Details
-                      <svg 
-                        className="arrow-icon" 
-                        width="16" 
-                        height="16" 
-                        viewBox="0 0 16 16" 
-                        fill="none"
-                      >
-                        <path 
-                          d="M3 8H13M13 8L9 4M13 8L9 12" 
-                          stroke="currentColor" 
-                          strokeWidth="2" 
-                          strokeLinecap="round" 
-                          strokeLinejoin="round"
-                        />
-                      </svg>
+                      <i className="devicon-arrowforward-plain arrow-icon"></i>
                     </span>
                   </div>
                 </div>
