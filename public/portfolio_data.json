@@ -149,7 +149,11 @@
         "images/portfolio/kevin/8.png",
         "images/portfolio/kevin/9.png",
         "images/portfolio/kevin/10.png",
-        "images/portfolio/kevin/11.png"
+        "images/portfolio/kevin/11.png",
+        "images/portfolio/kevin/12.png",
+        "images/portfolio/kevin/13.png",
+        "images/portfolio/kevin/14.png",
+        "images/portfolio/kevin/15.png"
       ],
       "technologies": ["React Native", "Expo", "AWS ", "TypeScript"],
       "features": [
