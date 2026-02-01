@@ -177,7 +177,14 @@
         "images/portfolio/monaco/5.png",
         "images/portfolio/monaco/6.png",
         "images/portfolio/monaco/7.png",
-        "images/portfolio/monaco/8.png"
+        "images/portfolio/monaco/8.png",
+        "images/portfolio/monaco/9.png",
+        "images/portfolio/monaco/10.png",
+        "images/portfolio/monaco/11.png",
+        "images/portfolio/monaco/12.png",
+        "images/portfolio/monaco/13.png",
+        "images/portfolio/monaco/14.png",
+        "images/portfolio/monaco/15.png"
       ],
       "technologies": ["React Native", "Expo", "AWS ", "TypeScript"],
       "features": [
