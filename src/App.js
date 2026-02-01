@@ -26,7 +26,20 @@ class App extends Component {
       dataType: "json",
       cache: false,
       success: (data) => {
-        this.setState({ sharedData: data, isLoading: false });
+        this.setState({ sharedData: data }, () => {
+          if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(() => {
+              this.setState({ isLoading: false });
+            });
+          } else {
+            window.addEventListener('load', () => {
+              this.setState({ isLoading: false });
+            });
+            if (document.readyState === 'complete') {
+              this.setState({ isLoading: false });
+            }
+          }
+        });
       },
       error: (xhr, status, err) => {
         console.error(err);

@@ -5,34 +5,38 @@ class Typewriter extends React.PureComponent {
   constructor(props) {
     super(props);
     this.fullText = props.text.toUpperCase();
+    this.charIndex = 0;
     this.state = {
       displayText: '',
-      charIndex: 0,
     };
     this.timeoutId = null;
+    this.isTyping = false;
   }
 
   componentDidMount() {
-    // Small delay to ensure everything else is rendered first
-    this.timeoutId = setTimeout(this.typeNextChar, 100);
+    // Use requestAnimationFrame to ensure we're in a paint cycle
+    requestAnimationFrame(() => {
+      this.startTyping();
+    });
   }
 
   componentWillUnmount() {
     if (this.timeoutId) clearTimeout(this.timeoutId);
   }
 
+  startTyping = () => {
+    if (this.isTyping) return;
+    this.isTyping = true;
+    this.typeNextChar();
+  };
+
   typeNextChar = () => {
-    const { charIndex } = this.state;
     const { typingSpeed = 60 } = this.props;
 
-    if (charIndex < this.fullText.length) {
-      const nextIndex = charIndex + 1;
-      this.setState({
-        displayText: this.fullText.slice(0, nextIndex),
-        charIndex: nextIndex,
-      }, () => {
-        this.timeoutId = setTimeout(this.typeNextChar, typingSpeed);
-      });
+    if (this.charIndex < this.fullText.length) {
+      this.charIndex++;
+      this.setState({ displayText: this.fullText.slice(0, this.charIndex) });
+      this.timeoutId = setTimeout(this.typeNextChar, typingSpeed);
     }
   };
 
