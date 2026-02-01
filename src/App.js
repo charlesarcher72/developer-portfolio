@@ -15,8 +15,7 @@ class App extends Component {
   constructor(props) {
     super();
     this.state = {
-      sharedData: null,
-      isLoading: true,
+      sharedData: {},
     };
   }
 
@@ -26,81 +25,26 @@ class App extends Component {
       dataType: "json",
       cache: false,
       success: (data) => {
-        this.setState({ sharedData: data }, () => {
-          this.preloadAssets(data);
-        });
+        this.setState({ sharedData: data });
       },
       error: (xhr, status, err) => {
         console.error(err);
-        this.setState({ isLoading: false });
       },
     });
   }
 
-  preloadImage = (src) => {
-    return new Promise((resolve) => {
-      const img = new Image();
-      img.onload = resolve;
-      img.onerror = resolve;
-      img.src = src;
-    });
-  };
-
-  preloadAssets = (data) => {
-    const promises = [];
-
-    if (document.fonts && document.fonts.ready) {
-      promises.push(document.fonts.ready);
-    }
-
-    if (data.info && data.info.logo) {
-      if (typeof data.info.logo === 'object') {
-        promises.push(this.preloadImage(`images/${data.info.logo.light}`));
-        promises.push(this.preloadImage(`images/${data.info.logo.dark}`));
-      } else {
-        promises.push(this.preloadImage(`images/${data.info.logo}`));
-      }
-    }
-
-    if (data.info && data.info.image) {
-      promises.push(this.preloadImage(`images/${data.info.image}`));
-    }
-
-    if (data.projects) {
-      data.projects.forEach((project) => {
-        if (project.images && project.images.length > 0) {
-          promises.push(this.preloadImage(project.images[0]));
-        }
-      });
-    }
-
-    Promise.all(promises).then(() => {
-      this.setState({ isLoading: false });
-    });
-  };
-
   render() {
-    const { sharedData, isLoading } = this.state;
-
-    if (isLoading || !sharedData) {
-      return (
-        <div className="app-loading">
-          <div className="loading-spinner"></div>
-        </div>
-      );
-    }
-
     return (
       <div className="app-container">
         <NavProvider>
           <Nav />
-          <Header sharedData={sharedData} />
-          <About sharedData={sharedData} />
-          <Experience sharedData={sharedData} />
-          <Projects sharedData={sharedData} />
-          <Skills sharedData={sharedData} />
-          <Services sharedData={sharedData} />
-          <Footer sharedData={sharedData} />
+          <Header sharedData={this.state.sharedData} />
+          <About sharedData={this.state.sharedData} />
+          <Experience sharedData={this.state.sharedData} />
+          <Projects sharedData={this.state.sharedData} />
+          <Skills sharedData={this.state.sharedData} />
+          <Services sharedData={this.state.sharedData} />
+          <Footer sharedData={this.state.sharedData} />
         </NavProvider>
       </div>
     );
