@@ -6,55 +6,47 @@ class Typewriter extends Component {
     super(props);
     this.state = {
       displayText: '',
-      currentIndex: 0,
-      isDeleting: false,
-      currentTitleIndex: 0,
     };
-    this.rafId = null;
     this.timeoutId = null;
+    this.isDeleting = false;
+    this.currentTitleIndex = 0;
   }
 
   componentDidMount() {
-    this.scheduleNextFrame();
+    this.type();
   }
 
   componentWillUnmount() {
-    if (this.rafId) cancelAnimationFrame(this.rafId);
     if (this.timeoutId) clearTimeout(this.timeoutId);
   }
 
-  scheduleNextFrame = () => {
-    const { titles, typingSpeed = 80, deletingSpeed = 50, pauseTime = 1500 } = this.props;
-    const { displayText, isDeleting, currentTitleIndex } = this.state;
-    const currentTitle = titles[currentTitleIndex].toUpperCase();
+  type = () => {
+    const { titles, typingSpeed = 80, deletingSpeed = 40, pauseTime = 1500 } = this.props;
+    const currentTitle = titles[this.currentTitleIndex].toUpperCase();
+    const currentText = this.state.displayText;
 
-    if (!isDeleting && displayText === currentTitle) {
-      this.timeoutId = setTimeout(() => {
-        this.setState({ isDeleting: true });
-        this.scheduleNextFrame();
-      }, pauseTime);
-      return;
+    if (!this.isDeleting) {
+      if (currentText.length < currentTitle.length) {
+        this.timeoutId = setTimeout(() => {
+          this.setState({ displayText: currentTitle.slice(0, currentText.length + 1) }, this.type);
+        }, typingSpeed);
+      } else {
+        this.timeoutId = setTimeout(() => {
+          this.isDeleting = true;
+          this.type();
+        }, pauseTime);
+      }
+    } else {
+      if (currentText.length > 0) {
+        this.timeoutId = setTimeout(() => {
+          this.setState({ displayText: currentText.slice(0, -1) }, this.type);
+        }, deletingSpeed);
+      } else {
+        this.isDeleting = false;
+        this.currentTitleIndex = (this.currentTitleIndex + 1) % titles.length;
+        this.timeoutId = setTimeout(this.type, 300);
+      }
     }
-
-    if (isDeleting && displayText === '') {
-      const nextIndex = (currentTitleIndex + 1) % titles.length;
-      this.setState({ isDeleting: false, currentTitleIndex: nextIndex });
-      this.timeoutId = setTimeout(() => this.scheduleNextFrame(), 300);
-      return;
-    }
-
-    const delay = isDeleting ? deletingSpeed : typingSpeed;
-
-    this.timeoutId = setTimeout(() => {
-      this.rafId = requestAnimationFrame(() => {
-        if (isDeleting) {
-          this.setState({ displayText: displayText.slice(0, -1) });
-        } else {
-          this.setState({ displayText: currentTitle.slice(0, displayText.length + 1) });
-        }
-        this.scheduleNextFrame();
-      });
-    }, delay);
   };
 
   render() {
