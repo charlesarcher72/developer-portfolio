@@ -1,42 +1,34 @@
 import React, { Component } from "react";
 import "../scss/Header.scss";
 
-class Typewriter extends React.PureComponent {
+class Typewriter extends React.Component {
   constructor(props) {
     super(props);
     this.fullText = props.text.toUpperCase();
-    this.charIndex = 0;
     this.state = {
       displayText: '',
     };
-    this.timeoutId = null;
-    this.isTyping = false;
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    // Only re-render if displayText changes
+    return nextState.displayText !== this.state.displayText;
   }
 
   componentDidMount() {
-    // Use requestAnimationFrame to ensure we're in a paint cycle
-    requestAnimationFrame(() => {
-      this.startTyping();
-    });
+    this.type(0);
   }
 
   componentWillUnmount() {
     if (this.timeoutId) clearTimeout(this.timeoutId);
   }
 
-  startTyping = () => {
-    if (this.isTyping) return;
-    this.isTyping = true;
-    this.typeNextChar();
-  };
-
-  typeNextChar = () => {
+  type = (index) => {
     const { typingSpeed = 60 } = this.props;
 
-    if (this.charIndex < this.fullText.length) {
-      this.charIndex++;
-      this.setState({ displayText: this.fullText.slice(0, this.charIndex) });
-      this.timeoutId = setTimeout(this.typeNextChar, typingSpeed);
+    if (index < this.fullText.length) {
+      this.setState({ displayText: this.fullText.slice(0, index + 1) });
+      this.timeoutId = setTimeout(() => this.type(index + 1), typingSpeed);
     }
   };
 
@@ -57,14 +49,15 @@ const BINARY_COLUMNS = [...Array(10)].map(() =>
 class Header extends Component {
   constructor() {
     super();
+    // Get initial theme synchronously to avoid re-render
+    const initialTheme = document.documentElement.getAttribute('data-theme') || 'light';
     this.state = {
       iconLoaded: false,
-      currentTheme: 'light'
+      currentTheme: initialTheme
     };
   }
 
   componentDidMount() {
-    this.updateTheme();
     this.themeObserver = new MutationObserver(() => {
       this.updateTheme();
     });

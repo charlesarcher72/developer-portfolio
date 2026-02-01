@@ -140,13 +140,12 @@ header.navbar.scrolled {
     box-shadow: var(--shadow-lg);
   }
   
-  .navbar-toggle i {
-    font-size: 1.5rem;
+  .navbar-toggle svg {
     color: var(--text-primary);
     transition: transform 0.3s ease;
   }
-  
-  .navbar-toggle:hover i {
+
+  .navbar-toggle:hover svg {
     transform: scale(1.1);
   }
 
