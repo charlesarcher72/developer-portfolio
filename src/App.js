@@ -36,13 +36,20 @@ class App extends Component {
   }
 
   render() {
+    const { sharedData, isLoading } = this.state;
+
+    if (isLoading || !sharedData) {
+      return (
+        <div className="app-loading">
+          <div className="loading-spinner"></div>
+        </div>
+      );
+    }
+
     return (
       <div className="app-container">
         <NavProvider>
           <Nav />
-          <Header sharedData={this.state.sharedData} />
-          <About sharedData={this.state.sharedData} />
-          <Experience sharedData={this.state.sharedData} />
           <Header sharedData={sharedData} />
           <About sharedData={sharedData} />
           <Experience sharedData={sharedData} />
