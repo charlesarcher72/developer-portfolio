@@ -7,45 +7,26 @@ class Typewriter extends Component {
     this.state = {
       displayText: '',
     };
+    this.charIndex = 0;
     this.timeoutId = null;
-    this.isDeleting = false;
-    this.currentTitleIndex = 0;
   }
 
   componentDidMount() {
-    this.type();
+    this.typeNextChar();
   }
 
   componentWillUnmount() {
     if (this.timeoutId) clearTimeout(this.timeoutId);
   }
 
-  type = () => {
-    const { titles, typingSpeed = 80, deletingSpeed = 40, pauseTime = 1500 } = this.props;
-    const currentTitle = titles[this.currentTitleIndex].toUpperCase();
-    const currentText = this.state.displayText;
+  typeNextChar = () => {
+    const { text, typingSpeed = 80 } = this.props;
+    const fullText = text.toUpperCase();
 
-    if (!this.isDeleting) {
-      if (currentText.length < currentTitle.length) {
-        this.timeoutId = setTimeout(() => {
-          this.setState({ displayText: currentTitle.slice(0, currentText.length + 1) }, this.type);
-        }, typingSpeed);
-      } else {
-        this.timeoutId = setTimeout(() => {
-          this.isDeleting = true;
-          this.type();
-        }, pauseTime);
-      }
-    } else {
-      if (currentText.length > 0) {
-        this.timeoutId = setTimeout(() => {
-          this.setState({ displayText: currentText.slice(0, -1) }, this.type);
-        }, deletingSpeed);
-      } else {
-        this.isDeleting = false;
-        this.currentTitleIndex = (this.currentTitleIndex + 1) % titles.length;
-        this.timeoutId = setTimeout(this.type, 300);
-      }
+    if (this.charIndex < fullText.length) {
+      this.charIndex++;
+      this.setState({ displayText: fullText.slice(0, this.charIndex) });
+      this.timeoutId = setTimeout(this.typeNextChar, typingSpeed);
     }
   };
 
@@ -167,11 +148,9 @@ class Header extends Component {
 
             <div className="title-container">
               <Typewriter
-                titles={info.titles}
+                text={info.titles[0]}
                 className="title-styles"
-                typingSpeed={80}
-                deletingSpeed={40}
-                pauseTime={1500}
+                typingSpeed={60}
               />
             </div>
 

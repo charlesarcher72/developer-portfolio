@@ -90,7 +90,8 @@ header.navbar.scrolled {
   right: 1.5rem;
   top: 1rem;
   z-index: 1002;
-  
+  pointer-events: auto;
+
   .theme-toggle {
     position: static;
     z-index: auto;
@@ -100,14 +101,16 @@ header.navbar.scrolled {
 @media (max-width: 768px) {
   header.navbar {
     min-height: 80px;
+    pointer-events: none;
   }
-  
+
   .navbar-container {
     min-height: 60px;
     display: flex;
     align-items: center;
+    pointer-events: none;
   }
-  
+
   .navbar-toggle {
     display: flex;
     align-items: center;
@@ -125,6 +128,7 @@ header.navbar.scrolled {
     box-shadow: var(--shadow-md);
     transition: all 0.3s ease;
     outline: none;
+    pointer-events: auto;
   }
   
   .navbar-toggle:focus {
@@ -156,22 +160,24 @@ header.navbar.scrolled {
     background: var(--bg-primary);
     border-left: 1px solid var(--border-color);
     box-shadow: -4px 0 24px rgba(0, 0, 0, 0.1);
-    
+
     flex-direction: column;
     justify-content: flex-start;
     gap: 0.5rem;
     padding: 5rem 1.5rem 2rem;
-    
+
     transform: translateX(100%);
     transition: transform 0.3s ease;
     z-index: 1001;
     visibility: hidden;
     overflow-y: auto;
+    pointer-events: none;
   }
 
   .navbar-menu.open {
     transform: translateX(0);
     visibility: visible;
+    pointer-events: auto;
   }
 
   .nav-link {
