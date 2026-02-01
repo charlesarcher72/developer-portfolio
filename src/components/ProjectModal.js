@@ -88,7 +88,6 @@ const ProjectModal = ({ show, onHide, data }) => {
       show={show}
       onHide={handleClose}
       size="lg"
-      centered
       className="project-modal"
       backdrop="static"
       keyboard={true}
