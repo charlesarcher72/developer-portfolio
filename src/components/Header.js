@@ -4,17 +4,43 @@ import "../scss/Header.scss";
 class Typewriter extends React.PureComponent {
   constructor(props) {
     super(props);
-    const fullText = props.text.toUpperCase();
+    this.fullText = props.text.toUpperCase();
     this.state = {
-      displayText: fullText,
+      displayText: '',
+      charIndex: 0,
     };
-    this.fullText = fullText;
+    this.timeoutId = null;
   }
+
+  componentDidMount() {
+    // Small delay to ensure everything else is rendered first
+    this.timeoutId = setTimeout(this.typeNextChar, 100);
+  }
+
+  componentWillUnmount() {
+    if (this.timeoutId) clearTimeout(this.timeoutId);
+  }
+
+  typeNextChar = () => {
+    const { charIndex } = this.state;
+    const { typingSpeed = 60 } = this.props;
+
+    if (charIndex < this.fullText.length) {
+      const nextIndex = charIndex + 1;
+      this.setState({
+        displayText: this.fullText.slice(0, nextIndex),
+        charIndex: nextIndex,
+      }, () => {
+        this.timeoutId = setTimeout(this.typeNextChar, typingSpeed);
+      });
+    }
+  };
 
   render() {
     return (
       <span className={this.props.className}>
         {this.state.displayText}
+        <span className="typewriter-cursor">|</span>
       </span>
     );
   }

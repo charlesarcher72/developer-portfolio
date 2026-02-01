@@ -267,6 +267,17 @@
   letter-spacing: 0.1em;
 }
 
+.typewriter-cursor {
+  animation: blink 1s step-end infinite;
+  font-weight: 300;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 .header-icon-links {
   display: flex;
   gap: 1.5rem;
