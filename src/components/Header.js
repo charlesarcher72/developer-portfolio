@@ -1,44 +1,28 @@
 import React, { Component } from "react";
 import "../scss/Header.scss";
 
-class Typewriter extends Component {
+class Typewriter extends React.PureComponent {
   constructor(props) {
     super(props);
+    const fullText = props.text.toUpperCase();
     this.state = {
-      displayText: '',
+      displayText: fullText,
     };
-    this.charIndex = 0;
-    this.timeoutId = null;
+    this.fullText = fullText;
   }
-
-  componentDidMount() {
-    this.typeNextChar();
-  }
-
-  componentWillUnmount() {
-    if (this.timeoutId) clearTimeout(this.timeoutId);
-  }
-
-  typeNextChar = () => {
-    const { text, typingSpeed = 80 } = this.props;
-    const fullText = text.toUpperCase();
-
-    if (this.charIndex < fullText.length) {
-      this.charIndex++;
-      this.setState({ displayText: fullText.slice(0, this.charIndex) });
-      this.timeoutId = setTimeout(this.typeNextChar, typingSpeed);
-    }
-  };
 
   render() {
     return (
       <span className={this.props.className}>
         {this.state.displayText}
-        <span className="cursor">|</span>
       </span>
     );
   }
 }
+
+const BINARY_COLUMNS = [...Array(10)].map(() =>
+  [...Array(40)].map(() => Math.random() > 0.5 ? '1' : '0').join('\n')
+);
 
 class Header extends Component {
   constructor() {
@@ -81,10 +65,6 @@ class Header extends Component {
     this.setState({ iconLoaded: true });
   };
 
-  generateBinaryString = (length) => {
-    return Array.from({ length }, () => Math.random() > 0.5 ? '1' : '0').join('');
-  };
-
   render() {
     const { info } = this.props.sharedData;
     const { iconLoaded, currentTheme } = this.state;
@@ -116,13 +96,9 @@ class Header extends Component {
             <div className="code-glow glow-2"></div>
 
             <div className="binary-rain">
-              {[...Array(10)].map((_, i) => (
-                <div key={i} className="binary-col">
-                  {[...Array(40)].map((_, j) => (
-                    <React.Fragment key={j}>
-                      {this.generateBinaryString(1)}<br/>
-                    </React.Fragment>
-                  ))}
+              {BINARY_COLUMNS.map((col, i) => (
+                <div key={i} className="binary-col" style={{ whiteSpace: 'pre-line' }}>
+                  {col}
                 </div>
               ))}
             </div>
@@ -150,7 +126,6 @@ class Header extends Component {
               <Typewriter
                 text={info.titles[0]}
                 className="title-styles"
-                typingSpeed={60}
               />
             </div>
 

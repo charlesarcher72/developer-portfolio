@@ -265,16 +265,6 @@
   color: var(--accent-primary);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-
-  .cursor {
-    animation: blink 1s step-end infinite;
-    font-weight: 300;
-  }
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
 }
 
 .header-icon-links {
