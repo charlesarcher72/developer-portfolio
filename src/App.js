@@ -15,19 +15,24 @@ class App extends Component {
   constructor(props) {
     super();
     this.state = {
-      resumeData: $.ajax({
-        url: 'portfolio_data.json',
-        dataType: "json",
-        cache: false,
-        success: function (data) {
-          this.setState({ sharedData: data });
-        }.bind(this),
-        error: function (xhr, status, err) {
-          alert(err);
-        },
-      }),
-      sharedData: {},
+      sharedData: null,
+      isLoading: true,
     };
+  }
+
+  componentDidMount() {
+    $.ajax({
+      url: 'portfolio_data.json',
+      dataType: "json",
+      cache: false,
+      success: (data) => {
+        this.setState({ sharedData: data, isLoading: false });
+      },
+      error: (xhr, status, err) => {
+        console.error(err);
+        this.setState({ isLoading: false });
+      },
+    });
   }
 
   render() {
@@ -38,10 +43,13 @@ class App extends Component {
           <Header sharedData={this.state.sharedData} />
           <About sharedData={this.state.sharedData} />
           <Experience sharedData={this.state.sharedData} />
-          <Projects sharedData={this.state.sharedData} />
-          <Skills sharedData={this.state.sharedData} />
-          <Services sharedData={this.state.sharedData} />
-          <Footer sharedData={this.state.sharedData} />
+          <Header sharedData={sharedData} />
+          <About sharedData={sharedData} />
+          <Experience sharedData={sharedData} />
+          <Projects sharedData={sharedData} />
+          <Skills sharedData={sharedData} />
+          <Services sharedData={sharedData} />
+          <Footer sharedData={sharedData} />
         </NavProvider>
       </div>
     );
