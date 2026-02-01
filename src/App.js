@@ -27,18 +27,7 @@ class App extends Component {
       cache: false,
       success: (data) => {
         this.setState({ sharedData: data }, () => {
-          if (document.fonts && document.fonts.ready) {
-            document.fonts.ready.then(() => {
-              this.setState({ isLoading: false });
-            });
-          } else {
-            window.addEventListener('load', () => {
-              this.setState({ isLoading: false });
-            });
-            if (document.readyState === 'complete') {
-              this.setState({ isLoading: false });
-            }
-          }
+          this.preloadAssets(data);
         });
       },
       error: (xhr, status, err) => {
@@ -47,6 +36,48 @@ class App extends Component {
       },
     });
   }
+
+  preloadImage = (src) => {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.onload = resolve;
+      img.onerror = resolve;
+      img.src = src;
+    });
+  };
+
+  preloadAssets = (data) => {
+    const promises = [];
+
+    if (document.fonts && document.fonts.ready) {
+      promises.push(document.fonts.ready);
+    }
+
+    if (data.info && data.info.logo) {
+      if (typeof data.info.logo === 'object') {
+        promises.push(this.preloadImage(`images/${data.info.logo.light}`));
+        promises.push(this.preloadImage(`images/${data.info.logo.dark}`));
+      } else {
+        promises.push(this.preloadImage(`images/${data.info.logo}`));
+      }
+    }
+
+    if (data.info && data.info.image) {
+      promises.push(this.preloadImage(`images/${data.info.image}`));
+    }
+
+    if (data.projects) {
+      data.projects.forEach((project) => {
+        if (project.images && project.images.length > 0) {
+          promises.push(this.preloadImage(project.images[0]));
+        }
+      });
+    }
+
+    Promise.all(promises).then(() => {
+      this.setState({ isLoading: false });
+    });
+  };
 
   render() {
     const { sharedData, isLoading } = this.state;
