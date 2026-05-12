@@ -7,7 +7,7 @@
       "light": "logo-light.png",
       "dark": "logo-dark.png"
     },
-    "description": "I'm Charles Archer, a Senior Software Engineer specializing in full-stack development and technical leadership. I lead engineering teams in developing mission-critical aerospace systems while also building modern web and mobile applications. My expertise spans from low-level systems programming to cloud-native applications, working across the full technology stack. Whether developing command and control systems, building cross-platform mobile apps with React Native and AWS, or creating intuitive web experiences, I bring technical excellence and proven leadership to every project. Let's build something remarkable together.",
+    "description": "I'm Charles Archer, a Staff Software Engineer specializing in full-stack development and technical leadership. I lead engineering teams in developing mission-critical aerospace systems while also building modern web and mobile applications. My expertise spans from low-level systems programming to cloud-native applications, working across the full technology stack. Whether developing command and control systems, building cross-platform mobile apps with React Native and AWS, or creating intuitive web experiences, I bring technical excellence and proven leadership to every project. Let's build something remarkable together.",
     "social": [
       {
         "name": "linkedin",
@@ -106,7 +106,14 @@
   "experience": [
     {
       "company": "Lockheed Martin Aeronautics",
-      "title": "Deputy Product Owner",
+      "title": "Staff Software Engineer",
+      "years": "May 2026 - Present",
+      "description": "Driving architecture and technical direction for Command and Control (C2) ground stations across multiple unmanned aerial vehicle programs, owning system-level design decisions, mentoring engineers, and partnering with stakeholders to land mission-critical capabilities and next-generation pilot vehicle interfaces.",
+      "technologies": ["Lua", "C++", "Gitlab", "Python"]
+    },
+    {
+      "company": "Lockheed Martin Aeronautics",
+      "title": "Product Owner",
       "description": "Leading a team of 10+ engineers in developing a Command and Control (C2) system for air refueling operations through code reviews, feature integration, and stakeholder coordination.",
       "years": "October 2024 - Present",
       "technologies": ["Lua", "Jira", "Git", "Gitlab", "Leadership"]
@@ -114,7 +121,7 @@
     {
       "company": "Lockheed Martin Aeronautics",
       "title": "Senior Software Engineer",
-      "years": "May 2024 - Present",
+      "years": "May 2024 - May 2026",
       "description": "Developing software for Command and Control (C2) ground stations supporting multiple unmanned aerial vehicle platforms, delivering mission-critical capabilities and cutting-edge pilot vehicle interfaces.",
       "technologies": ["Lua", "C++", "Gitlab", "Python"]
     },
@@ -134,6 +141,84 @@
     }
   ],
   "projects": [
+    {
+      "title": "Spill Beauty",
+      "date": "2026",
+      "description": "A cross-platform social review platform for nail salons and nail technicians, built with React Native, Expo, and AWS Amplify. The app moves beyond five-star guesswork by capturing reviews across six structured rating dimensions — Cleanliness, Vibe, Service, Technician, Choice, and Results — and lets users filter discovery by service type, style and color tags, distance, and minimum rating. Features a meritocratic discovery feed, location-aware search powered by AWS Geo, structured review threads, follow graph with notifications, and a salon owner workflow for claiming listings and responding to reviews. Backed by a custom GraphQL service with Cognito auth and S3 media storage, and shipped to iOS, Android, and web from a single Expo Router codebase.",
+      "images": [
+        "images/portfolio/spill-beauty/1.png",
+        "images/portfolio/spill-beauty/2.png",
+        "images/portfolio/spill-beauty/3.png",
+        "images/portfolio/spill-beauty/4.png",
+        "images/portfolio/spill-beauty/5.png",
+        "images/portfolio/spill-beauty/6.png"
+      ],
+      "technologies": ["React Native", "Expo", "TypeScript", "AWS Amplify", "GraphQL", "Cognito"],
+      "features": [
+        "Structured six-dimension review system",
+        "Location-aware salon and technician discovery",
+        "Multi-axis filtering by service, style, color, and rating",
+        "Follow graph with Nearby and Trending feeds",
+        "Push notifications via Expo Notifications",
+        "Salon owner claim and response workflow",
+        "Cross-platform deployment (iOS, Android, web)"
+      ],
+      "url": "https://spillbeauty.com/",
+      "appStore": "https://apps.apple.com/us/app/spill-beauty/id6765920935"
+    },
+    {
+      "title": "About Spill Beauty",
+      "date": "2026",
+      "description": "A polished marketing site for the Spill Beauty social review platform, built with React 19, Vite, and TypeScript on top of Tailwind 4 and Framer Motion. The site serves as the public face of the brand and a conversion surface for the iOS beta and web app, with sections covering the problem space, structured-review features, a three-step flow, target personas, and the founding team. Designed mobile-first with light and dark theme support driven by CSS custom properties, smooth scroll-triggered animations, hash-anchored navigation, and platform-aware CTAs that surface the iOS TestFlight link to Apple visitors and the web app to everyone else. Deployed to AWS Amplify and ships full legal pages (Privacy, Terms, Support, Account Deletion) alongside the marketing surface.",
+      "images": [
+        "images/portfolio/about-spillbeauty/1.png",
+        "images/portfolio/about-spillbeauty/2.png",
+        "images/portfolio/about-spillbeauty/3.png",
+        "images/portfolio/about-spillbeauty/4.png",
+        "images/portfolio/about-spillbeauty/5.png",
+        "images/portfolio/about-spillbeauty/6.png",
+        "images/portfolio/about-spillbeauty/7.png"
+      ],
+      "technologies": ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion", "AWS Amplify"],
+      "features": [
+        "Mobile-first responsive layout",
+        "Light and dark theme via prefers-color-scheme",
+        "Scroll-triggered animations with Framer Motion",
+        "Platform-aware CTAs (iOS vs web)",
+        "Hash-anchored single-page navigation",
+        "Full legal page suite (Privacy, Terms, Support, Account Deletion)"
+      ],
+      "url": "https://about.spillbeauty.com/"
+    },
+    {
+      "title": "Chuckwise",
+      "date": "2026",
+      "description": "A personal productivity web app that fuses three tools into a single cohesive interface — a Planner, a Budget tracker, and an Assets dashboard — built with React 19, TypeScript, and Vite on top of Tailwind CSS and a custom design-token system. The Planner supports one-off and recurring tasks with weekly, monthly-by-day, and relative-weekday schedules (e.g. \"last Friday of the month\"), per-occurrence completion, hidden-by-default tasks, and email reminders. The Budget tab models monthly income, expense, and savings line items with reusable templates, weekly spending targets on configurable week boundaries, and percentage-based extra-money allocation buckets. The Assets tab tracks accounts across checking, savings, HYSA, investment, retirement, credit card, loan, and mortgage types with balance history charts and a projection engine that models future growth from annual rates, monthly contributions, and scheduled contribution increases. Data is persisted to Supabase (Postgres + Row Level Security) through a single storage abstraction layer, with a mirrored in-memory demo store that lets unauthenticated visitors interact with the full feature set against seeded sample data. Ships dark and light themes, a fullscreen screensaver dashboard view, and is deployed to AWS Amplify Hosting.",
+      "images": [
+        "images/portfolio/chuckwise/1.png",
+        "images/portfolio/chuckwise/2.png",
+        "images/portfolio/chuckwise/3.png",
+        "images/portfolio/chuckwise/4.png",
+        "images/portfolio/chuckwise/5.png",
+        "images/portfolio/chuckwise/6.png",
+        "images/portfolio/chuckwise/7.png"
+      ],
+      "technologies": ["React", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "Recharts", "AWS Amplify"],
+      "features": [
+        "Recurring tasks with weekly, monthly, and relative-weekday schedules",
+        "Per-occurrence task completion and disregard tracking",
+        "Monthly budget with line items, templates, and confirmation workflow",
+        "Weekly spending tracker with configurable week boundaries",
+        "Extra-money allocation across percentage-based buckets",
+        "Multi-account net worth dashboard with balance history charts",
+        "Projection engine with growth rates and scheduled contribution increases",
+        "Storage abstraction layer with Supabase and in-memory demo backends",
+        "Fully interactive demo mode with seeded sample data",
+        "Dark and light themes with custom design tokens",
+        "Fullscreen screensaver dashboard view"
+      ],
+      "url": "https://main.d3ttgilzbherjk.amplifyapp.com/"
+    },
     {
       "title": "KEVIN",
       "date": "2025",
