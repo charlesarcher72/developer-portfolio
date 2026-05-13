@@ -115,3 +115,5 @@ $RECYCLE.BIN/
 # Temporary folders
 tmp/
 temp/
+# Claude Code
+.claude/

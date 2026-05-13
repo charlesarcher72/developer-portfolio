@@ -92,75 +92,69 @@ class Header extends Component {
     const { info } = this.props.sharedData;
     const { iconLoaded, currentTheme } = this.state;
 
-    if (info) {
-      const name = info.name;
+    const logoFilename = typeof info.logo === 'object'
+      ? info.logo[currentTheme]
+      : info.logo;
+    const logo = `images/${logoFilename}`;
 
-      const logoFilename = typeof info.logo === 'object'
-        ? info.logo[currentTheme]
-        : info.logo;
-      const logo = `images/${logoFilename}`;
+    const networks = info.social.map((network) => (
+      <a
+        key={network.name}
+        href={network.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={network.name}
+      >
+        <i className={network.class}></i>
+      </a>
+    ));
 
-      const networks = info.social.map((network) => (
-        <a
-          key={network.name}
-          href={network.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={network.name}
-        >
-          <i className={network.class}></i>
-        </a>
-      ));
+    return (
+      <header id="home">
+        <div className="header-background">
+          <div className="code-glow glow-1"></div>
+          <div className="code-glow glow-2"></div>
 
-      return (
-        <header id="home">
-          <div className="header-background">
-            <div className="code-glow glow-1"></div>
-            <div className="code-glow glow-2"></div>
+          <div className="binary-rain">
+            {BINARY_COLUMNS.map((col, i) => (
+              <div key={i} className="binary-col" style={{ whiteSpace: 'pre-line' }}>
+                {col}
+              </div>
+            ))}
+          </div>
+        </div>
 
-            <div className="binary-rain">
-              {BINARY_COLUMNS.map((col, i) => (
-                <div key={i} className="binary-col" style={{ whiteSpace: 'pre-line' }}>
-                  {col}
-                </div>
-              ))}
-            </div>
+        <div className="header-content">
+          <div className="header-logo-container">
+            {!iconLoaded && (
+              <div className="spinner"></div>
+            )}
+            <img
+              className={`header-icon ${iconLoaded ? 'visible' : 'hidden'}`}
+              alt="logo"
+              src={logo}
+              onLoad={this.handleImageLoad}
+              key={logo}
+            />
           </div>
 
-          <div className="header-content">
-            <div className="header-logo-container">
-              {!iconLoaded && (
-                <div className="spinner"></div>
-              )}
-              <img
-                className={`header-icon ${iconLoaded ? 'visible' : 'hidden'}`}
-                alt="logo"
-                src={logo}
-                onLoad={this.handleImageLoad}
-                key={logo}
-              />
-            </div>
-
-            <div className="header-name">
-              <p>{name}</p>
-            </div>
-
-            <div className="title-container">
-              <Typewriter
-                text={info.titles[0]}
-                className="title-styles"
-              />
-            </div>
-
-            <div className="header-icon-links">
-              {networks}
-            </div>
+          <div className="header-name">
+            <p>{info.name}</p>
           </div>
-        </header>
-      );
-    }
 
-    return null;
+          <div className="title-container">
+            <Typewriter
+              text={info.titles[0]}
+              className="title-styles"
+            />
+          </div>
+
+          <div className="header-icon-links">
+            {networks}
+          </div>
+        </div>
+      </header>
+    );
   }
 }
 
