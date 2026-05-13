@@ -84,8 +84,7 @@
   position: relative;
   width: 200px;
   height: 200px;
-  animation: fadeInUp 0.6s ease-out;
-  
+
   @media (min-width: 768px) {
     width: 250px;
     height: 250px;
@@ -179,8 +178,7 @@
     0 0 0 1px rgba(0, 0, 0, 0.02);
   overflow: hidden;
   position: relative;
-  animation: fadeInUp 0.6s ease-out 0.2s both;
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -320,8 +318,7 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  animation: fadeInUp 0.6s ease-out 0.4s both;
-  
+
   @media (min-width: 768px) {
     gap: var(--spacing-md);
     max-width: 500px;
@@ -416,8 +413,7 @@
 .res-button {
   display: flex;
   justify-content: center;
-  animation: fadeInUp 0.6s ease-out 0.4s both;
-  
+
   a {
     display: inline-flex;
     align-items: center;

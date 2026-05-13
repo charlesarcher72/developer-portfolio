@@ -58,8 +58,6 @@
 
 .project-item {
   cursor: pointer;
-  animation: fadeIn 0.6s ease-out backwards;
-  animation-delay: calc(var(--item-index) * 0.1s);
   outline: none;
   
   &:focus-visible {

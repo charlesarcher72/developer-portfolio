@@ -1,47 +1,6 @@
 import React, { Component } from "react";
 import "../scss/Header.scss";
 
-class Typewriter extends React.Component {
-  constructor(props) {
-    super(props);
-    this.fullText = props.text.toUpperCase();
-    this.state = {
-      displayText: '',
-    };
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    // Only re-render if displayText changes
-    return nextState.displayText !== this.state.displayText;
-  }
-
-  componentDidMount() {
-    this.type(0);
-  }
-
-  componentWillUnmount() {
-    if (this.timeoutId) clearTimeout(this.timeoutId);
-  }
-
-  type = (index) => {
-    const { typingSpeed = 60 } = this.props;
-
-    if (index < this.fullText.length) {
-      this.setState({ displayText: this.fullText.slice(0, index + 1) });
-      this.timeoutId = setTimeout(() => this.type(index + 1), typingSpeed);
-    }
-  };
-
-  render() {
-    return (
-      <span className={this.props.className}>
-        {this.state.displayText}
-        <span className="typewriter-cursor">|</span>
-      </span>
-    );
-  }
-}
-
 const BINARY_COLUMNS = [...Array(10)].map(() =>
   [...Array(40)].map(() => Math.random() > 0.5 ? '1' : '0').join('\n')
 );
@@ -49,17 +8,16 @@ const BINARY_COLUMNS = [...Array(10)].map(() =>
 class Header extends Component {
   constructor() {
     super();
-    // Get initial theme synchronously to avoid re-render
     const initialTheme = document.documentElement.getAttribute('data-theme') || 'light';
-    this.state = {
-      iconLoaded: false,
-      currentTheme: initialTheme
-    };
+    this.state = { currentTheme: initialTheme };
   }
 
   componentDidMount() {
     this.themeObserver = new MutationObserver(() => {
-      this.updateTheme();
+      const theme = document.documentElement.getAttribute('data-theme') || 'light';
+      if (theme !== this.state.currentTheme) {
+        this.setState({ currentTheme: theme });
+      }
     });
 
     this.themeObserver.observe(document.documentElement, {
@@ -69,28 +27,12 @@ class Header extends Component {
   }
 
   componentWillUnmount() {
-    if (this.themeObserver) {
-      this.themeObserver.disconnect();
-    }
+    if (this.themeObserver) this.themeObserver.disconnect();
   }
-
-  updateTheme = () => {
-    const theme = document.documentElement.getAttribute('data-theme') || 'light';
-    if (theme !== this.state.currentTheme) {
-      this.setState({
-        currentTheme: theme,
-        iconLoaded: false
-      });
-    }
-  };
-
-  handleImageLoad = () => {
-    this.setState({ iconLoaded: true });
-  };
 
   render() {
     const { info } = this.props.sharedData;
-    const { iconLoaded, currentTheme } = this.state;
+    const { currentTheme } = this.state;
 
     const logoFilename = typeof info.logo === 'object'
       ? info.logo[currentTheme]
@@ -126,16 +68,7 @@ class Header extends Component {
 
         <div className="header-content">
           <div className="header-logo-container">
-            {!iconLoaded && (
-              <div className="spinner"></div>
-            )}
-            <img
-              className={`header-icon ${iconLoaded ? 'visible' : 'hidden'}`}
-              alt="logo"
-              src={logo}
-              onLoad={this.handleImageLoad}
-              key={logo}
-            />
+            <img className="header-icon" alt="logo" src={logo} />
           </div>
 
           <div className="header-name">
@@ -143,10 +76,7 @@ class Header extends Component {
           </div>
 
           <div className="title-container">
-            <Typewriter
-              text={info.titles[0]}
-              className="title-styles"
-            />
+            <span className="title-styles">{info.titles[0].toUpperCase()}</span>
           </div>
 
           <div className="header-icon-links">
