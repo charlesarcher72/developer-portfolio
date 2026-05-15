@@ -1,108 +1,71 @@
 .theme-toggle {
-  background: transparent;
-  border: none;
-  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
   padding: 0;
-  outline: none;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast),
+    color var(--transition-fast);
+
+  &:hover {
+    background: var(--bg-tertiary);
+    color: var(--accent-primary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+  }
 }
 
-.theme-toggle:focus {
-  outline: none;
-}
-
-.theme-toggle-switch {
-  display: block;
-}
-
+// Hide legacy switch & extra icon spans — render single icon
+.theme-toggle-switch,
 .theme-toggle-icon {
   display: none;
 }
 
-.theme-toggle-track {
-  width: 56px;
-  height: 28px;
-  background: var(--bg-tertiary);
-  border-radius: 14px;
-  border: 2px solid var(--border-color);
-  position: relative;
-  transition: all var(--transition-base);
+// The toggle now displays the inner SVG (sun/moon) directly via the legacy thumb svg.
+// Keep it visible by re-purposing the wrapper.
+.theme-toggle-switch {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
 }
 
-.theme-toggle-track:hover {
-  border-color: var(--accent-primary);
-  background: var(--bg-secondary);
+.theme-toggle-track {
+  width: auto;
+  height: auto;
+  background: transparent;
+  border: 0;
+  position: static;
 }
 
 .theme-toggle-thumb {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 20px;
-  height: 20px;
-  background: var(--accent-gradient);
-  border-radius: 50%;
-  display: flex;
+  position: static;
+  width: 22px;
+  height: 22px;
+  background: transparent;
+  box-shadow: none;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform var(--transition-base);
-  box-shadow: var(--shadow-md);
-}
+  color: currentColor;
 
-[data-theme="dark"] .theme-toggle-thumb {
-  transform: translateX(28px);
-}
+  svg {
+    color: currentColor;
+    width: 20px;
+    height: 20px;
+  }
 
-.theme-toggle-thumb svg {
-  color: #ffffff;
-}
-
-@media (max-width: 768px) {
-  .theme-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    border-radius: 0.5rem;
-    width: 3rem;
-    height: 3rem;
-    box-shadow: var(--shadow-md);
-    transition: all 0.3s ease;
-  }
-  
-  .theme-toggle:hover {
-    background: var(--bg-tertiary);
-    box-shadow: var(--shadow-lg);
-  }
-  
-  .theme-toggle-switch {
-    display: none;
-  }
-  
-  .theme-toggle-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .theme-toggle-icon i {
-    font-size: 1.25rem;
-    color: var(--text-primary);
-    transition: transform 0.3s ease;
-  }
-  
-  .theme-toggle:hover .theme-toggle-icon i {
-    transform: scale(1.1);
-  }
-}
-
-@media (max-width: 480px) {
-  .theme-toggle {
-    width: 2.75rem;
-    height: 2.75rem;
-  }
-  
-  .theme-toggle-icon i {
-    font-size: 1.125rem;
+  // Cancel legacy dark-theme translate
+  [data-theme="dark"] & {
+    transform: none;
   }
 }

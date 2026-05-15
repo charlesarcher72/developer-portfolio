@@ -1,62 +1,51 @@
 import React, { Component } from "react";
-import Badge from "react-bootstrap/Badge";
 import "../scss/Experience.scss";
 
 class Experience extends Component {
   render() {
     const { experience, info } = this.props.sharedData;
 
-    if (experience && info) {
-      const sectionName = info.section_name.experience;
+    if (!experience || !info) return null;
 
-      const workElements = experience.map((work, i) => {
-        const technologies = work.technologies;
-        const tech = technologies.map((technology, j) => (
-          <Badge pill className="experience-badge" key={j}>
-            {technology}
-          </Badge>
-        ));
+    const sectionName = info.section_name.experience;
 
-        return (
-          <div className="experience-card" key={i}>
-            <div className="experience-card-header">
-              <div className="experience-icon">
-                <i className="fas fa-code"></i>
-              </div>
-              <div className="experience-meta">
-                <span className="experience-years">{work.years}</span>
-              </div>
-            </div>
-            
-            <div className="experience-card-body">
-              <h3 className="experience-title">{work.title}</h3>
-              <h4 className="experience-company">{work.company}</h4>
-              <p className="experience-description">{work.description}</p>
-            </div>
-            
-            <div className="experience-card-footer">
-              {tech}
-            </div>
-          </div>
-        );
-      });
+    return (
+      <section id="experience" className="section">
+        <div className="container">
+          <header className="section-header">
+            <span className="section-eyebrow">{sectionName}</span>
+            <h2 className="section-title">Where I've worked.</h2>
+            <p className="section-subtitle">
+              From individual contributor to product owner, leading mission-critical software at scale.
+            </p>
+          </header>
 
-      return (
-        <section id="experience">
-          <div className="experience-container">
-            <h2 className="section-title">
-              <span>{sectionName}</span>
-            </h2>
-            
-            <div className="experience-grid">
-              {workElements}
-            </div>
-          </div>
-        </section>
-      );
-    }
+          <ol className="timeline">
+            {experience.map((work, i) => (
+              <li className="timeline-item" key={i}>
+                <div className="timeline-marker" aria-hidden="true">
+                  <span className="timeline-dot" />
+                </div>
 
-    return null;
+                <div className="timeline-content">
+                  <div className="timeline-meta">{work.years}</div>
+                  <h3 className="timeline-role">{work.title}</h3>
+                  <div className="timeline-company">{work.company}</div>
+                  <p className="timeline-description">{work.description}</p>
+                  {work.technologies && work.technologies.length > 0 && (
+                    <ul className="timeline-tags" aria-label="Technologies">
+                      {work.technologies.map((tech, j) => (
+                        <li className="chip" key={j}>{tech}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+    );
   }
 }
 

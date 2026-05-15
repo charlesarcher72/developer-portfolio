@@ -7,131 +7,50 @@
 @import './Skills.scss';
 @import './Services.scss';
 @import './ThemeToggle.scss';
+@import './Footer.scss';
 
 .app-container {
   position: relative;
   min-height: 100vh;
-  overflow-x: hidden;
+  min-height: 100dvh;
   min-width: 320px;
+  overflow-x: clip;
+}
+
+main {
+  display: block;
 }
 
 section {
   position: relative;
-  
-  &#home {
-    min-height: 100vh;
-  }
-  
+
   &:not(#home) {
     scroll-margin-top: 80px;
   }
 }
 
-*:focus-visible {
-  outline: 2px solid var(--accent-primary);
-  outline-offset: 2px;
+// Surface alternation for vertical rhythm
+#about,
+#projects,
+#services {
+  background: var(--bg-primary);
 }
 
-button:focus-visible {
-  outline: 2px solid var(--accent-primary);
-  outline-offset: 2px;
+#experience,
+#skills {
+  background: var(--bg-secondary);
 }
 
-::selection {
-  background: var(--accent-primary);
-  color: #ffffff;
-}
-
-::-moz-selection {
-  background: var(--accent-primary);
-  color: #ffffff;
-}
-
-* {
-  transition-property: background-color, border-color, color, fill, stroke;
-  transition-duration: var(--transition-base);
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-*:where(
-  [class*="animation"],
-  [class*="animate"],
-  .slider,
-  img,
-  video
-) {
-  transition-property: none;
-}
-
-.navbar,
-.navbar *,
-.theme-toggle {
-  transition-property: background-color, border-color, color, transform, opacity !important;
-}
-
-.back-to-top {
-  position: fixed;
-  bottom: var(--spacing-2xl);
-  right: var(--spacing-2xl);
-  width: 48px;
-  height: 48px;
-  background: var(--accent-gradient);
-  color: #ffffff;
-  border: none;
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transition: all var(--transition-base);
-  box-shadow: var(--shadow-lg);
-  z-index: 998;
-  
-  &.visible {
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
-  }
-  
-  svg {
-    width: 24px;
-    height: 24px;
-  }
-}
-
+// Print
 @media print {
   nav,
   .theme-toggle,
   .back-to-top,
-  .scroll-indicator,
-  .mobile-menu-toggle {
+  .nav-mobile-toggle {
     display: none !important;
   }
-  
+
   section {
     page-break-inside: avoid;
-  }
-  
-  .project-card,
-  .skills-tile,
-  .services-tile {
-    break-inside: avoid;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
   }
 }

@@ -6,105 +6,93 @@ const Projects = ({ sharedData }) => {
   const [showModal, setShowModal] = useState(false);
   const [projectData, setProjectData] = useState({});
 
-  const showModalHandler = (data) => {
+  const open = (data) => {
     setProjectData(data);
     setShowModal(true);
   };
 
-  const closeModalHandler = () => {
-    setShowModal(false);
-  };
+  const close = () => setShowModal(false);
 
   const { projects, info } = sharedData;
   const sectionName = info?.section_name?.projects;
 
-  const renderProjectImage = (project) => {
+  const renderThumb = (project) => {
     if (project.images && project.images.length > 0 && project.images[0]) {
       return (
         <img
           src={project.images[0]}
-          alt={project.title}
-          className="project-image"
+          alt=""
+          className="project-thumb-image"
           loading="lazy"
+          decoding="async"
         />
       );
     }
-
     return (
-      <div className="project-image-placeholder">
-        <i className="fas fa-code placeholder-icon"></i>
+      <div className="project-thumb-placeholder" aria-hidden="true">
+        <i className="fas fa-code" />
       </div>
     );
   };
 
   return (
-    <section id="projects">
-      <div className="projects-container">
-        <h2 className="section-title">
-          <span>{sectionName}</span>
-        </h2>
-        
-        <div className="project-grid">
-          {projects?.map((project, index) => (
-            <div
-              className="project-item"
-              key={project.title}
-              style={{ '--item-index': index }}
-              onClick={() => showModalHandler(project)}
-              role="button"
-              tabIndex={0}
-              onKeyPress={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  showModalHandler(project);
-                }
-              }}
-            >
-              <div className="project-card">
-                <div className="project-image-container">
-                  {renderProjectImage(project)}
-                  <div className="project-image-overlay"></div>
-                </div>
-                
-                <div className="project-content">
-                  <div className="project-header">
-                    <h3 className="project-title">{project.title}</h3>
+    <section id="projects" className="section">
+      <div className="container">
+        <header className="section-header">
+          <span className="section-eyebrow">{sectionName}</span>
+          <h2 className="section-title">Selected work.</h2>
+          <p className="section-subtitle">
+            A mix of production products, marketing surfaces, and personal tools — each one shipped.
+          </p>
+        </header>
+
+        <ul className="project-grid">
+          {projects?.map((project) => (
+            <li className="project-card" key={project.title}>
+              <button
+                type="button"
+                className="project-card-trigger"
+                onClick={() => open(project)}
+                aria-label={`View details for ${project.title}`}
+              >
+                <span className="project-thumb">
+                  {renderThumb(project)}
+                </span>
+
+                <span className="project-body">
+                  <span className="project-header">
+                    <span className="project-title">{project.title}</span>
                     {project.date && (
-                      <span className="project-date">{project.date}</span>
+                      <span className="project-year">{project.date}</span>
                     )}
-                  </div>
-                  
-                  {project.technologies && (
-                    <div className="project-tech-stack">
-                      {project.technologies.slice(0, 3).map((tech, idx) => (
-                        <span key={idx} className="tech-badge">
-                          {tech}
-                        </span>
-                      ))}
-                      {project.technologies.length > 3 && (
-                        <span className="tech-badge-more">
-                          +{project.technologies.length - 3}
-                        </span>
-                      )}
-                    </div>
+                  </span>
+
+                  {project.description && (
+                    <span className="project-excerpt">{project.description}</span>
                   )}
-                  
-                  <div className="project-action">
-                    <span className="view-more">
-                      View Details
-                      <i className="devicon-arrowforward-plain arrow-icon"></i>
+
+                  {project.technologies && project.technologies.length > 0 && (
+                    <span className="project-tech">
+                      {project.technologies.map((tech, idx) => (
+                        <span key={idx} className="chip">{tech}</span>
+                      ))}
                     </span>
-                  </div>
-                </div>
-              </div>
-            </div>
+                  )}
+
+                  <span className="project-cta">
+                    View details
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <line x1="7" y1="17" x2="17" y2="7"/>
+                      <polyline points="7 7 17 7 17 17"/>
+                    </svg>
+                  </span>
+                </span>
+              </button>
+            </li>
           ))}
-        </div>
-        
-        <ProjectModal
-          show={showModal}
-          onHide={closeModalHandler}
-          data={projectData}
-        />
+        </ul>
+
+        <ProjectModal show={showModal} onHide={close} data={projectData} />
       </div>
     </section>
   );

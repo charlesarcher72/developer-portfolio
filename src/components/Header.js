@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 import "../scss/Header.scss";
 
-const BINARY_COLUMNS = [...Array(10)].map(() =>
-  [...Array(40)].map(() => Math.random() > 0.5 ? '1' : '0').join('\n')
-);
+const scrollToId = (id) => {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const offset = 72;
+  const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+  window.scrollTo({ top, behavior: 'smooth' });
+};
 
 class Header extends Component {
   constructor() {
@@ -39,51 +43,92 @@ class Header extends Component {
       : info.logo;
     const logo = `images/${logoFilename}`;
 
-    const networks = info.social.map((network) => (
+    const socials = info.social.map((network) => (
       <a
         key={network.name}
         href={network.url}
-        target="_blank"
+        target={network.url.startsWith('mailto:') ? undefined : "_blank"}
         rel="noopener noreferrer"
         aria-label={network.name}
+        className="hero-social"
       >
         <i className={network.class}></i>
       </a>
     ));
 
+    const title = info.titles[0];
+
     return (
-      <header id="home">
-        <div className="header-background">
-          <div className="code-glow glow-1"></div>
-          <div className="code-glow glow-2"></div>
+      <section id="home" className="hero">
+        <div className="hero-background" aria-hidden="true">
+          <div className="hero-orb hero-orb-1" />
+          <div className="hero-orb hero-orb-2" />
+        </div>
 
-          <div className="binary-rain">
-            {BINARY_COLUMNS.map((col, i) => (
-              <div key={i} className="binary-col" style={{ whiteSpace: 'pre-line' }}>
-                {col}
-              </div>
-            ))}
+        <div className="container hero-inner">
+          <div className="hero-content">
+            <span className="hero-status">
+              <span className="hero-status-dot" aria-hidden="true" />
+              Available for select work
+            </span>
+
+            <h1 className="hero-title">
+              <span className="hero-name">{info.name}</span>
+              <span className="hero-tagline">
+                <span className="hero-tagline-prefix">{title}</span>
+                <span className="hero-tagline-rest">
+                  building <span className="gradient-text">mission-critical&nbsp;systems</span> and modern products.
+                </span>
+              </span>
+            </h1>
+
+            <p className="hero-lede">
+              I lead engineering teams on aerospace C2 platforms by day and ship cross-platform
+              web and mobile products by night — from low-level systems to cloud-native applications.
+            </p>
+
+            <div className="hero-actions">
+              <button
+                type="button"
+                className="btn btn-primary"
+                onClick={() => scrollToId('projects')}
+              >
+                View Work
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </button>
+              <a
+                className="btn btn-secondary"
+                href="mailto:charlesarcher72@gmail.com"
+              >
+                Get in Touch
+              </a>
+            </div>
+
+            <div className="hero-socials" aria-label="Social links">
+              {socials}
+            </div>
+          </div>
+
+          <div className="hero-visual" aria-hidden="true">
+            <div className="hero-logo-frame">
+              <img className="hero-logo" alt="" src={logo} />
+            </div>
           </div>
         </div>
 
-        <div className="header-content">
-          <div className="header-logo-container">
-            <img className="header-icon" alt="logo" src={logo} />
-          </div>
-
-          <div className="header-name">
-            <p>{info.name}</p>
-          </div>
-
-          <div className="title-container">
-            <span className="title-styles">{info.titles[0].toUpperCase()}</span>
-          </div>
-
-          <div className="header-icon-links">
-            {networks}
-          </div>
-        </div>
-      </header>
+        <button
+          type="button"
+          className="hero-scroll-cue"
+          onClick={() => scrollToId('about')}
+          aria-label="Scroll to About section"
+        >
+          <span className="hero-scroll-label">Scroll</span>
+          <span className="hero-scroll-line" />
+        </button>
+      </section>
     );
   }
 }

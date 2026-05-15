@@ -15,12 +15,14 @@ const App = () => (
   <div className="app-container">
     <NavProvider>
       <Nav />
-      <Header sharedData={sharedData} />
-      <About sharedData={sharedData} />
-      <Experience sharedData={sharedData} />
-      <Projects sharedData={sharedData} />
-      <Skills sharedData={sharedData} />
-      <Services sharedData={sharedData} />
+      <main id="main">
+        <Header sharedData={sharedData} />
+        <About sharedData={sharedData} />
+        <Experience sharedData={sharedData} />
+        <Projects sharedData={sharedData} />
+        <Skills sharedData={sharedData} />
+        <Services sharedData={sharedData} />
+      </main>
       <Footer sharedData={sharedData} />
     </NavProvider>
   </div>
