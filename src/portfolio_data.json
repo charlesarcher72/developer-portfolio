@@ -164,7 +164,8 @@
         "Cross-platform deployment (iOS, Android, web)"
       ],
       "url": "https://spillbeauty.com/",
-      "appStore": "https://apps.apple.com/us/app/spill-beauty/id6765920935"
+      "appStore": "https://apps.apple.com/us/app/spill-beauty/id6765920935",
+      "playStore": "https://play.google.com/store/apps/details?id=com.pipbrosengineering.spillbeauty"
     },
     {
       "title": "About Spill Beauty",
