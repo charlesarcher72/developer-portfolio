@@ -78,6 +78,7 @@
           {"name": "COGNITO", "class": "fas fa-user-shield"},
           {"name": "S3", "class": "fas fa-database"},
           {"name": "MONGODB", "class": "devicon-mongodb-plain"},
+          {"name": "SUPABASE", "class": "fas fa-bolt"},
           {"name": "VERCEL", "class": "devicon-vercel-original"}
         ]
       },
@@ -359,8 +360,7 @@
         "images/portfolio/developer-portfolio/4.png",
         "images/portfolio/developer-portfolio/5.png",
         "images/portfolio/developer-portfolio/6.png",
-        "images/portfolio/developer-portfolio/7.png",
-        "images/portfolio/developer-portfolio/8.png"
+        "images/portfolio/developer-portfolio/7.png"
       ],
       "technologies": ["React", "React Bootstrap", "SCSS", "AWS Amplify"],
       "features": [

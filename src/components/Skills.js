@@ -12,11 +12,7 @@ class Skills extends Component {
       <section id="skills" className="section">
         <div className="container">
           <header className="section-header">
-            <span className="section-eyebrow">{sectionName}</span>
-            <h2 className="section-title">Tools of the trade.</h2>
-            <p className="section-subtitle">
-              The languages, frameworks, and platforms I reach for across the stack.
-            </p>
+            <h2 className="section-title">{sectionName}</h2>
           </header>
 
           <div className="skills-categories">

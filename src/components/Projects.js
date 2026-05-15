@@ -39,11 +39,7 @@ const Projects = ({ sharedData }) => {
     <section id="projects" className="section">
       <div className="container">
         <header className="section-header">
-          <span className="section-eyebrow">{sectionName}</span>
-          <h2 className="section-title">Selected work.</h2>
-          <p className="section-subtitle">
-            A mix of production products, marketing surfaces, and personal tools — each one shipped.
-          </p>
+          <h2 className="section-title">{sectionName}</h2>
         </header>
 
         <ul className="project-grid">

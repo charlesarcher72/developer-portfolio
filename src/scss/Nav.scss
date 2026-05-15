@@ -22,11 +22,12 @@
   max-width: var(--container-max);
   margin: 0 auto;
   padding: var(--space-3) var(--container-px);
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: var(--space-4);
   min-height: 64px;
+  position: relative;
 
   @media (min-width: 768px) {
     padding-left: var(--container-px-md);
@@ -47,6 +48,7 @@
   margin-left: calc(var(--space-2) * -1);
   border-radius: var(--radius-md);
   transition: color var(--transition-fast);
+  flex-shrink: 0;
 
   &:hover {
     color: var(--accent-primary);
@@ -64,11 +66,15 @@
   white-space: nowrap;
 }
 
+// Desktop links — absolutely centered so wordmark/end can grow without shifting them
 .nav-links {
   display: none;
-  justify-content: center;
   align-items: center;
   gap: var(--space-1);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 
   @media (min-width: 900px) {
     display: flex;
@@ -118,6 +124,8 @@
   align-items: center;
   justify-content: flex-end;
   gap: var(--space-2);
+  flex-shrink: 0;
+  margin-right: calc(var(--space-2) * -1);
 }
 
 .nav-mobile-toggle {

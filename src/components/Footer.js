@@ -26,7 +26,7 @@ class Footer extends Component {
       <footer id="footer" className="site-footer">
         <div className="container site-footer-inner">
           <div className="site-footer-cta">
-            <span className="section-eyebrow">Let's build something</span>
+            <span className="site-footer-eyebrow">Let's build something</span>
             <a className="site-footer-mail" href="mailto:charlesarcher72@gmail.com">
               charlesarcher72@gmail.com
             </a>

@@ -37,7 +37,9 @@
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast),
     transform var(--transition-fast), color var(--transition-fast);
 
-  &:hover {
+  &:hover,
+  &:focus {
+    text-decoration: none;
     border-color: var(--accent-primary);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);

@@ -15,12 +15,7 @@ class Services extends Component {
       <section id="services" className="section">
         <div className="container">
           <header className="section-header">
-            <span className="section-eyebrow">{sectionName}</span>
-            <h2 className="section-title">Available for new work.</h2>
-            <p className="section-subtitle">
-              Whether it's an aerospace systems problem or a product you're trying to ship — tap any
-              card to start a conversation.
-            </p>
+            <h2 className="section-title">{sectionName}</h2>
           </header>
 
           <ul className="services-grid">

@@ -106,7 +106,8 @@
   // Z-index scale
   --z-nav: 100;
   --z-overlay: 900;
-  --z-modal: 1000;
+  --z-modal: 1055;
+  --z-modal-backdrop: 1050;
 }
 
 [data-theme="dark"] {
@@ -235,47 +236,31 @@ button {
   }
 }
 
-// Section heading rhythm — used by every section title
-.section-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  font-family: var(--font-mono);
-  font-size: var(--fs-overline);
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--accent-primary);
-  margin-bottom: var(--space-3);
-
-  &::before {
-    content: '';
-    width: 24px;
-    height: 1px;
-    background: var(--accent-primary);
-    opacity: 0.6;
-  }
-}
-
+// Section heading — single bold title pulled from JSON section_name
 .section-title {
+  position: relative;
+  display: inline-block;
   font-size: var(--fs-h2);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   color: var(--text-primary);
-  margin-bottom: var(--space-3);
   line-height: 1.15;
-}
+  padding-bottom: var(--space-3);
 
-.section-subtitle {
-  font-size: var(--fs-body-lg);
-  color: var(--text-secondary);
-  max-width: 640px;
-  line-height: 1.6;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 48px;
+    height: 3px;
+    background: var(--accent-gradient);
+    border-radius: 2px;
+  }
 }
 
 .section-header {
   margin-bottom: var(--space-12);
-  max-width: 720px;
 
   @media (min-width: 1024px) {
     margin-bottom: var(--space-16);

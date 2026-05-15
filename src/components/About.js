@@ -54,11 +54,7 @@ class About extends Component {
       <section id="about" className="section">
         <div className="container about">
           <header className="section-header">
-            <span className="section-eyebrow">{sectionName}</span>
-            <h2 className="section-title">A little about me.</h2>
-            <p className="section-subtitle">
-              Senior-level engineering across systems, web, and mobile — built by leading teams and shipping product.
-            </p>
+            <h2 className="section-title">{sectionName}</h2>
           </header>
 
           <div className="about-grid">

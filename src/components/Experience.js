@@ -13,11 +13,7 @@ class Experience extends Component {
       <section id="experience" className="section">
         <div className="container">
           <header className="section-header">
-            <span className="section-eyebrow">{sectionName}</span>
-            <h2 className="section-title">Where I've worked.</h2>
-            <p className="section-subtitle">
-              From individual contributor to product owner, leading mission-critical software at scale.
-            </p>
+            <h2 className="section-title">{sectionName}</h2>
           </header>
 
           <ol className="timeline">

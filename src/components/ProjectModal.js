@@ -47,12 +47,12 @@ const ProjectModal = ({ show, onHide, data }) => {
       onHide={onHide}
       size="lg"
       className="project-modal"
-      backdrop="static"
+      backdrop={true}
       keyboard={true}
+      centered
     >
       <div className="modal-wrapper">
-        <div className="modal-handle" aria-hidden="true" />
-
+        <span className="modal-handle" aria-hidden="true" />
         <button
           type="button"
           onClick={onHide}

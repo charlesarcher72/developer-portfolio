@@ -67,25 +67,12 @@ class Header extends Component {
 
         <div className="container hero-inner">
           <div className="hero-content">
-            <span className="hero-status">
-              <span className="hero-status-dot" aria-hidden="true" />
-              Available for select work
-            </span>
-
             <h1 className="hero-title">
               <span className="hero-name">{info.name}</span>
               <span className="hero-tagline">
                 <span className="hero-tagline-prefix">{title}</span>
-                <span className="hero-tagline-rest">
-                  building <span className="gradient-text">mission-critical&nbsp;systems</span> and modern products.
-                </span>
               </span>
             </h1>
-
-            <p className="hero-lede">
-              I lead engineering teams on aerospace C2 platforms by day and ship cross-platform
-              web and mobile products by night — from low-level systems to cloud-native applications.
-            </p>
 
             <div className="hero-actions">
               <button
