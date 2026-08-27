@@ -145,7 +145,7 @@
     {
       "title": "Puffed",
       "date": "2026",
-      "description": "A cross-platform review community and lounge operations app for the cigar world, built with React Native, Expo, and TypeScript. I handled the front end, branding, and product design — a warm gold-and-espresso identity, the Puffed wordmark, and a token-driven design system that holds together across phone, tablet, and web. The consumer surface is built around a single 0 to 100 rating model, with Following, Recent, and Trending feeds, threaded review conversations, and multi-axis discovery across brand, strength, wrapper, country of origin, price, and distance. The same interface switches into an operator mode for lounges covering members and memberships, events and RSVPs, inventory and menu publishing, staff scheduling, and a kiosk check-in terminal — all rendered from a single Expo Router codebase on iOS, Android, and web.",
+      "description": "A cross-platform review community and lounge operations app for the cigar world. I built the entire front end in React Native, Expo, and TypeScript, and owned the branding and product design: a warm gold-and-espresso identity, the Puffed wordmark, and a token-driven design system that holds together across phone, tablet, and web. The consumer surface is built around a single 0 to 100 rating model, with Following, Recent, and Trending feeds, threaded review conversations, and multi-axis discovery across brand, strength, wrapper, country of origin, price, and distance. The same interface switches into an operator mode for lounges covering members and memberships, events and RSVPs, inventory and menu publishing, staff scheduling, and a kiosk check-in terminal, all rendered from a single Expo Router codebase on iOS, Android, and web.",
       "images": [
         "images/portfolio/puffed/1.png",
         "images/portfolio/puffed/2.png",
@@ -166,8 +166,9 @@
         "images/portfolio/puffed/17.png",
         "images/portfolio/puffed/18.png"
       ],
-      "technologies": ["React Native", "Expo", "TypeScript", "Expo Router", "Figma"],
+      "technologies": ["React Native", "Expo", "TypeScript", "Expo Router"],
       "features": [
+        "Front end development across iOS, Android, and web",
         "Brand identity, wordmark, and design token system",
         "Single 0 to 100 rating model with threaded review conversations",
         "Following, Recent, and Trending discovery feeds",
@@ -184,7 +185,7 @@
     {
       "title": "About Puffed",
       "date": "2026",
-      "description": "The marketing site for the Puffed platform, built with React 19, Vite, and TypeScript on top of Tailwind 4 and Framer Motion. It carries the Puffed brand onto the web as a dark, gold-accented surface and acts as the conversion entry point to the web app, the iOS TestFlight beta, and Google Play, with platform-aware CTAs that surface the right destination for each visitor. Sections walk through the rating model, discovery, and what is coming next, paced by scroll-triggered animations and hash-anchored navigation. Designed mobile-first on CSS custom properties, localized in English and Spanish through i18next, age-gated for 21 and over, and shipped alongside full legal pages (Privacy, Terms, Support, Account Deletion).",
+      "description": "The marketing site for the Puffed platform. I designed and built the front end in React 19, Vite, and TypeScript on top of Tailwind 4 and Framer Motion. It carries the Puffed brand onto the web as a dark, gold-accented surface and acts as the conversion entry point to the web app, the iOS TestFlight beta, and Google Play, with platform-aware CTAs that surface the right destination for each visitor. Sections walk through the rating model, discovery, and what is coming next, paced by scroll-triggered animations and hash-anchored navigation. Designed mobile-first on CSS custom properties, localized in English and Spanish through i18next, age-gated for 21 and over, and shipped alongside full legal pages (Privacy, Terms, Support, Account Deletion).",
       "images": [
         "images/portfolio/about-puffed/1.png",
         "images/portfolio/about-puffed/2.png",
@@ -211,7 +212,7 @@
     {
       "title": "Spill Beauty",
       "date": "2026",
-      "description": "A cross-platform social review platform for nail salons and nail technicians, built with React Native, Expo, and AWS Amplify. The app moves beyond five-star guesswork by capturing reviews across six structured rating dimensions — Cleanliness, Vibe, Service, Technician, Choice, and Results — and lets users filter discovery by service type, style and color tags, distance, and minimum rating. Features a meritocratic discovery feed, location-aware search powered by AWS Geo, structured review threads, follow graph with notifications, and a salon owner workflow for claiming listings and responding to reviews. Backed by a custom GraphQL service with Cognito auth and S3 media storage, and shipped to iOS, Android, and web from a single Expo Router codebase.",
+      "description": "A cross-platform social review platform for nail salons and nail technicians, built with React Native, Expo, and AWS Amplify. The app moves beyond five-star guesswork by capturing reviews across six structured rating dimensions (Cleanliness, Vibe, Service, Technician, Choice, and Results) and lets users filter discovery by service type, style and color tags, distance, and minimum rating. Features a meritocratic discovery feed, location-aware search powered by AWS Geo, structured review threads, follow graph with notifications, and a salon owner workflow for claiming listings and responding to reviews. Backed by a custom GraphQL service with Cognito auth and S3 media storage, and shipped to iOS, Android, and web from a single Expo Router codebase.",
       "images": [
         "images/portfolio/spill-beauty/1.png",
         "images/portfolio/spill-beauty/2.png",
@@ -261,7 +262,7 @@
     {
       "title": "Chuckwise",
       "date": "2026",
-      "description": "A personal productivity web app that fuses three tools into a single cohesive interface — a Planner, a Budget tracker, and an Assets dashboard — built with React 19, TypeScript, and Vite on top of Tailwind CSS and a custom design-token system. The Planner supports one-off and recurring tasks with weekly, monthly-by-day, and relative-weekday schedules (e.g. \"last Friday of the month\"), per-occurrence completion, hidden-by-default tasks, and email reminders. The Budget tab models monthly income, expense, and savings line items with reusable templates, weekly spending targets on configurable week boundaries, and percentage-based extra-money allocation buckets. The Assets tab tracks accounts across checking, savings, HYSA, investment, retirement, credit card, loan, and mortgage types with balance history charts and a projection engine that models future growth from annual rates, monthly contributions, and scheduled contribution increases. Data is persisted to Supabase (Postgres + Row Level Security) through a single storage abstraction layer, with a mirrored in-memory demo store that lets unauthenticated visitors interact with the full feature set against seeded sample data. Ships dark and light themes, a fullscreen screensaver dashboard view, and is deployed to AWS Amplify Hosting.",
+      "description": "A personal productivity web app that fuses three tools into a single cohesive interface (a Planner, a Budget tracker, and an Assets dashboard) built with React 19, TypeScript, and Vite on top of Tailwind CSS and a custom design-token system. The Planner supports one-off and recurring tasks with weekly, monthly-by-day, and relative-weekday schedules (e.g. \"last Friday of the month\"), per-occurrence completion, hidden-by-default tasks, and email reminders. The Budget tab models monthly income, expense, and savings line items with reusable templates, weekly spending targets on configurable week boundaries, and percentage-based extra-money allocation buckets. The Assets tab tracks accounts across checking, savings, HYSA, investment, retirement, credit card, loan, and mortgage types with balance history charts and a projection engine that models future growth from annual rates, monthly contributions, and scheduled contribution increases. Data is persisted to Supabase (Postgres + Row Level Security) through a single storage abstraction layer, with a mirrored in-memory demo store that lets unauthenticated visitors interact with the full feature set against seeded sample data. Ships dark and light themes, a fullscreen screensaver dashboard view, and is deployed to AWS Amplify Hosting.",
       "images": [
         "images/portfolio/chuckwise/1.png",
         "images/portfolio/chuckwise/2.png",
