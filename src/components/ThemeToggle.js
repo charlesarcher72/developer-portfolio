@@ -10,8 +10,30 @@ const ThemeToggle = () => {
   });
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
+    const root = document.documentElement;
+
+    // Swap the theme instantly. A site-wide color crossfade is cheap on
+    // desktop but janky on mobile: the nav's backdrop-filter blur must
+    // re-rasterize every frame as colors animate behind it. Suppressing
+    // transitions for the swap turns ~15 blurred repaints into one.
+    const noTransition = document.createElement('style');
+    noTransition.appendChild(
+      document.createTextNode('*,*::before,*::after{transition:none!important}')
+    );
+    document.head.appendChild(noTransition);
+
+    root.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
+
+    // Force a reflow so the new theme paints with transitions off, then
+    // restore them next frame for hover/focus animations.
+    void document.body.offsetHeight;
+    const raf = window.requestAnimationFrame(() => noTransition.remove());
+
+    return () => {
+      window.cancelAnimationFrame(raf);
+      noTransition.remove();
+    };
   }, [theme]);
 
   const toggleTheme = () => {
