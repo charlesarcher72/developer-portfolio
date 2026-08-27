@@ -143,6 +143,72 @@
   ],
   "projects": [
     {
+      "title": "Puffed",
+      "date": "2026",
+      "description": "A cross-platform review community and lounge operations app for the cigar world, built with React Native, Expo, and TypeScript. I handled the front end, branding, and product design — a warm gold-and-espresso identity, the Puffed wordmark, and a token-driven design system that holds together across phone, tablet, and web. The consumer surface is built around a single 0 to 100 rating model, with Following, Recent, and Trending feeds, threaded review conversations, and multi-axis discovery across brand, strength, wrapper, country of origin, price, and distance. The same interface switches into an operator mode for lounges covering members and memberships, events and RSVPs, inventory and menu publishing, staff scheduling, and a kiosk check-in terminal — all rendered from a single Expo Router codebase on iOS, Android, and web.",
+      "images": [
+        "images/portfolio/puffed/1.png",
+        "images/portfolio/puffed/2.png",
+        "images/portfolio/puffed/3.png",
+        "images/portfolio/puffed/4.png",
+        "images/portfolio/puffed/5.png",
+        "images/portfolio/puffed/6.png",
+        "images/portfolio/puffed/7.png",
+        "images/portfolio/puffed/8.png",
+        "images/portfolio/puffed/9.png",
+        "images/portfolio/puffed/10.png",
+        "images/portfolio/puffed/11.png",
+        "images/portfolio/puffed/12.png",
+        "images/portfolio/puffed/13.png",
+        "images/portfolio/puffed/14.png",
+        "images/portfolio/puffed/15.png",
+        "images/portfolio/puffed/16.png",
+        "images/portfolio/puffed/17.png",
+        "images/portfolio/puffed/18.png"
+      ],
+      "technologies": ["React Native", "Expo", "TypeScript", "Expo Router", "Figma"],
+      "features": [
+        "Brand identity, wordmark, and design token system",
+        "Single 0 to 100 rating model with threaded review conversations",
+        "Following, Recent, and Trending discovery feeds",
+        "Multi-axis filtering by brand, strength, wrapper, origin, price, and distance",
+        "Dual-mode interface for enthusiasts and lounge operators",
+        "Operator screens for members, events, inventory, menus, and scheduling",
+        "Kiosk check-in terminal and rotating digital menu boards",
+        "Cross-platform layouts for iOS, Android, and web"
+      ],
+      "url": "https://puffed.io/",
+      "testFlight": "https://testflight.apple.com/join/sBD6DXYK",
+      "playStore": "https://play.google.com/store/apps/details?id=com.pipbrosengineering.puffed"
+    },
+    {
+      "title": "About Puffed",
+      "date": "2026",
+      "description": "The marketing site for the Puffed platform, built with React 19, Vite, and TypeScript on top of Tailwind 4 and Framer Motion. It carries the Puffed brand onto the web as a dark, gold-accented surface and acts as the conversion entry point to the web app, the iOS TestFlight beta, and Google Play, with platform-aware CTAs that surface the right destination for each visitor. Sections walk through the rating model, discovery, and what is coming next, paced by scroll-triggered animations and hash-anchored navigation. Designed mobile-first on CSS custom properties, localized in English and Spanish through i18next, age-gated for 21 and over, and shipped alongside full legal pages (Privacy, Terms, Support, Account Deletion).",
+      "images": [
+        "images/portfolio/about-puffed/1.png",
+        "images/portfolio/about-puffed/2.png",
+        "images/portfolio/about-puffed/3.png",
+        "images/portfolio/about-puffed/4.png",
+        "images/portfolio/about-puffed/5.png",
+        "images/portfolio/about-puffed/6.png",
+        "images/portfolio/about-puffed/7.png",
+        "images/portfolio/about-puffed/8.png"
+      ],
+      "technologies": ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion", "i18next"],
+      "features": [
+        "Dark, brand-led visual system driven by CSS custom properties",
+        "Mobile-first responsive layout",
+        "Scroll-triggered animations with Framer Motion",
+        "Platform-aware CTAs for web, iOS beta, and Google Play",
+        "English and Spanish localization via i18next",
+        "Hash-anchored single-page navigation",
+        "Age gate for 21 and over",
+        "Full legal page suite (Privacy, Terms, Support, Account Deletion)"
+      ],
+      "url": "https://about.puffed.io/"
+    },
+    {
       "title": "Spill Beauty",
       "date": "2026",
       "description": "A cross-platform social review platform for nail salons and nail technicians, built with React Native, Expo, and AWS Amplify. The app moves beyond five-star guesswork by capturing reviews across six structured rating dimensions — Cleanliness, Vibe, Service, Technician, Choice, and Results — and lets users filter discovery by service type, style and color tags, distance, and minimum rating. Features a meritocratic discovery feed, location-aware search powered by AWS Geo, structured review threads, follow graph with notifications, and a salon owner workflow for claiming listings and responding to reviews. Backed by a custom GraphQL service with Cognito auth and S3 media storage, and shipped to iOS, Android, and web from a single Expo Router codebase.",
