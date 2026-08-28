@@ -179,13 +179,12 @@
         "Cross-platform layouts for iOS, Android, and web"
       ],
       "url": "https://puffed.io/",
-      "testFlight": "https://testflight.apple.com/join/sBD6DXYK",
       "playStore": "https://play.google.com/store/apps/details?id=com.pipbrosengineering.puffed"
     },
     {
       "title": "About Puffed",
       "date": "2026",
-      "description": "The marketing site for the Puffed platform. I designed and built the front end in React 19, Vite, and TypeScript on top of Tailwind 4 and Framer Motion. It carries the Puffed brand onto the web as a dark, gold-accented surface and acts as the conversion entry point to the web app, the iOS TestFlight beta, and Google Play, with platform-aware CTAs that surface the right destination for each visitor. Sections walk through the rating model, discovery, and what is coming next, paced by scroll-triggered animations and hash-anchored navigation. Designed mobile-first on CSS custom properties, localized in English and Spanish through i18next, age-gated for 21 and over, and shipped alongside full legal pages (Privacy, Terms, Support, Account Deletion).",
+      "description": "The marketing site for the Puffed platform. I designed and built the front end in React 19, Vite, and TypeScript on top of Tailwind 4 and Framer Motion. It carries the Puffed brand onto the web as a dark, gold-accented surface and acts as the conversion entry point to the web app and Google Play, with platform-aware CTAs that surface the right destination for each visitor. Sections walk through the rating model, discovery, and what is coming next, paced by scroll-triggered animations and hash-anchored navigation. Designed mobile-first on CSS custom properties, localized in English and Spanish through i18next, age-gated for 21 and over, and shipped alongside full legal pages (Privacy, Terms, Support, Account Deletion).",
       "images": [
         "images/portfolio/about-puffed/1.png",
         "images/portfolio/about-puffed/2.png",
