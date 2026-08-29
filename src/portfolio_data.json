@@ -262,7 +262,7 @@
     {
       "title": "Chuckwise",
       "date": "2026",
-      "description": "A personal productivity web app that fuses three tools into a single cohesive interface (a Planner, a Budget tracker, and an Assets dashboard) built with React 19, TypeScript, and Vite on top of Tailwind CSS and a custom design-token system. The Planner supports one-off and recurring tasks with weekly, monthly-by-day, and relative-weekday schedules (e.g. \"last Friday of the month\"), per-occurrence completion, hidden-by-default tasks, and email reminders. The Budget tab models monthly income, expense, and savings line items with reusable templates, weekly spending targets on configurable week boundaries, and percentage-based extra-money allocation buckets. The Assets tab tracks accounts across checking, savings, HYSA, investment, retirement, credit card, loan, and mortgage types with balance history charts and a projection engine that models future growth from annual rates, monthly contributions, and scheduled contribution increases. Data is persisted to Supabase (Postgres + Row Level Security) through a single storage abstraction layer, with a mirrored in-memory demo store that lets unauthenticated visitors interact with the full feature set against seeded sample data. Ships dark and light themes, a fullscreen screensaver dashboard view, and is deployed to AWS Amplify Hosting.",
+      "description": "A personal productivity web app that fuses four tools into a single cohesive interface (a Planner, a Budget tracker, an Assets dashboard, and a Mortgage tab) built with React 19, TypeScript, and Vite on top of Tailwind CSS and a custom design-token system. The Planner offers daily, weekly, and monthly views over one-off and recurring tasks, with weekly, monthly-by-day, relative-weekday, last-weekday, last-budget-day, and yearly schedules, plus per-occurrence completion and skipping, drag-to-reorder ordering, hidden-by-default tasks, and email reminders. The Budget tab models monthly income, expense, and savings line items with reusable templates, pay-frequency-aware forecasting, savings contributions expressed as either a fixed amount or a percentage of the month's income, and a weekly spending tracker on configurable week boundaries. The Assets tab tracks accounts across checking, savings, HYSA, investment, retirement, credit card, loan, and mortgage types with balance history charts and a projection engine that models future growth from annual rates, scheduled contribution increases, and date-bounded exceptions, with balances linked and synced automatically through Plaid. The Mortgage tab runs a full amortization engine over the real loan terms, tracks escrow and home value over time, folds home equity into net worth, and includes a what-if forecast that models one-time and recurring extra payments against the payoff date and lifetime interest. Data is persisted to Supabase (Postgres with Row Level Security, plus Deno edge functions for Plaid sync and scheduled email digests) through a single storage abstraction layer, mirrored by an in-memory demo store that lets unauthenticated visitors interact with the full feature set against seeded sample data. Ships dark and light themes, a fullscreen screensaver dashboard with today's tasks and transfer reminders, and is deployed to AWS Amplify Hosting.",
       "images": [
         "images/portfolio/chuckwise/1.png",
         "images/portfolio/chuckwise/2.png",
@@ -270,21 +270,33 @@
         "images/portfolio/chuckwise/4.png",
         "images/portfolio/chuckwise/5.png",
         "images/portfolio/chuckwise/6.png",
-        "images/portfolio/chuckwise/7.png"
+        "images/portfolio/chuckwise/7.png",
+        "images/portfolio/chuckwise/8.png",
+        "images/portfolio/chuckwise/9.png",
+        "images/portfolio/chuckwise/10.png",
+        "images/portfolio/chuckwise/11.png",
+        "images/portfolio/chuckwise/12.png",
+        "images/portfolio/chuckwise/13.png"
       ],
-      "technologies": ["React", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "Recharts", "AWS Amplify"],
+      "technologies": ["React", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "Plaid", "Recharts", "AWS Amplify"],
       "features": [
-        "Recurring tasks with weekly, monthly, and relative-weekday schedules",
-        "Per-occurrence task completion and disregard tracking",
+        "Planner with daily, weekly, and monthly views",
+        "Six recurrence types including relative and last weekday of the month",
+        "Per-occurrence completion, skipping, and drag-to-reorder ordering",
         "Monthly budget with line items, templates, and confirmation workflow",
+        "Savings contributions as a fixed amount or a percent of income",
         "Weekly spending tracker with configurable week boundaries",
-        "Extra-money allocation across percentage-based buckets",
         "Multi-account net worth dashboard with balance history charts",
-        "Projection engine with growth rates and scheduled contribution increases",
+        "Projection engine with growth rates, contribution increases, and exceptions",
+        "Plaid account linking with automated balance sync",
+        "Mortgage amortization engine with escrow and home value history",
+        "Extra-payment forecast showing payoff date and interest saved",
+        "Home equity folded into the net worth calculation",
+        "Scheduled email digests and task reminders via Supabase edge functions",
         "Storage abstraction layer with Supabase and in-memory demo backends",
         "Fully interactive demo mode with seeded sample data",
         "Dark and light themes with custom design tokens",
-        "Fullscreen screensaver dashboard view"
+        "Fullscreen screensaver dashboard with today's tasks and transfer reminders"
       ],
       "url": "https://main.d3ttgilzbherjk.amplifyapp.com/"
     },
